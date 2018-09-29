@@ -12,53 +12,155 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Add Bet</h4>
-                <form border="1">
-                    <table>
-                        <tr>
-                            <td>
-                                User Name:
-                                <input type="text" name="firstname" value="">
-                                <br />
-                            </td>
-                            <td>
-                                Login ID:&nbsp;
-
-                                <input type="text" name="lastname" value="">
-                                <br />
+                <form action="//submit.form" id="SignUp100" method="post" onsubmit="return ValidateForm(this);">
+                    <center>
+                        <table border="0" cellpadding="5" cellspacing="0" width="600">
+                            <tr>
+                                <td>
+                                    <label for="Login Id">Login Id</label>
+                                </td>
+                                <td>
+                                    <input name="Login Id" type="text" maxlength="60" style="width: 146px;" />
+                                </td>
 
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Email ID:
-                                &nbsp;&nbsp;&nbsp;
-                                <input type="text" name="lastname" value="">
-                            </td>
+                                <td>
+                                    <label for="UserId">User Id*:</label>
+                                </td>
+
+                                <td>
+                                    <input name="UserId" type="text" maxlength="60" style="width: 146px;" />
+                                </td>
+                            </tr>
 
 
-                            <td>
-                                Currency:
-                                <input type="text" name="lastname" value="">
+                            <tr>
+                                <td>
+                                    <label for="Event Id">Event Id:</label>
+                                </td>
+                                <td>
+                                    <input name="Event Id" type="text" maxlength="60" style="width: 146px;" />
+                                </td>
 
-                            </td>
-                        </tr>
+                                <td>
+                                    <label for="Match Date">Match Date*:</label>
+                                </td>
+                                <td>
+                                    <input name="Match Date" type="text" maxlength="60" style="width: 146px;" />
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>
-                                Password:
-                                &nbsp;
+                            <tr>
+                                <td>
+                                    <label for="CellPhone">Innings:</label>
+                                </td>
+                                <td>
+                                    <input name="CellPhone" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
 
-                                <input type="text" name="lastname" value="">
-                            </td>
+                                <td>
+                                    <label for="Fax">Match Status:</label>
+                                </td>
+                                <td>
+                                    <input name="Fax" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                            </tr>
 
-                            <td>
+                            <tr>
+                                <td>
+                                    <label for="BetType">Bet Type:</label>
+                                </td>
+                                <td>
+                                    <select style="width: 146px;">
+                                        <option value="To_win_the_match">To win the match</option>
+                                        <option value="To_win_the_Toss">To win the Toss</option>
+                                        <option value="A Fifty to be scored in the match">A Fifty to be scored in the match</option>
+                                        <option value="A Hybdred to be scored in the match">A Hybdred to be scored in the match</option>
+                                        <option value="Runs to be scored in 6 over">Runs to be scored in 6 over</option>
+                                        <option value="Runs to be scored in 12 over">Runs to be scored in 12 over</option>
+                                        <option value="Runs to be scored in 20 over">Runs to be scored in 20 over</option>
+                                        <option value="Closed">Closed</option>                  
+                                    </select>
+                                </td>
 
-                                <input type="submit" value="Submit">
-                            </td>
-                        </tr>
+                                <td>
+                                    <label for="Selection">Selection:</label>
+                                </td>
+                                <td>
+                                    <input name="Selection" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                            </tr>
 
-                    </table>
+                            <tr>
+                                <td>
+                                    <label for="Odds">Odds:</label>
+                                </td>
+                                <td>
+                                    <input name="Odds" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+
+                                <td>
+                                    <label for="Stake">Stake:</label>
+                                </td>
+                                <td>
+                                    <input name="Stake" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="TotalReturn">Total Return:</label>
+                                </td>
+                                <td>
+                                    <input name="TotalReturn" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+
+                                <td>
+                                    <label for="NetProfit">Net Profit:</label>
+                                </td>
+                                <td>
+                                    <input name="NetProfit" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="Result">Result:</label>
+                                </td>
+                                <td>
+                                    <input name="Result" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+
+                                <td>
+                                    <label for="Status">Status:</label>
+                                </td>
+                                <td>
+                                    <input name="Status" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <label for="Match">Match:</label>
+                                </td>
+                                <td>
+                                    <input name="Match" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+
+                                <td>
+                                    <input name="skip_Submit" type="submit" style="backgroundcolor:black;color:white;width:150px;height:40px;"value="AddBet" />
+                                </td>
+
+                                <td>
+                                    <input name="skip_Submit" type="submit" value="Reset" />
+                                </td>
+                            </tr>
+
+
+
+                        </table>
+                    </center>
                 </form>
             </div>
         </div>
