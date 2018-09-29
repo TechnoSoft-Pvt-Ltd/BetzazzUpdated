@@ -349,3 +349,14 @@ body {
     border: 3px solid;
     border-color: #333;
 }
+@media (max-width: 768px) {
+    .mypadding {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-10 {
+        margin-top: 110px;
+    }
+}
