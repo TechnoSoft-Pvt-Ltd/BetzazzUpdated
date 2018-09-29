@@ -358,5 +358,14 @@ body {
 @media (min-width: 992px) {
     .col-md-10 {
         margin-top: 110px;
+        margin-right: 0px;
     }
+}
+.inplay {
+    background:#333;
+    font-size:12px;
+    margin-right:2px;
+}
+.my-card-body {
+    background-color: #575656;
 }
