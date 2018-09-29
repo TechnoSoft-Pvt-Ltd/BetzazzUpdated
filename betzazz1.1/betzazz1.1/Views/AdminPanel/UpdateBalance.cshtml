@@ -12,7 +12,79 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Update Balance</h4>
+                <form action="//submit.form" id="SignUp100" method="post" onsubmit="return ValidateForm(this);">
+                    <center>
+                        <table border="0" cellpadding="5" cellspacing="0" width="600">
 
+                            <tr>
+                                <td>
+                                    <label for="BalanceId">Balance Id:</label>
+                                </td>
+                                <td>
+                                    <input name="BalanceId" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+
+                                <td>
+                                    <label for="UserName ">User Name :</label>
+                                </td>
+                                <td>
+                                    <input name="UserName " type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="Balance">Balance:</label>
+                                </td>
+                                <td>
+                                    <input name="Balance" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+
+                                <td>
+                                    <label for="Amount">Amount:</label>
+                                </td>
+                                <td>
+                                    <input name="Amount" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+
+
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <label for="Action">Action:</label>
+                                </td>
+                                <td>
+                                    <select style="width: 146px;">
+                                        <option value="SelectCurrency">Select Action</option>
+                                        <option value="saab">Credit</option>
+                                        <option value="opel">Debit</option>
+                                        <option value="audi">EUR</option>
+                                        <option value="audi">Adjustment</option>          
+                                    </select>
+                                </td>
+                                <td>
+                                    <label for="Comment">Comment:</label>
+                                </td>
+                                <td>
+                                    <input name="Comment" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input name="Add" type="submit" value="Add" />
+
+                                    <input name="Add" type="submit" value="Reset" />
+                                </td>
+                            </tr>
+
+
+
+                        </table>
+                    </center>
+                </form>
             </div>
         </div>
 

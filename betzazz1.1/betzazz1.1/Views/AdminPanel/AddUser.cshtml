@@ -12,65 +12,80 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Add User</h4>
-                <center>
-                    <form action="/action_page.php">
-                        <table>
+
+                <form action="//submit.form" id="SignUp100" method="post" onsubmit="return ValidateForm(this);">
+                    <center>
+                        <table border="0" cellpadding="5" cellspacing="0" width="600">
+
                             <tr>
                                 <td>
-                                    User Name:
-                                    <input type="text" name="firstname" value="">
-                                    <br />
+                                    <label for="UserName">User Name:</label>
                                 </td>
                                 <td>
-                                    Login ID:&nbsp;
-
-                                    <input type="text" name="lastname" value="">
-                                    <br />
-
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Email ID:
-                                    &nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="lastname" value="">
+                                    <input name="UserName" type="text" maxlength="43" style="width: 146px;" />
                                 </td>
 
-
                                 <td>
-                                    Currency:
-                                    <input type="text" name="lastname" value="">
-
+                                    <label for="LoginId ">Login Id :</label>
+                                </td>
+                                <td>
+                                    <input name="LoginId " type="text" maxlength="43" style="width: 146px;" />
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    Password:
-                                    &nbsp;
-
-                                    <input type="text" name="lastname" value="">
+                                    <label for="EmailId">Email Id:</label>
+                                </td>
+                                <td>
+                                    <input name="EmailId" type="text" maxlength="43" style="width: 146px;" />
                                 </td>
 
                                 <td>
+                                    <label for="Match">Match:</label>
+                                </td>
+                                <td>
+                                    <input name="Match" type="text" maxlength="43" style="width: 146px;" />
+                                </td>
+                                
 
-                                    <input type="submit" value="Submit">
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <label for="Currency">Currency:</label>
+                                </td>
+                                <td>
+                                    <select style="width: 146px;">
+                                        <option value="SelectCurrency">Select Currency</option>
+                                        <option value="saab">INR</option>
+                                        <option value="opel">USD</option>
+                                        <option value="audi">EUR</option>
+                                        <option value="audi">GBP</option>
+                                        <option value="audi">AED</option>
+                                        <option value="audi">CAD</option>
+                                        <option value="audi">AUD</option>
+                                    </select>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input name="Add" type="submit" class="btn btn-success" value="Add" />
+
+                                    <input name="Add" type="submit" class="btn btn-danger" value="Reset" />
                                 </td>
                             </tr>
+
+
 
                         </table>
-                    </form>
-                </center>
+                    </center>
+                </form>
+
 
             </div>
-        </div>
-
-
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <!-- partial -->
-
 
     </div>
 </div>
