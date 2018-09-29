@@ -155,7 +155,7 @@ i, span {
 
     #sidebar ul.components {
         padding: 20px 0;
-        border-bottom: 1px solid #47748b;
+        border-bottom: 1px solid #ce870d;
     }
 
     #sidebar ul li a {
@@ -165,7 +165,7 @@ i, span {
     }
 
         #sidebar ul li a:hover {
-            color: #7386D5;
+            color:#403e3e;
             background: #ce870d;
         }
 
@@ -348,4 +348,24 @@ body {
     background: #403e3e;
     border: 3px solid;
     border-color: #333;
+}
+@media (max-width: 768px) {
+    .mypadding {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-10 {
+        margin-top: 110px;
+        margin-right: 0px;
+    }
+}
+.inplay {
+    background:#333;
+    font-size:12px;
+    margin-right:2px;
+}
+.my-card-body {
+    background-color: #575656;
 }
