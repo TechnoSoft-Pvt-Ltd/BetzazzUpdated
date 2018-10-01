@@ -2793,7 +2793,7 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
 
     <Content Include="data.json" />
-=======
+
     <EntityDeploy Include="APDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>APDataModel.Designer.cs</LastGenOutput>
@@ -2808,7 +2808,7 @@
     <Content Include="Models\UserControlModel.edmx.diagram">
       <DependentUpon>UserControlModel.edmx</DependentUpon>
     </Content>
->>>>>>> 3a61454495c51eae3eb5dea76f272813569cfe34
+
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
