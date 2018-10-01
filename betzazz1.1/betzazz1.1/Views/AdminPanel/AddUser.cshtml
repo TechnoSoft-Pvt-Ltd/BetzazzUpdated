@@ -9,83 +9,81 @@
         <div class="page-header">
             <h3 class="page-title"></h3>
         </div>
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Add User</h4>
+        <center><pre class="alert-danger">Add User</pre></center>
+        <div>
+            <table id="t01">
+                <thead>
+                <th>Last Name</th>
+                <th>Fist Name</th>
+                <th>Password</th>
+                <th>State</th>
+                <th>Address</th>
+                </thead>
+                @foreach (var item in ViewBag.userdetails)
+                 {
 
-                <form action="//submit.form" id="SignUp100" method="post" onsubmit="return ValidateForm(this);">
-                    <center>
-                        <table border="0" cellpadding="5" cellspacing="0" width="600">
+                   <tr>
+                       <td>
+                        @item.PersonID
+                     </td>
+                       <td>
+                        @item.LastName
+                     </td>
+                       <td>
+                        @item.FirstName
+                     </td>
+                       <td>
+                        @item.Address
+                     </td>
+                       <td>
+                        @item.City
+                     </td>
+                     
+                   </tr>
 
-                            <tr>
-                                <td>
-                                    <label for="UserName">User Name:</label>
-                                </td>
-                                <td>
-                                    <input name="UserName" type="text" maxlength="43" style="width: 146px;" />
-                                </td>
+                 }
 
-                                <td>
-                                    <label for="LoginId ">Login Id :</label>
-                                </td>
-                                <td>
-                                    <input name="LoginId " type="text" maxlength="43" style="width: 146px;" />
-                                </td>
-                            </tr>
+            </table>
+        </div>
 
-                            <tr>
-                                <td>
-                                    <label for="EmailId">Email Id:</label>
-                                </td>
-                                <td>
-                                    <input name="EmailId" type="text" maxlength="43" style="width: 146px;" />
-                                </td>
+        <style>
+            table#t01 {
+                width: 100%;
+                background-color: #f1f1c1;
+            }
 
-                                <td>
-                                    <label for="Match">Match:</label>
-                                </td>
-                                <td>
-                                    <input name="Match" type="text" maxlength="43" style="width: 146px;" />
-                                </td>
-                                
+                table#t01 tr:nth-child(even) {
+                    background-color: #eee;
+                }
 
-                            </tr>
+                table#t01 tr:nth-child(odd) {
+                    background-color: #fff;
+                }
 
+                table#t01 th {
+                    color: white;
+                    background-color: blue;
+                }
 
-                            <tr>
-                                <td>
-                                    <label for="Currency">Currency:</label>
-                                </td>
-                                <td>
-                                    <select style="width: 146px;">
-                                        <option value="SelectCurrency">Select Currency</option>
-                                        <option value="saab">INR</option>
-                                        <option value="opel">USD</option>
-                                        <option value="audi">EUR</option>
-                                        <option value="audi">GBP</option>
-                                        <option value="audi">AED</option>
-                                        <option value="audi">CAD</option>
-                                        <option value="audi">AUD</option>
-                                    </select>
-                                </td>
-                                <td>
+            table, th, td {
+                border: 1px solid black;
+            }
 
-                                </td>
-                                <td>
-                                    <input name="Add" type="submit" class="btn btn-success" value="Add" />
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
 
-                                    <input name="Add" type="submit" class="btn btn-danger" value="Reset" />
-                                </td>
-                            </tr>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
 
-
-
-                        </table>
-                    </center>
-                </form>
-
-
-            </div>
+            th, td {
+                padding: 15px;
+            }
+        </style>
+        <pre class="alert-danger"></pre>
 
     </div>
 </div>

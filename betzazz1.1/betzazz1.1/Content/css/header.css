@@ -184,9 +184,9 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     content: '\e259';
     display: block;
     position: absolute;
-    left: 284px;
+    left: 210px;
     font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 a[aria-expanded="true"]::before {
@@ -296,8 +296,9 @@ body {
 .modal.left .modal-dialog {
     position: fixed;
     margin: auto;
-    width: 320px;
+    width: 255px;
     height: 100%;
+
     -webkit-transform: translate3d(0%, 0, 0);
     -ms-transform: translate3d(0%, 0, 0);
     -o-transform: translate3d(0%, 0, 0);
