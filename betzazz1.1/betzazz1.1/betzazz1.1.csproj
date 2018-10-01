@@ -150,10 +150,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminPanelController.cs" />
+    <Compile Include="Controllers\CricketController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\FootballController.cs" />
     <Compile Include="Controllers\InplayController.cs" />
     <Compile Include="Controllers\PrematchController.cs" />
+    <Compile Include="Controllers\TennisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2821,6 +2824,12 @@
     <Content Include="Views\AdminPanel\BalanceTransaction.cshtml" />
     <Content Include="Views\AdminPanel\UpdateBalance.cshtml" />
     <Content Include="Views\AdminPanel\ManageBalance.cshtml" />
+    <Content Include="Views\Cricket\Inplay.cshtml" />
+    <Content Include="Views\Cricket\PreMatch.cshtml" />
+    <Content Include="Views\Football\Inplay.cshtml" />
+    <Content Include="Views\Football\PreMatch.cshtml" />
+    <Content Include="Views\Tennis\Inplay.cshtml" />
+    <Content Include="Views\Tennis\PreMatch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
