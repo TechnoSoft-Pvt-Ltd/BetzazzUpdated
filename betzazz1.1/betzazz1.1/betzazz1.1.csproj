@@ -2791,7 +2791,7 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
-<<<<<<< HEAD
+
     <Content Include="data.json" />
 =======
     <EntityDeploy Include="APDataModel.edmx">
