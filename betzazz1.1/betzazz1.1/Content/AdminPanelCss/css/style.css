@@ -19017,8 +19017,6 @@ input:focus {
 }
 
 .navbar.default-layout-navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile {
-  border-left: 1px solid #e0e0ef;
-  border-right: 1px solid #e0e0ef;
   padding-left: 1rem;
   padding-right: 1rem;
 }
