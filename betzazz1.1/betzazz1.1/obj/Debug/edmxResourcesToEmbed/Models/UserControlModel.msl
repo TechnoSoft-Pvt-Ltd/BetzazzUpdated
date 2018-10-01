@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="option_247betModelStoreContainer" CdmEntityContainer="option_247betEntities">
+    <EntitySetMapping Name="ModalDatas">
+      <EntityTypeMapping TypeName="option_247betModel.ModalData">
+        <MappingFragment StoreEntitySet="ModalData">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserNameRandomGen" ColumnName="UserNameRandomGen" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="AccountCuerrcy" ColumnName="AccountCuerrcy" />
+          <ScalarProperty Name="CreatePass" ColumnName="CreatePass" />
+          <ScalarProperty Name="ConfirmPass" ColumnName="ConfirmPass" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_USERCONTROAL" FunctionName="option_247betModel.Store.SP_USERCONTROAL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="option_247betModel.SP_USERCONTROAL_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserNameRandomGen" ColumnName="UserNameRandomGen" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="AccountCuerrcy" ColumnName="AccountCuerrcy" />
+          <ScalarProperty Name="CreatePass" ColumnName="CreatePass" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -9,9 +9,10 @@
         <div class="page-header">
             <h3 class="page-title"></h3>
         </div>
+        <center><pre class="alert-danger">Add Bet</pre></center>
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Add Bet</h4>
+
                 <form action="//submit.form" id="SignUp100" method="post" onsubmit="return ValidateForm(this);">
                     <center>
                         <table border="0" cellpadding="5" cellspacing="0" width="600">
@@ -79,7 +80,7 @@
                                         <option value="Runs to be scored in 6 over">Runs to be scored in 6 over</option>
                                         <option value="Runs to be scored in 12 over">Runs to be scored in 12 over</option>
                                         <option value="Runs to be scored in 20 over">Runs to be scored in 20 over</option>
-                                        <option value="Closed">Closed</option>                  
+                                        <option value="Closed">Closed</option>
                                     </select>
                                 </td>
 
@@ -147,13 +148,11 @@
                                 <td>
                                     <input name="Match" type="text" maxlength="43" style="width: 146px;" />
                                 </td>
-
+                                <td></td>
                                 <td>
-                                    <input name="skip_Submit" type="submit" style="backgroundcolor:black;color:white;width:150px;height:40px;"value="AddBet" />
-                                </td>
+                                    <input name="Add" type="submit" class="btn btn-success" value="Add" />
 
-                                <td>
-                                    <input name="skip_Submit" type="submit" value="Reset" />
+                                    <input name="Add" type="submit" class="btn btn-danger" value="Reset" />
                                 </td>
                             </tr>
 
@@ -162,8 +161,10 @@
                         </table>
                     </center>
                 </form>
+
             </div>
         </div>
+        <pre class="alert-danger"></pre>
 
 
         <!-- content-wrapper ends -->
