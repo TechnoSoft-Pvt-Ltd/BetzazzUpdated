@@ -2142,21 +2142,16 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
-<<<<<<< HEAD
+
     <Content Include="data.json" />
     <Content Include="data.json" />
-=======
+
 
     <Content Include="data.json" />
 
     <Content Include="data.json" />
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 33083d48165d0e8b4201766f116a5f36623a18e9
->>>>>>> 4770ef8b41b3ed8d61062a0b22169e54a6dca408
->>>>>>> 6547087d454a61b6554c88e165bb433fdc2ed43a
     <EntityDeploy Include="APDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>APDataModel.Designer.cs</LastGenOutput>
@@ -2171,10 +2166,7 @@
     <Content Include="Models\UserControlModel.edmx.diagram">
       <DependentUpon>UserControlModel.edmx</DependentUpon>
     </Content>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 63c34d71a363a4be294c1a5d569cfca8d2bdaa05
+
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -2190,15 +2182,7 @@
     <Content Include="AdminPanel\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="AdminPanel\vendor\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Web.config" />
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6547087d454a61b6554c88e165bb433fdc2ed43a
 
-
->>>>>>> 63c34d71a363a4be294c1a5d569cfca8d2bdaa05
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
