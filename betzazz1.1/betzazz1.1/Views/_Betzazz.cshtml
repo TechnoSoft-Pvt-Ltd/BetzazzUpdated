@@ -125,9 +125,9 @@
                 <!-- Sidebar Holder -->
                 <nav id="sidebar">
                     <div class="sidebar-header">
-                      
-                        <div class="row">
-                            <div class="col-1">
+
+                        <div id="inline" style="display: -webkit-box;">
+
                             <select class="form-control my-form-control">
                                 <option>Asian</option>
                                 <option>Modern</option>
@@ -135,22 +135,45 @@
                                 <option>Combo</option>
                                 <option>Latest</option>
                             </select>
-                                </div>
-                            <div class="col-1">
-                                 <select class="form-control my-form-control">
+
+                            <select class="form-control my-form-control">
                                 <option>Decimal</option>
                                 <option>Fraction</option>
                                 <option>American</option>
                                 <option>China</option>
                                 <option>indo</option>
                             </select>
-                                </div>
-                            </div>
-                        
-
 
                         </div>
-                    <ul class="list-unstyled components">
+
+                        <div class="tab-setting">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openEvent(event, 'Live')">Live</button>
+                            <button class="tablinks" onclick="openEvent(event, 'Live')">Future</button>
+                            <button class="tablinks" onclick="openEvent(event, 'Live')">Today</button>
+                        </div>
+                            </div>
+                        <script>
+                            function openEvent(evt, eventName) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablinks");
+                                for (i = 0; i < tablinks.length; i++) {
+                                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                }
+                                document.getElementById(eventName).style.display = "block";
+                                evt.currentTarget.className += " active";
+                            }
+                        </script>
+
+
+
+
+                    </div>
+                    <ul class="list-unstyled components tabcontent" id="Live">
                         <li class="active">
                             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-home"></i>
@@ -396,13 +419,23 @@
                 <!-- Sidebar Holder -->
                 <nav id="sidebar">
                     <div class="sidebar-header">
-                        <h3>Bootstrap Sidebar</h3>
+                        
 
                     </div>
                     <div class="card border-warning mb-3" style="max-width: 18rem;">
-                        <div class="card-header">Header</div>
-                        <div class="card-body text-warning">
-                            <h5 class="card-title">Warning card title</h5>
+                        <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
+                        <div class="card-body text-warning card-body-style">
+                            <h5 class="card-title card-title-style">Bet Title Here</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                       
+                        <div class="card-body text-warning card-body-style">
+                            <h5 class="card-title card-title-style">Bet Title Here</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      
+                        <div class="card-body text-warning card-body-style">
+                            <h5 class="card-title card-title-style">Bet Title Here</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
