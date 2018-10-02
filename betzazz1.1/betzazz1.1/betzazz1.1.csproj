@@ -223,21 +223,6 @@
     <Compile Include="AdminPanel\UserControl.aspx.designer.cs">
       <DependentUpon>UserControl.aspx</DependentUpon>
     </Compile>
-    <Compile Include="APDataModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>APDataModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="APDataModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>APDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="APDataModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>APDataModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -251,31 +236,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ModalData.cs">
-      <DependentUpon>UserControlModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SP_USERCONTROAL_Result.cs">
-      <DependentUpon>UserControlModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserControlModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserControlModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserControlModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserControlModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserControlModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserControlModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_s_Reg_Result.cs">
-      <DependentUpon>APDataModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPanel\AddBalanceaspx.aspx" />
@@ -384,16 +345,6 @@
     <Content Include="AdminPanel\vendor\font-awesome\css\font-awesome.min.css" />
     <Content Include="AdminPanel\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="AdminPanel\vendor\font-awesome\HELP-US-OUT.txt" />
-    <Content Include="APDataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>APDataModel.edmx</DependentUpon>
-      <LastGenOutput>APDataModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="APDataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>APDataModel.edmx</DependentUpon>
-      <LastGenOutput>APDataModel.cs</LastGenOutput>
-    </Content>
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
@@ -441,16 +392,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\UserControlModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserControlModel.edmx</DependentUpon>
-      <LastGenOutput>UserControlModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\UserControlModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserControlModel.edmx</DependentUpon>
-      <LastGenOutput>UserControlModel.cs</LastGenOutput>
-    </Content>
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2165,9 +2106,7 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-<<<<<<< HEAD
     <Content Include="data.json" />
-=======
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.eot" />
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.ttf" />
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.woff" />
@@ -2203,29 +2142,8 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
-<<<<<<< HEAD
     <Content Include="data.json" />
-=======
-
     <Content Include="data.json" />
-
->>>>>>> 33083d48165d0e8b4201766f116a5f36623a18e9
->>>>>>> 4770ef8b41b3ed8d61062a0b22169e54a6dca408
-    <EntityDeploy Include="APDataModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>APDataModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="APDataModel.edmx.diagram">
-      <DependentUpon>APDataModel.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Models\UserControlModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserControlModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\UserControlModel.edmx.diagram">
-      <DependentUpon>UserControlModel.edmx</DependentUpon>
-    </Content>
-<<<<<<< HEAD
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -2241,11 +2159,6 @@
     <Content Include="AdminPanel\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="AdminPanel\vendor\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Web.config" />
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 33083d48165d0e8b4201766f116a5f36623a18e9
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2260,7 +2173,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
->>>>>>> 4770ef8b41b3ed8d61062a0b22169e54a6dca408
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -2361,6 +2273,7 @@
     <Folder Include="AdminPanel\img\flags\" />
     <Folder Include="AdminPanel\vendor\font-awesome\less\" />
     <Folder Include="AdminPanel\vendor\font-awesome\scss\" />
+    <Folder Include="Models\" />
     <Folder Include="Views\Prematch\" />
   </ItemGroup>
   <ItemGroup>
