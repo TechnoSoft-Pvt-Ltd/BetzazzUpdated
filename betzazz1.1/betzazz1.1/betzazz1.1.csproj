@@ -2165,7 +2165,52 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+<<<<<<< HEAD
     <Content Include="data.json" />
+=======
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.eot" />
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.ttf" />
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.woff" />
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Boldd41d.eot" />
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Regular.eot" />
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Regular.ttf" />
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Regular.woff" />
+    <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Regulard41d.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\font-awesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\simple-line-icon\fonts\Simple-Line-Iconsb26c.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\simple-line-icon\fonts\Simple-Line-Iconsb26c.ttf" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\simple-line-icon\fonts\Simple-Line-Iconsb26c.woff" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\ti-icons\fonts\themify.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\ti-icons\fonts\themify.ttf" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\ti-icons\fonts\themify.woff" />
+    <Content Include="Content\AdminPanelCss\vendors\iconfonts\ti-icons\fonts\themifyd41d.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\lightgallery\fonts\lgd41d.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\lightgallery\fonts\lgd641.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\lightgallery\fonts\lgd641.ttf" />
+    <Content Include="Content\AdminPanelCss\vendors\lightgallery\fonts\lgd641.woff" />
+    <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.eot" />
+    <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
+    <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
+    <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
+<<<<<<< HEAD
+    <Content Include="data.json" />
+=======
+
+    <Content Include="data.json" />
+
+>>>>>>> 33083d48165d0e8b4201766f116a5f36623a18e9
+>>>>>>> 4770ef8b41b3ed8d61062a0b22169e54a6dca408
     <EntityDeploy Include="APDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>APDataModel.Designer.cs</LastGenOutput>
@@ -2180,6 +2225,7 @@
     <Content Include="Models\UserControlModel.edmx.diagram">
       <DependentUpon>UserControlModel.edmx</DependentUpon>
     </Content>
+<<<<<<< HEAD
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -2195,6 +2241,26 @@
     <Content Include="AdminPanel\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="AdminPanel\vendor\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Web.config" />
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 33083d48165d0e8b4201766f116a5f36623a18e9
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+>>>>>>> 4770ef8b41b3ed8d61062a0b22169e54a6dca408
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
