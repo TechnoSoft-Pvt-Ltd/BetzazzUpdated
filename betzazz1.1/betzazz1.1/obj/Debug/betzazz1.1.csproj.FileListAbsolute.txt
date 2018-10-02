@@ -911,7 +911,6 @@ C:\Users\7097\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\be
 C:\Users\7097\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.dll
 C:\Users\7097\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.pdb
 >>>>>>> 90baa0ebe9fe272f627d9492f0efb9b4d84c4046
-<<<<<<< HEAD
 C:\Users\Mohammad Umar\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\ApplicationInsights.config
 C:\Users\Mohammad Umar\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\betzazz1.1.dll.config
 C:\Users\Mohammad Umar\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\betzazz1.1.dll
@@ -1011,6 +1010,13 @@ C:\Users\Mohammad Umar\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin
 C:\Users\Mohammad Umar\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\PagedList.Mvc.dll
 C:\Users\Mohammad Umar\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\PagedList.xml
 C:\Users\Mohammad Umar\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\PagedList.Mvc.xml
-=======
 >>>>>>> fd46576e6ec139e873228716d090666b0638851c
 >>>>>>> b242815881d9bdcb3ddfe09e8d698fe2c0c270a2
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\EntityFramework.dll
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\EntityFramework.SqlServer.dll
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\PagedList.dll
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\PagedList.Mvc.dll
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\EntityFramework.xml
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\EntityFramework.SqlServer.xml
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\PagedList.xml
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\PagedList.Mvc.xml
