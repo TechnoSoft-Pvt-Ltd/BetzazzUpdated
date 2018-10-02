@@ -1431,16 +1431,16 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="md-form mb-4">
-                        <i class="fa fa-envelope prefix grey-text"></i>
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">User id</label>
+                        <input type="email" id="defaultForm-email" class="form-control validate" data-toggle="tooltip" title="Enter User id provided by Admin!">
 
                     </div>
 
-                    <div class="md-form mb-4">
-                        <i class="fa fa-lock prefix grey-text"></i>
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                    <div class="md-form m-b-4">
+                        <i class="fa fa-lock prefix grey-text"></i>&nbsp;
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass" class="container">Your password</label>
+                        <input type="password" id="defaultForm-pass" class="form-control validate" data-toggle="tooltip" title="Enter Password provided by Admin!">
 
                     </div>
 
@@ -1464,22 +1464,30 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="md-form mb-4">
-                        <i class="fa fa-envelope prefix grey-text"></i>
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
+                        <input type="text" id="txtUserName" class="form-control validate" data-toggle="tooltip" title="Enter Display Name!">
 
                     </div>
 
                     <div class="md-form mb-4">
-                        <i class="fa fa-lock prefix grey-text"></i>
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <i class="fa fa-usd prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Currency</label>
+                        <select class="form-control validate" data-toggle="tooltip" title="Select your country currency!">
+                            <option>INR</option>
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>GBP</option>
+                            <option>AED</option>
+                            <option>CAD</option>
+                            <option>AUD</option>
+                        </select>
 
                     </div>
                     <div class="md-form mb-4">
                         <i class="fa fa-lock prefix grey-text"></i>
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Confirm password</label>
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Email</label>
+                        <input type="email" id="defaultForm-pass" class="form-control validate" data-toggle="tooltip" title="Enter Email for all required communications!">
 
                     </div>
 
@@ -1491,8 +1499,6 @@
         </div>
     </div>
     <!--End Register Popup Modal-->
-   
-
     <!-- Footer -->
     <!-- JAVASCRIPT
     ================================================== -->
