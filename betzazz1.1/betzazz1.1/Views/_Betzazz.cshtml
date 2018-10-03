@@ -16,7 +16,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top " role="navigation">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 visible-lg  visible-sm">
+                <div class="col-xs-12 visible-lg visible-md ">
                     <div class="col-xs-2">
 
                         <a class="navbar-brand collapse navbar-collapse " id="bs-example-navbar-collapse-1" href="@Url.Action("Index","Default")"><img src="~/Content/assets/logo.png" /></a>
@@ -59,20 +59,19 @@
             <!-- /.navbar-collapse -->
         </div>  <!-- /.container-fluid -->
         <!-- Mobile Navbar Start -->
-        <div class="row">
 
-        </div>
-
-        <div class="visible-xs visible-md  text-center" style="align-items:center">
+        <div class="visible-xs  visible-sm text-center" style="align-items:center">
             <div class="pull-left">
-                <button type="button" class="btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal">
+                <button type="button" class=" btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal">
                     <i class="glyphicon glyphicon-align-left"></i>
-
                 </button>
             </div>
-            <a href="@Url.Action("Index","Default")"><img style="padding-left: 0px;" class="mx-auto" src="~/Content/assets/mlogo.png" /></a>
+            <span class="text-center" style="margin-bottom:-10px;">
+                <div class="visible-xs"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/mlogo.png" /></a></div>
+                <div class="visible-sm"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/logo.png" /></a></div>
+            </span>
             @*<i class="glyphicon glyphicon-user pull-right img-circle" style="padding:10px;color:#e49b1e"></i>*@
-            <div class="pull-right">
+            <div class="pull-right" style=" padding:10px;">
                 <span data-toggle="dropdown" data-hover="dropdown"><button class="glyphicon glyphicon-user img-circle" style="background-color:black; font-size: 10px;padding:10px;color:#e49b1e"></button></span>
                 @*<button class="btn btn-default dropdown-toggle glyphicon glyphicon-user pull-right img-circle" type="button" data-toggle="dropdown" data-hover="dropdown">
                         <span class="caret"></span>
@@ -88,9 +87,9 @@
               <a href="#" style="color:#fca104;text-decoration:none"> <span>LOGIN</span></a>
             </div>-->
         </div>
-
-        <div class="visible-xs text-center">
-            <ul class="nav navbar-nav my-nav ">
+        <hr style="background-color:#ce870d;margin-top: 0px; margin-bottom: 0;width:100%;">
+        <div class="visible-xs visible-sm text-center">
+            <ul class="nav navbar-nav my-nav" style="margin-top:-10px;">
                 <li><a href="@Url.Action("Inplay","Events")">In-Play</a></li>
                 <li><a href="@Url.Action("PreMatch","Events")">Coming Soon</a></li>
                 <li><a href="#">Sports</a></li>
@@ -120,7 +119,7 @@
     <div class="row">
 
 
-        <div class="col-sm-2 padding-left-pane">
+        <div class="col-sm-2 visible-lg visible-md padding-left-pane">
             <div class="wrapper hidden-xs body my-scrollbar-settings">
                 <!-- Sidebar Holder -->
                 <nav id="sidebar">
@@ -148,26 +147,11 @@
 
                         <div class="tab-setting">
                             <div class="tab">
-                                <button class="tablinks" onclick="openEvent(event, 'Live')">Live</button>
+                                <button class="tablinks" id="defaultOpen" onclick="openEvent(event, 'Live')">Live</button>
                                 <button class="tablinks" onclick="openEvent(event, 'Live')">Future</button>
                                 <button class="tablinks" onclick="openEvent(event, 'Live')">Today</button>
                             </div>
                         </div>
-                        <script>
-                            function openEvent(evt, eventName) {
-                                var i, tabcontent, tablinks;
-                                tabcontent = document.getElementsByClassName("tabcontent");
-                                for (i = 0; i < tabcontent.length; i++) {
-                                    tabcontent[i].style.display = "none";
-                                }
-                                tablinks = document.getElementsByClassName("tablinks");
-                                for (i = 0; i < tablinks.length; i++) {
-                                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                                }
-                                document.getElementById(eventName).style.display = "block";
-                                evt.currentTarget.className += " active";
-                            }
-                        </script>
 
 
 
@@ -215,18 +199,18 @@
                             <ul class="collapse list-unstyled" id="casino">
                                 <li><a href="#">Casino is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
                             <a href="#baseball" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-link"></i>
-                                Badmintion 
+                                Badmintion
                             </a>
                             <ul class="collapse list-unstyled" id="baseball">
                                 <li><a href="#">Baseball is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -237,7 +221,7 @@
                             <ul class="collapse list-unstyled" id="hocky">
                                 <li><a href="#"> Ice Hocky is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -248,7 +232,7 @@
                             <ul class="collapse list-unstyled" id="Basketball">
                                 <li><a href="#">  BasketBall is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -259,7 +243,7 @@
                             <ul class="collapse list-unstyled" id="TableTennis">
                                 <li><a href="#"> Table Tennis is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -270,7 +254,7 @@
                             <ul class="collapse list-unstyled" id="badminton">
                                 <li><a href="#"> Badmin is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                     </ul>
@@ -281,7 +265,7 @@
             </div>
         </div>
         <!-- left Moder Starting from Here for mobile only-->
-        <div class=" container visible-xs">
+        <div class=" container visible-xs visible-sm">
 
 
             <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -419,7 +403,7 @@
             </div>
         </div>
         <!-- for the third partition in the  screen-->
-        <div class="col-sm-2 padding-right-pane">
+        <div class="col-sm-2 visible-lg visible-md padding-right-pane">
             <div class="wrapper hidden-xs body my-scrollbar-settings">
                 <!-- Sidebar Holder -->
                 <nav id="sidebar">
@@ -427,67 +411,79 @@
 
 
                     </div>
-                    <div class="card border-warning mb-3" style="max-width: 18rem;">
-                        <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
+                    <div class="card border-warning mb-3 card-width">
+                        <div class="card-header card-header-style"><strong>ScoreCard</strong></div>
+                        <span class="topright">&times</span>
                         <div class="card-body text-warning card-body-style">
 
-                            <h5 class="card-title card-title-style">Pakistan vs India</h5>
-                            <table style="text-align:center">
-                                <tr><th>Match Odds</th></tr>
-                                <tr>
-                                    <th>
-                                       Selection
-                                    </th>
-                                    <th>Match Odds</th>
-                                <tr>
-                                    <td>Rate</td>
-                                    <td><input type="text" name="Rate" value="Rate">
-                                    <td>
-                                </tr>
-
-                                <tr>    <td>Stake</td><td><input type="text" name="Stake" value="Enter Stake Here"></td>
-                                <tr>
-
-                                <tr>
-                                    <td>Return</td>
-                                    <td>
-                                        <input type="text" name="Return" value="To Return">
-                                    </td>
-                                </tr>
-                                <tr><td><button class="btn btn-dark betslip-button">Submit</button></td><td><button class="btn btn-dark betslip-button">Close</button></td></tr>
-                            </table>
-                                </div>
-                       
-
-                            <h5 class="card-title card-title-style">Bet Title Here</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+                            <p class="card-text">Match Score will Be Display Here Match Score will Be Display Here Match Score will Be Display Here</p>
 
 
-                        <div class="card-body text-warning card-body-style">
-                            <h5 class="card-title card-title-style">Bet Title Here</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-
-                        <div class="card-body text-warning card-body-style">
-                            <h5 class="card-title card-title-style">Bet Title Here</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
-                    <ul class="list-unstyled components">
+                    <div class="card border-warning mb-3 card-width">
+                        <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
+                        <span class="topright">&times</span>
+                        <div class="card-body text-warning card-body-style">
+
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+
+                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">Match Odds</h5>
+                            <table style="margin-left: 5%;">
+                                @*<tr><th>Match Odds</th></tr>*@
+                                <tr>
+                                    <th class="my-td">
+                                        Selection
+                                    </th>
+                                    <th class="my-td">
+                                        Team Name
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="my-td" style="width:50%;">Rate</td>
+                                    <td><input type="text" name="Rate" value="7.50" style="width: 70%;" readonly>
+                                    <td>
+                                </tr>
+                                <tr>
+                                    <td class="my-td">Stake</td>
+                                    <td><input type="text" name="Stake" onfocus="this.value=''" value="Enter Stake" style="width: 70%;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="my-td">Return</td>
+                                    <td><input type="text" name="Return" value="To Return" style="width: 70%;" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button class="btn btn-dark betslip-button">Place Bet</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
 
 
+                        <h5 class="card-title card-title-style">Bet Title Here</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
 
-                        
 
+                    <div class="card-body text-warning card-body-style">
+                        <h5 class="card-title card-title-style">Bet Title Here</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
 
-                    </ul>
+                    <div class="card-body text-warning card-body-style">
+                        <h5 class="card-title card-title-style">Bet Title Here</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+</div>
+            <ul class="list-unstyled components"></ul>
 
-                </nav>
-                <!-- Page Content Holder -->
+            </nav>
+            <!-- Page Content Holder -->
 
-            </div>
         </div>
+    </div>
 
     </div>
     <!-- jQuery CDN -->
@@ -654,7 +650,7 @@
                     <div class="md-form mb-4">
                         <i class="glyphicon glyphicon-user"></i>
                         <label data-error="wrong" data-success="right" for="defaultForm-email">User id</label>
-                        <input type="email" id="defaultForm-email" class="form-control validate"  data-toggle="tooltip" title="Enter User id provided by Admin!">
+                        <input type="email" id="defaultForm-email" class="form-control validate" data-toggle="tooltip" title="Enter User id provided by Admin!">
 
                     </div>
 
@@ -693,7 +689,7 @@
 
                     <div class="md-form mb-4">
                         <i class="glyphicon glyphicon-usd"></i>
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass" >Currency</label>
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Currency</label>
                         <select class="form-control validate" data-toggle="tooltip" title="Select your country currency!">
                             <option>INR</option>
                             <option>USD</option>
@@ -706,7 +702,7 @@
 
                     </div>
                     <div class="md-form mb-4">
-                        <i class="glyphicon glyphicon-envelope""></i>
+                        <i class="glyphicon glyphicon-envelope"></i>
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Email</label>
                         <input type="email" id="defaultForm-pass" class="form-control validate" data-toggle="tooltip" title="Enter Email for all required communications!">
 
@@ -725,6 +721,25 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+<!--Script for the left pane tabs Live,Future,Today-->
+    <script>
+        function openEvent(evt, eventName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(eventName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
 
 </body>
 </html>
