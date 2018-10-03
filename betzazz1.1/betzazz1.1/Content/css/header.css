@@ -130,8 +130,8 @@ i, span {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    /*min-width: 250px;
+    max-width: 250px;*/
     background: #333333;
     color: #ce870d;
     transition: all 0.3s;
@@ -187,7 +187,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     content: '\e259';
     display: block;
     position: absolute;
-    left: 190px;
+    left: 90%;
     font-family: 'Glyphicons Halflings';
     font-size: 0.7em;
 }
@@ -280,7 +280,8 @@ body {
     }
 
 .my-dropdown-menu {
-    top: 20%;
+    top: 27%;
+    transition: 0.3s;
 }
 
 .my-m-scrollbar-settings {
@@ -376,6 +377,7 @@ body {
 }
 .my-card-body {
     background-color: #575656;
+   
 }
 
 .padding-left-pane{
@@ -397,7 +399,7 @@ body {
 }
     
 #inline {
-    width: 100%;
+    width: 113%;
     height: auto;
     background-color: #333;
     display: -webkit-box;
@@ -421,9 +423,11 @@ body {
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 4px 15px;
+        padding: 4px 0px;
         transition: 0.3s;
-        font-size: 14px;
+        font-size: 15px;
+        width:33.333%;
+        text-align:center
     }
 
         /* Change background color of buttons on hover */
@@ -442,12 +446,24 @@ body {
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
 }
 
+/* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    padding-right: 5%;
+}
+
+    .topright:hover {
+        color: red;
+        transition:0.3s;
+    }
+
 .tab-setting {
-    width: 196px;
+    width: 95%;
     height: 33px;
     margin-top: 5px;
 }
@@ -456,14 +472,15 @@ body {
     background-color: #ce870d;
     color: #333;
     margin: auto;
-    margin-right: -45px;
-    margin-left: -10px;
     font-size: 16px;
+    
+}
+.card-width {
+    max-width: 100%;
 }
 .card-body-style {
     background-color: #575656;
-    margin-right: -44px;
-    padding-left: 10px;
+    
 }
 .card-title-style {
     text-align: center;
@@ -474,5 +491,17 @@ body {
     padding: 0px 8px;
     background-color: #ce870d;
     margin-top: 12px;
-    color:#333;
+    margin-bottom: 12px;
+    color: #333;
+    border-radius: 0px;
+    width: 91%;
+}
+.betslip-button:hover{
+    background-color:forestgreen;
+    color:whitesmoke;
+    transition:0.3s;
+}
+.my-td {
+    color: #e49b1e;
+
 }
