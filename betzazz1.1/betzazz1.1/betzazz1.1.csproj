@@ -2106,13 +2106,12 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-<<<<<<< HEAD
 
     <Content Include="data.json" />
 
-=======
+
     <Content Include="data.json" />
->>>>>>> 4cbb419578acb912a734ecfd0ad9a2e15aa74102
+
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.eot" />
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.ttf" />
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.woff" />
@@ -2150,7 +2149,7 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
     <Content Include="data.json" />
     <Content Include="data.json" />
-<<<<<<< HEAD
+
 
 
     <EntityDeploy Include="APDataModel.edmx">
@@ -2168,10 +2167,10 @@
       <DependentUpon>UserControlModel.edmx</DependentUpon>
     </Content>
 
-=======
+
     <Content Include="data.json" />
     <Content Include="data.json" />
->>>>>>> 4cbb419578acb912a734ecfd0ad9a2e15aa74102
+
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -2187,12 +2186,11 @@
     <Content Include="AdminPanel\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="AdminPanel\vendor\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Web.config" />
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 4cbb419578acb912a734ecfd0ad9a2e15aa74102
+
+
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2207,10 +2205,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-<<<<<<< HEAD
 
-=======
->>>>>>> 4cbb419578acb912a734ecfd0ad9a2e15aa74102
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

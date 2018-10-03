@@ -118,6 +118,7 @@ a, a:hover, a:focus {
 
 i, span {
     display: inline-block;
+    margin-left: 4px;
 }
 
 /* ---------------------------------------------------
@@ -239,7 +240,7 @@ a.article, a.article:hover {
 
 .my-scrollbar-settings {
     display: block;
-    width: 100%;
+    width: 106%;
     height: 700px;
     overflow: scroll;
     overflow-x:hidden;
@@ -368,9 +369,10 @@ body {
    
 }
 .inplay {
-    background:#333;
-    font-size:12px;
-    margin-right:2px;
+    background: #333;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-right: 4px;
 }
 .my-card-body {
     background-color: #575656;
