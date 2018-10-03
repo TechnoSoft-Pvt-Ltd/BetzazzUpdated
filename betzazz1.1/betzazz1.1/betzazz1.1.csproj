@@ -226,6 +226,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BusnessLogics\Global.cs" />
     <Compile Include="Controllers\CricketController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
@@ -236,6 +237,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LiveEventList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2106,12 +2108,6 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-
-    <Content Include="data.json" />
-
-
-    <Content Include="data.json" />
-
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.eot" />
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.ttf" />
     <Content Include="Content\AdminPanelCss\fonts\PT_Sans\PTSans-Bold.woff" />
@@ -2147,30 +2143,6 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
-    <Content Include="data.json" />
-    <Content Include="data.json" />
-
-
-
-    <EntityDeploy Include="APDataModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>APDataModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="APDataModel.edmx.diagram">
-      <DependentUpon>APDataModel.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Models\UserControlModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserControlModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\UserControlModel.edmx.diagram">
-      <DependentUpon>UserControlModel.edmx</DependentUpon>
-    </Content>
-
-
-    <Content Include="data.json" />
-    <Content Include="data.json" />
-
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -2186,11 +2158,6 @@
     <Content Include="AdminPanel\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="AdminPanel\vendor\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Web.config" />
-
-
-
-
-
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2205,7 +2172,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -2306,7 +2272,6 @@
     <Folder Include="AdminPanel\img\flags\" />
     <Folder Include="AdminPanel\vendor\font-awesome\less\" />
     <Folder Include="AdminPanel\vendor\font-awesome\scss\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Prematch\" />
   </ItemGroup>
   <ItemGroup>
