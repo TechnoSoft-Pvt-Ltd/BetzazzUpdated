@@ -2144,6 +2144,7 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
+<<<<<<< HEAD
     <EntityDeploy Include="Models\UserControlModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>UserControlModel.Designer.cs</LastGenOutput>
@@ -2151,6 +2152,8 @@
     <Content Include="Models\UserControlModel.edmx.diagram">
       <DependentUpon>UserControlModel.edmx</DependentUpon>
     </Content>
+=======
+>>>>>>> 1566e11e02dd244394da7cc995d0637bdff42d35
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
