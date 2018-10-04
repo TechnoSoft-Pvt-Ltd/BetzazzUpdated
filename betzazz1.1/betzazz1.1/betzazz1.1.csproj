@@ -2179,9 +2179,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Inplay\Cricket.cshtml" />
     <Content Include="Views\Inplay\Football.cshtml" />
     <Content Include="Views\Inplay\Sport.cshtml" />
@@ -2268,6 +2265,7 @@
     <Content Include="Views\Football\PreMatch.cshtml" />
     <Content Include="Views\Tennis\Inplay.cshtml" />
     <Content Include="Views\Tennis\PreMatch.cshtml" />
+    <Content Include="Views\Tennis\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPanel\img\flags\" />
