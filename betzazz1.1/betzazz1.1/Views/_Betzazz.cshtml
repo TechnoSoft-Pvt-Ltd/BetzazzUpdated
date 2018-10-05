@@ -161,12 +161,58 @@
                         <li class="active">
                             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-home"></i>
-                                Cricket
+                                Cricket <span class="pull-right"style="padding-right:20px;">@ViewBag.CRTotalEvent</span>
                             </a>
                             <ul class="collapse list-unstyled" id="homeSubmenu">
-                                <li><a href="#">Test</a></li>
-                                <li><a href="#">T20</a></li>
-                                <li><a href="#">International One Day</a></li>
+                                <li>
+                                    <a href="#TestEvent" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;">  @ViewBag.LeagueName  </span>
+                                        <span class="pull-right" style="padding-right:20px">@ViewBag.TestCount</span>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="TestEvent">
+                                        @for (int i = 0; i < ViewBag.ArrTestData.Length; i++)
+                                        {
+                                            <li>
+                                                <button type="button" id="@ViewBag.Evntid[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrTestData[i]
+                                                </button>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;">  @ViewBag.T20LeagueName  </span>
+                                        <span class="pull-right" style="padding-right:20px">@ViewBag.T20Count</span>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="T20Event">
+                                        @for (int j = 0; j < ViewBag.ArrT20Data.Length; j++)
+                                        {
+                                            <li>
+                                                <button type="button" id="@ViewBag.T20EventId[j]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrT20Data[j]
+                                                </button>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#ODIEvent" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;">  @ViewBag.ODILeagueName  </span>
+                                        <span class="pull-right" style="padding-right:20px">@ViewBag.ODICount</span>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="ODIEvent">
+                                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
+                                        {
+                                            <li>
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrODIData[k]
+                                                </button>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+                                <li><a href="#">International One Day <span class="pull-right"></span></a></li>
                                 <li><a href="#">Premium League</a></li>
                             </ul>
                         </li>

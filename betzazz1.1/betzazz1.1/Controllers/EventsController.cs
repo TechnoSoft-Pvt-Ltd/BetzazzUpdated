@@ -22,105 +22,60 @@ namespace betzazz1._1.Controllers
         public static int crleagueid { get; set; }
         public static int ftleagueid { get; set; }
         public static string LeagueName { get; set; }
+        public static string T20LeagueName { get; set; }
+        public static string ODILeagueName { get; set; }
 
         // Methods for Inplay Cricket and Football
-        public ActionResult InPlay()
+        public ActionResult InPlay(string[] ArrTestData, string[] ArrT20Data, string[] ArrODIData,string[] Evntid, string[] T20EventId, string[] ODIEventId)
         {
-            //bool Doprocessing = true;
-            //while(Doprocessing)
-            //{
-            //    try
-            //    {
-            //        GBLClass.GetIPEventList();
-            //        string cripjson = GBLClass.CricketIPGetJson.ToString();
-            //        string ftipjson = GBLClass.FotballIPGetJson.ToString();
-            //        var serializer = new JavaScriptSerializer();
+            //test ts=new test();
+                GBLClass.InplayCR();
+           
 
-            //        LiveEventList CRLiveList = serializer.Deserialize<LiveEventList>(cripjson);
-            //        int matchCount = CRLiveList.results.Count();
-            //        if (CRLiveList.success == "1" && CRLiveList.results != null)
-            //        {
-            //            for (int i = 0; i < matchCount; i++)
-            //            {
-            //                FullNewEL FulLive = new FullNewEL();
-            //                FulLive.matchId = CRLiveList.results[1].id;
-            //                FulLive.sport_id = CRLiveList.results[i].sport_id;
-            //                FulLive.time = CRLiveList.results[i].time;
-            //                FulLive.timeStatus = CRLiveList.results[i].time_status;
-            //                FulLive.leagueId = CRLiveList.results[i].league.id;
-            //                FulLive.leagueName = CRLiveList.results[i].league.name;
-            //                FulLive.homeTeamId = CRLiveList.results[i].home.id;
-            //                FulLive.homeTeamName = CRLiveList.results[i].home.name;
-            //                FulLive.awayTeamId = CRLiveList.results[i].away.id;
-            //                FulLive.awayTeamName = CRLiveList.results[i].away.name;
-            //                int LocalLeaguid = Convert.ToInt32(FulLive.leagueId);
-            //                crleagueid = Convert.ToInt32(FulLive.leagueId);
-            //                if (FulLive.leagueName.Contains("Test") && crleagueid == LocalLeaguid)
-            //                {
-            //                    //test ts = new test();
-            //                    //LeagueName = FulLive.leagueName;
-            //                    //List<string> list = new List<string>();
-            //                    //list.Add(LeagueName);
-            //                    //LocalLeaguid = 0;
-            //                }
-            //                else
-            //                {
-            //                    LocalLeaguid = 0;
-            //                }
-            //            }
-            //        }
-
-            //        LiveEventList FTLiveList = serializer.Deserialize<LiveEventList>(ftipjson);
-            //        int matchcountFt = FTLiveList.results.Count();
-            //        if (FTLiveList.success == "1" && FTLiveList.results != null)
-            //        {
-            //            for (int j = 0; j < matchcountFt; j++)
-            //            {
-            //                FullNewELFT FTEventList = new FullNewELFT();
-            //                FTEventList.sport_id = FTLiveList.results[j].sport_id;
-            //                FTEventList.matchId = FTLiveList.results[j].id;
-            //                FTEventList.time = FTLiveList.results[j].time;
-            //                FTEventList.timeStatus = FTLiveList.results[j].time_status;
-            //                FTEventList.leagueId = FTLiveList.results[j].league.id;
-            //                FTEventList.leagueName = FTLiveList.results[j].league.name;
-            //                FTEventList.homeTeamId = FTLiveList.results[j].home.id;
-            //                FTEventList.homeTeamName = FTLiveList.results[j].home.name;
-            //                FTEventList.awayTeamId = FTLiveList.results[j].away.id;
-            //                FTEventList.awayTeamName = FTLiveList.results[j].away.name;
-            //                int LocalLeaguid = Convert.ToInt32(FTEventList.leagueId);
-            //                ftleagueid = Convert.ToInt32(FTEventList.leagueId);
-
-            //                if (FTEventList.leagueName.Contains("Test") && ftleagueid == LocalLeaguid)
-            //                {
-            //                    LocalLeaguid = 0;
-            //                }
-
-            //            }
-            //        }
-            //    }
-            //    catch (Exception et)
-            //{
-            //    throw et;
-            //}
-           // Thread.Sleep(1000);
-           // }
+            string GetTestData = GBLClass.TestData;
+            ArrTestData = GetTestData.Split('@');
+            int TestCount = ArrTestData.Length;
+            ViewBag.TestCount = TestCount;
+            ViewBag.ArrTestData = ArrTestData;
+            ViewBag.LeagueName = GBLClass.TestLeagueName;
+            string id = GBLClass.EventId;
+            Evntid = id.Split('@');
+            ViewBag.Evntid = Evntid;
             
 
+            string GetT20Data = GBLClass.T20Data;
+            ArrT20Data = GetT20Data.Split('@');
+            int T20Count = ArrTestData.Length;
+            ViewBag.T20Count = T20Count;
+            ViewBag.ArrT20Data = ArrT20Data;
+            ViewBag.T20LeagueName = GBLClass.T20LeagueName;
+            string idT20 = GBLClass.EventId1;
+            T20EventId = idT20.Split('@');
+            ViewBag.T20EventId = T20EventId;
+
+
+
+            string GetODIData = GBLClass.ODIData;
+            ArrODIData = GetODIData.Split('@');
+            int ODICount = ArrTestData.Length;
+            ViewBag.ODICount = ODICount;
+            ViewBag.ArrODIData = ArrODIData;
+            ViewBag.ODILeagueName = GBLClass.ODILeagueName;
+            string ODIid = GBLClass.EventId2;
+            ODIEventId = ODIid.Split('@');
+            ViewBag.ODIEventId = ODIEventId;
+
+            int CRTotalEvent = TestCount + T20Count + ODICount;
+            ViewBag.CRTotalEvent = CRTotalEvent;
             return View();
         }
+
+       
 
         // Methods for PreMatch Cricket and Football
         public ActionResult PreMatch()
         {
-            //bool DoProcessing = true;
-            //while(DoProcessing)
-            //{
-            //    GBLClass.GetPMEventList();
-            //    string crpmjson = GBLClass.CricketPMGetJson.ToString();
-            //    string ftpmjson = GBLClass.FotballPMGetJson.ToString();
-
-            //   // Thread.Sleep(1000);
-            //}
+           
             return View();
         }
 
