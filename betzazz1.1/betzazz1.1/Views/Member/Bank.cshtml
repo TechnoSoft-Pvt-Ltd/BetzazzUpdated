@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Bank";
+    Layout = "~/Views/_Betzazz.cshtml";
+}
+<div class="container-fluid middle-container">
+<h2>Banks</h2>
+<div class="tab-setting">
+    <div class="tab">
+        <button class="tablinksBank" id="defaultOpen" onclick="openBank(event, 'Deposit')">Deposit</button>
+        <button class="tablinksBank" onclick="openBank(event, 'Withdraw')">Withdraw</button>
+        <button class="tablinksBank" onclick="openBank(event, 'Deposit')">Transfer</button>
+    </div>
+</div>
+
+<ul class="list-unstyled components tabcontentBank" id="Deposit">
+    <li class="active">
+        <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false">
+            <i class="glyphicon glyphicon-home"></i>
+            Cricket
+        </a>
+        <ul class="collapse list-unstyled" id="homeSubmenu1">
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+        </ul>
+        <ul class="collapse list-unstyled" id="homeSubmenu2">
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">T20</a></li>
+            <li><a href="#">International One Day</a></li>
+            <li><a href="#">Premium League</a></li>
+
+        </ul>
+    </li>
+</ul>
+</div>
+
+
+
+    <!--Script for the Bank tabs -->
+    <script>
+        function openBank(evt, eventName) {
+            var i, tabcontentBank, tablinksBank;
+            tabcontentBank = document.getElementsByClassName("tabcontentBank");
+            for (i = 0; i < tabcontentBank.length; i++) {
+                tabcontentBank[i].style.display = "none";
+            }
+            tablinksBank = document.getElementsByClassName("tablinksBank");
+            for (i = 0; i < tablinksBank.length; i++) {
+                tablinksBank[i].className = tablinksBank[i].className.replace(" active", "");
+            }
+            document.getElementById(eventName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>

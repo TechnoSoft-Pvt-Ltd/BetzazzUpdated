@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Bets";
+    Layout = "~/Views/_Betzazz.cshtml";
+}
+
+<div class="container-fluid middle-container" >
+    <h2>Bets</h2>
+    <div class="tab-setting">
+        <div class="tab">
+            <button class="tablinksBank" style="width: 25%;" id="defaultOpen" onclick="openBank(event, 'Deposit')">Active Bets</button>
+            <button class="tablinksBank" style="width: 25%;" onclick="openBank(event, 'Withdraw')">Bets History</button>
+            <button class="tablinksBank" style="width: 25%;" onclick="openBank(event, 'Deposit')">Won</button>
+            <button class="tablinksBank" style="width: 25%;" onclick="openBank(event, 'Deposit')">Lost</button>
+        </div>
+    </div>
+
+    <ul class="list-unstyled components tabcontentBank" id="Withdraw">
+        <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                <i class="glyphicon glyphicon-home"></i>
+                Cricket
+            </a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li><a href="#">Test</a></li>
+                <li><a href="#">T20</a></li>
+                <li><a href="#">International One Day</a></li>
+                <li><a href="#">Premium League</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+<!--Script for the Bank tabs -->
+<script>
+        function openBank(evt, eventName) {
+            var i, tabcontentBank, tablinksBank;
+            tabcontentBank = document.getElementsByClassName("tabcontentBank");
+            for (i = 0; i < tabcontentBank.length; i++) {
+                tabcontentBank[i].style.display = "none";
+            }
+            tablinksBank = document.getElementsByClassName("tablinksBank");
+            for (i = 0; i < tablinksBank.length; i++) {
+                tablinksBank[i].className = tablinksBank[i].className.replace(" active", "");
+            }
+            document.getElementById(eventName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+</script>

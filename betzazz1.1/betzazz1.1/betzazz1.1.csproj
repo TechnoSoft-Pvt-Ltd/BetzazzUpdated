@@ -232,6 +232,7 @@
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\FootballController.cs" />
     <Compile Include="Controllers\InplayController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\PrematchController.cs" />
     <Compile Include="Controllers\TennisController.cs" />
     <Compile Include="Global.asax.cs">
@@ -371,7 +372,9 @@
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap\js\npm.js" />
     <Content Include="Content\css\header.css" />
+    <Content Include="Content\css\index.css" />
     <Content Include="Content\css\js\min.js" />
+    <Content Include="Content\css\preloader.js" />
     <Content Include="Content\icons\badminton-equipment.svg" />
     <Content Include="Content\icons\baseball %281%29.svg" />
     <Content Include="Content\icons\basketball %281%29.svg" />
@@ -398,6 +401,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\css\Preloader.css" />
     <Content Include="slider2.html" />
     <Content Include="slider\css\slider2.css" />
     <Content Include="slider\img\1920\c-navigator-horizontal.png" />
@@ -2144,7 +2148,10 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
+<<<<<<< HEAD
+=======
 
+>>>>>>> ed68381d2b9378729cddb34e234851e2dd3cf286
     <EntityDeploy Include="Models\UserControlModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>UserControlModel.Designer.cs</LastGenOutput>
@@ -2152,7 +2159,10 @@
     <Content Include="Models\UserControlModel.edmx.diagram">
       <DependentUpon>UserControlModel.edmx</DependentUpon>
     </Content>
+<<<<<<< HEAD
+=======
 
+>>>>>>> ed68381d2b9378729cddb34e234851e2dd3cf286
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -2274,7 +2284,13 @@
     <Content Include="Views\Football\PreMatch.cshtml" />
     <Content Include="Views\Tennis\Inplay.cshtml" />
     <Content Include="Views\Tennis\PreMatch.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\Member\Member.cshtml" />
+    <Content Include="Views\Member\Bank.cshtml" />
+    <Content Include="Views\Member\Bets.cshtml" />
+=======
     <Content Include="Views\Tennis\Index.cshtml" />
+>>>>>>> ed68381d2b9378729cddb34e234851e2dd3cf286
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPanel\img\flags\" />
