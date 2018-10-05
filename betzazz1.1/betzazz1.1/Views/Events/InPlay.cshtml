@@ -1,4 +1,5 @@
 ﻿
+@using System.Linq;
 @{
     ViewBag.Title = "InPlay";
     Layout = "~/Views/_Betzazz.cshtml";
@@ -23,13 +24,18 @@
                                 <li class="active">
 
                                     <a href="#Testinplayview" data-toggle="collapse" aria-expanded="false">
-                                        Test Matches  
+                                      <span style="font-size:14px;font-weight:bold">  @ViewBag.LeagueName  </span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="Testinplayview">
-                                        @*<button type="button"  value="@">Click Me!</button>*@
-                                        @foreach (var item in Model.Links)
+                                       
+                                       
+                                        @for(int i=0;i<ViewBag.ArrTestData.Length; i++)
                                          {
-                                            <li id="hyu"><a href="#">@item</a></li>
+                                            <li>                                           
+                                                <button type="button" id="@ViewBag.Evntid[i]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrTestData[i]
+                                                </button>
+                                            </li>
                                          }
                                     </ul>
                                 </li>
@@ -39,12 +45,17 @@
                             <ul class="list-unstyled components">
                                 <li class="active">
                                     <a href="#Ondayinplayview" data-toggle="collapse" aria-expanded="false">
-                                        One-Day Internationals
+                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.T20LeagueName  </span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="Ondayinplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                        @for (int j = 0; j < ViewBag.ArrT20Data.Length; j++)
+                                        {
+                                            <li>
+                                                <button type="button" id="@ViewBag.T20EventId[j]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrT20Data[j]
+                                                </button>
+                                            </li>
+                                        }
                                     </ul>
                                 </li>
                             </ul>
@@ -53,13 +64,18 @@
 
                             <ul class="list-unstyled components">
                                 <li class="active">
-                                    <a href="#T20inplayview" data-toggle="collapse" aria-expanded="false">
-                                        Twenty 20
+                                    <a href="#ODI1inplayview" data-toggle="collapse" aria-expanded="false">
+                                    <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="T20inplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                    <ul class="collapse list-unstyled" id="ODI1inplayview">
+                                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
+                                         {
+                                            <li>
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrODIData[k]
+                                                </button>
+                                            </li>
+                                         }
                                     </ul>
                                 </li>
                             </ul>
@@ -68,13 +84,18 @@
 
                             <ul class="list-unstyled components">
                                 <li class="active">
-                                    <a href="#T20Intinplayview" data-toggle="collapse" aria-expanded="false">
-                                        Twenty 20 Internationals
+                                    <a href="#ODIinplayview" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="T20Intinplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                    <ul class="collapse list-unstyled" id="ODIinplayview">
+                                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
+                                        {
+                                            <li>
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrODIData[k]
+                                                </button>
+                                            </li>
+                                        }
                                     </ul>
                                 </li>
                             </ul>
@@ -82,13 +103,18 @@
                         <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                             <ul class="list-unstyled components">
                                 <li class="active">
-                                    <a href="#PLinplayview" data-toggle="collapse" aria-expanded="false">
-                                        Premier league
+                                    <a href="#ODI2inplayview" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="PLinplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                    <ul class="collapse list-unstyled" id="ODI2inplayview">
+                                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
+                                        {
+                                            <li>
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrODIData[k]
+                                                </button>
+                                            </li>
+                                        }
                                     </ul>
                                 </li>
                             </ul>
@@ -120,13 +146,18 @@
                         <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                             <ul class="list-unstyled components">
                                 <li class="active">
-                                    <a href="#FTOndayinplayview" data-toggle="collapse" aria-expanded="false">
-                                        One-Day Internationals
+                                    <a href="#T20inplayview" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="FTOndayinplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                    <ul class="collapse list-unstyled" id="T20inplayview">
+                                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
+                                        {
+                                            <li>
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    @ViewBag.ArrODIData[k]
+                                                </button>
+                                            </li>
+                                        }
                                     </ul>
                                 </li>
                             </ul>

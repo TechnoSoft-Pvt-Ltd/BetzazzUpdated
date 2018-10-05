@@ -503,5 +503,19 @@ body {
 }
 .my-td {
     color: #e49b1e;
+   
+}
+.button1 {
+    background-color: transparent;
+    color: #ce870d;
+    font-weight: bold;
+    height:30px;
+    font-size:12px;
 
 }
+
+    .button1:hover {
+        background-color: #dc9a29;
+        color: black;
+        font-weight:bold;
+    }

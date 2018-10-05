@@ -29,12 +29,24 @@ namespace betzazz1._1.BusnessLogics
 
         public static int crleagueid { get; set; }
         public  int ftleagueid { get; set; }
-       
 
-
-        public string  LeagueName { get; set; }
+        public string TestLeagueName { get; set; }
+        public string TestData { get; set; }
         public string EventId { get; set; }
-        public string EventName { get; set; }
+        public string EventId1 { get; set; }
+        public string EventId2 { get; set; }
+        public string EventI3 { get; set; }
+
+        public string T20Data { get; set; }
+        public string T20LeagueName { get; set; }
+
+
+        public string ODIData { get; set; }
+        public string ODILeagueName { get; set; }
+
+        //public string  LeagueName { get; set; }
+        //public string EventId { get; set; }
+        //public string EventName { get; set; }
 
 
         // Funtion for Get Inplay Event JSON String from Data Base.
@@ -163,18 +175,48 @@ namespace betzazz1._1.BusnessLogics
                             crleagueid = Convert.ToInt32(FulLive.leagueId);
                             if (FulLive.leagueName.Contains("Test") && crleagueid == LocalLeaguid)
                             {
-                                //test ts = new test();
-                                LeagueName = FulLive.leagueName;
-                                EventId = FulLive.matchId;
-                                EventName = FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
+                               if (TestData == null && EventId==null)
+                               {
+                                TestLeagueName = FulLive.leagueName;
+                                EventId = EventId + CRLiveList.results[i].id;
+                                TestData = TestData + FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
+                               }
+                               else
+                               {
+                                EventId = EventId +"@"+ CRLiveList.results[i].id;
+                                TestData = TestData + "@" + FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
+                               }                              
                                 LocalLeaguid = 0;
                             }
                             else if((FulLive.leagueName.Contains("T20") && crleagueid == LocalLeaguid))
                             {
-                            LeagueName = FulLive.leagueName;
-                            EventId = FulLive.matchId;
-                            EventName = FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
-                            LocalLeaguid = 0;
+                              if (T20Data == null && EventId1 == null)
+                              {
+                                T20LeagueName= FulLive.leagueName;
+                                EventId1= EventId1 + CRLiveList.results[i].id;
+                                T20Data = T20Data + FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
+                              }
+                              else
+                              {
+                                EventId1 = EventId1 + "@" + CRLiveList.results[i].id;
+                                T20Data = T20Data + "@" + FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
+                              }
+                               LocalLeaguid = 0;
+                            }
+                            else if ((FulLive.leagueName.Contains("ODI") && crleagueid == LocalLeaguid))
+                            {
+                              if (ODIData == null && EventId2 == null)
+                              {
+                                ODILeagueName= FulLive.leagueName;
+                                EventId2 = EventId2 + CRLiveList.results[i].id;
+                                ODIData = ODIData + FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
+                              }
+                              else
+                              {
+                                EventId2 = EventId2 + "@" + CRLiveList.results[i].id;
+                                ODIData = ODIData + "@" + FulLive.homeTeamName + " VS " + FulLive.awayTeamName;
+                              }
+                                LocalLeaguid = 0;
                             }
                         }
                     }
