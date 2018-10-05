@@ -105,9 +105,9 @@
                 <li><a href="@Url.Action("Inplay","Football")">Football</a></li>
                 <li><a href="@Url.Action("Inplay","Cricket")">Cricket</a></li>
                 <li><a href="@Url.Action("Inplay","Tennis")">Tennis</a></li>
-                <li><a href="#">Virtual Sport</a></li>
-                <li><a href="#">Tournaments</a></li>
-                <li><a href="#">Games</a></li>
+                <li><a href="@Url.Action("Bank","Member")">Virtual Sport</a></li>
+                <li><a href="@Url.Action("Member","Member")">Tournaments</a></li>
+                <li><a href="@Url.Action("Bets","Member")">Games</a></li>
                 <li><a href="#">Fantasy Sport</a></li>
                 <li><a href="#">Finebet</a></li>
                 <li><a href="#">Casino</a></li>
@@ -391,99 +391,101 @@
 
         <!----------------------------------- left Model Ending here ------------------------------->
         <div class="col-md-8 mypadding padding-center-pane">
+            <div class="container-fluid middle-container">
 
-            <div class="app-content content">
-                <div class="content-wrapper">
+                <div class="app-content content">
+                    <div class="content-wrapper">
 
 
 
-                    @RenderBody()
-                    <br />
+                        @RenderBody()
+                        <br />
+                    </div>
+                </div>
                 </div>
             </div>
-        </div>
-        <!-- for the third partition in the  screen-->
-        <div class="col-sm-2 visible-lg visible-md padding-right-pane">
-            <div class="wrapper hidden-xs body my-scrollbar-settings">
-                <!-- Sidebar Holder -->
-                <nav id="sidebar">
-                    <div class="sidebar-header">
-
-
-                    </div>
-                    <div class="card border-warning mb-3 card-width">
-                        <div class="card-header card-header-style"><strong>ScoreCard</strong></div>
-                        <span class="topright">&times</span>
-                        <div class="card-body text-warning card-body-style">
-
-                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
-                            <p class="card-text">Match Score will Be Display Here Match Score will Be Display Here Match Score will Be Display Here</p>
+            <!-- for the third partition in the  screen-->
+            <div class="col-sm-2 visible-lg visible-md padding-right-pane">
+                <div class="wrapper hidden-xs body my-scrollbar-settings">
+                    <!-- Sidebar Holder -->
+                    <nav id="sidebar">
+                        <div class="sidebar-header">
 
 
                         </div>
-                    </div>
-                    <div class="card border-warning mb-3 card-width">
-                        <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
-                        <span class="topright">&times</span>
-                        <div class="card-body text-warning card-body-style">
+                        <div class="card border-warning mb-3 card-width">
+                            <div class="card-header card-header-style"><strong>ScoreCard</strong></div>
+                            <span class="topright">&times</span>
+                            <div class="card-body text-warning card-body-style">
 
-                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+                                <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+                                <p class="card-text">Match Score will Be Display Here Match Score will Be Display Here Match Score will Be Display Here</p>
 
-                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">Match Odds</h5>
-                            <table style="margin-left: 5%;">
-                                @*<tr><th>Match Odds</th></tr>*@
-                                <tr>
-                                    <th class="my-td">
-                                        Selection
-                                    </th>
-                                    <th class="my-td">
-                                        Team Name
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td class="my-td" style="width:50%;">Rate</td>
-                                    <td><input type="text" name="Rate" value="7.50" style="width: 70%;" readonly>
-                                    <td>
-                                </tr>
-                                <tr>
-                                    <td class="my-td">Stake</td>
-                                    <td><input type="text" name="Stake" onfocus="this.value=''" value="Enter Stake" style="width: 70%;"></td>
-                                </tr>
-                                <tr>
-                                    <td class="my-td">Return</td>
-                                    <td><input type="text" name="Return" value="To Return" style="width: 70%;" readonly></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <button class="btn btn-dark betslip-button">Place Bet</button>
-                                    </td>
-                                </tr>
-                            </table>
+
+                            </div>
+                        </div>
+                        <div class="card border-warning mb-3 card-width">
+                            <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
+                            <span class="topright">&times</span>
+                            <div class="card-body text-warning card-body-style">
+
+                                <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+
+                                <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">Match Odds</h5>
+                                <table style="margin-left: 5%;">
+                                    @*<tr><th>Match Odds</th></tr>*@
+                                    <tr>
+                                        <th class="my-td">
+                                            Selection
+                                        </th>
+                                        <th class="my-td">
+                                            Team Name
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td class="my-td" style="width:50%;">Rate</td>
+                                        <td><input type="text" name="Rate" value="7.50" style="width: 70%;" readonly>
+                                        <td>
+                                    </tr>
+                                    <tr>
+                                        <td class="my-td">Stake</td>
+                                        <td><input type="text" name="Stake" onfocus="this.value=''" value="Enter Stake" style="width: 70%;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="my-td">Return</td>
+                                        <td><input type="text" name="Return" value="To Return" style="width: 70%;" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <button class="btn btn-dark betslip-button">Place Bet</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+                            <h5 class="card-title card-title-style">Bet Title Here</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
 
 
-                        <h5 class="card-title card-title-style">Bet Title Here</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
+                        <div class="card-body text-warning card-body-style">
+                            <h5 class="card-title card-title-style">Bet Title Here</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
 
+                        <div class="card-body text-warning card-body-style">
+                            <h5 class="card-title card-title-style">Bet Title Here</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                </div>
+                <ul class="list-unstyled components"></ul>
 
-                    <div class="card-body text-warning card-body-style">
-                        <h5 class="card-title card-title-style">Bet Title Here</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
+                </nav>
+                <!-- Page Content Holder -->
 
-                    <div class="card-body text-warning card-body-style">
-                        <h5 class="card-title card-title-style">Bet Title Here</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-</div>
-            <ul class="list-unstyled components"></ul>
-
-            </nav>
-            <!-- Page Content Holder -->
-
+            </div>
         </div>
-    </div>
 
     </div>
     <!-- jQuery CDN -->
