@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-
+@using System.Collections;
 <html lang="en">
 <head>
     <title>@ViewBag.Title</title>
@@ -161,57 +161,75 @@
                         <li class="active">
                             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-home"></i>
-                                Cricket <span class="pull-right"style="padding-right:20px;">@ViewBag.CRTotalEvent</span>
+                                Cricket <span class="pull-right" style="padding-right:20px;">@Session["CRTotalEvent"]</span>
                             </a>
                             <ul class="collapse list-unstyled" id="homeSubmenu">
                                 <li>
                                     <a href="#TestEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">  @ViewBag.LeagueName  </span>
-                                        <span class="pull-right" style="padding-right:20px">@ViewBag.TestCount</span>
+                                        <span style="font-size:14px;font-weight:bold;">@HttpContext.Current.Session["LeagueName"].ToString()  </span>
+                                        <span class="pull-right" style="padding-right:20px">@Session["TestCount"]</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="TestEvent">
-                                        @for (int i = 0; i < ViewBag.ArrTestData.Length; i++)
+                                        @if (Session["TstEventName"].ToString() != null)
                                         {
-                                            <li>
-                                                <button type="button" id="@ViewBag.Evntid[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                    @ViewBag.ArrTestData[i]
-                                                </button>
-                                            </li>
+                                            ArrayList EventList = (ArrayList)Session["TstEventName"];
+                                            ArrayList EventId = (ArrayList)Session["Evntid"];
+
+                                            for (int i = 0; i < EventList.Count; i++)
+                                            {
+                                                <li>
+                                                    <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @EventList[i]
+                                                    </button>
+                                                </li>
+                                            }
                                         }
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">  @ViewBag.T20LeagueName  </span>
-                                        <span class="pull-right" style="padding-right:20px">@ViewBag.T20Count</span>
-                                    </a>
-                                    <ul class="collapse list-unstyled" id="T20Event">
-                                        @for (int j = 0; j < ViewBag.ArrT20Data.Length; j++)
-                                        {
-                                            <li>
-                                                <button type="button" id="@ViewBag.T20EventId[j]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                    @ViewBag.ArrT20Data[j]
-                                                </button>
-                                            </li>
-                                        }
-                                    </ul>
+                                      <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["T20LeagueName"].ToString()  </span>
+                                        <span class="pull-right" style="padding-right:20px">@Session["T20Count"]</span>
+                                      </a>
+                                      <ul class="collapse list-unstyled" id="T20Event">
+                                          @if (Session["T20EventName"].ToString() != null)
+                                          {
+                                              ArrayList T20EventList = (ArrayList)Session["T20EventName"];
+                                              ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
+
+                                              for (int i = 0; i < T20EventList.Count; i++)
+                                              {
+                                                  <li>
+                                                      <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                          @T20EventList[i]
+                                                      </button>
+                                                  </li>
+                                              }
+                                          }
+                                      </ul>
                                 </li>
-                                <li>
-                                    <a href="#ODIEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">  @ViewBag.ODILeagueName  </span>
-                                        <span class="pull-right" style="padding-right:20px">@ViewBag.ODICount</span>
-                                    </a>
-                                    <ul class="collapse list-unstyled" id="ODIEvent">
-                                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
-                                        {
-                                            <li>
-                                                <button type="button" id="@ViewBag.ODIEventId[k]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                    @ViewBag.ArrODIData[k]
-                                                </button>
-                                            </li>
-                                        }
-                                    </ul>
-                                </li>
+                               <li>
+                                       <a href="#ODIEvent" data-toggle="collapse" aria-expanded="false">
+                                           <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["ODILeagueName"].ToString()   </span>
+                                           <span class="pull-right" style="padding-right:20px">@Session["ODICount"]</span>
+                                       </a>
+                                       <ul class="collapse list-unstyled" id="ODIEvent">
+                                           @if (Session["ODIEventName"].ToString() != null)
+                                           {
+                                               ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
+                                               ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
+
+                                               for (int i = 0; i < ODIEventList.Count; i++)
+                                               {
+                                                   <li>
+                                                       <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                           @ODIEventList[i]
+                                                       </button>
+                                                   </li>
+                                               }
+                                           }
+                                       </ul>
+                               </li>
                                 <li><a href="#">International One Day <span class="pull-right"></span></a></li>
                                 <li><a href="#">Premium League</a></li>
                             </ul>
@@ -327,12 +345,75 @@
                                 <div class="eventbDiv">
                                     <a href="#CricketMenu" data-toggle="collapse" aria-expanded="false">
                                         <i class="glyphicon glyphicon-home my-giphyicon"></i>
-                                        Cricket
+                                        Cricket <span class="pull-right" style="padding-right:20px;">@Session["CRTotalEvent"]</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="CricketMenu">
-                                        <li><a href="#">Test</a></li>
-                                        <li><a href="#">T20</a></li>
-                                        <li><a href="#">International One Day</a></li>
+                                        <li>
+                                            <a href="#MTestEvent" data-toggle="collapse" aria-expanded="false">
+                                                <span style="font-size:12px;font-weight:bold;">@HttpContext.Current.Session["LeagueName"].ToString()  </span>
+                                                <span class="pull-right" style="padding-right:20px">@Session["TestCount"]</span>
+                                            </a>
+                                            <ul class="collapse list-unstyled" id="MTestEvent">
+                                                @if (Session["TstEventName"].ToString() != null)
+                                                {
+                                                    ArrayList EventList = (ArrayList)Session["TstEventName"];
+                                                    ArrayList EventId = (ArrayList)Session["Evntid"];
+
+                                                    for (int i = 0; i < EventList.Count; i++)
+                                                    {
+                                                        <li>
+                                                            <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                                @EventList[i]
+                                                            </button>
+                                                        </li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#MT20Event" data-toggle="collapse" aria-expanded="false">
+                                                <span style="font-size:12px;font-weight:bold;">  @HttpContext.Current.Session["T20LeagueName"].ToString()  </span>
+                                                <span class="pull-right" style="padding-right:20px">@Session["T20Count"]</span>
+                                            </a>
+                                            <ul class="collapse list-unstyled" id="MT20Event">
+                                                @if (Session["T20EventName"].ToString() != null)
+                                                {
+                                                    ArrayList T20EventList = (ArrayList)Session["T20EventName"];
+                                                    ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
+
+                                                    for (int i = 0; i < T20EventList.Count; i++)
+                                                    {
+                                                        <li>
+                                                            <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                                @T20EventList[i]
+                                                            </button>
+                                                        </li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#MODIEvent" data-toggle="collapse" aria-expanded="false">
+                                                <span style="font-size:12px;font-weight:bold;">  @HttpContext.Current.Session["ODILeagueName"].ToString()   </span>
+                                                <span class="pull-right" style="padding-right:20px">@Session["ODICount"]</span>
+                                            </a>
+                                            <ul class="collapse list-unstyled" id="MODIEvent">
+                                                @if (Session["ODIEventName"].ToString() != null)
+                                                {
+                                                    ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
+                                                    ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
+
+                                                    for (int i = 0; i < ODIEventList.Count; i++)
+                                                    {
+                                                        <li>
+                                                            <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                                @ODIEventList[i]
+                                                            </button>
+                                                        </li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </li>
                                         <li><a href="#">Premium League</a></li>
                                     </ul>
                                 </div>
@@ -448,90 +529,90 @@
                         <br />
                     </div>
                 </div>
-                </div>
-            </div>
-            <!-- for the third partition in the  screen-->
-            <div class="col-sm-2 visible-lg visible-md padding-right-pane">
-                <div class="wrapper hidden-xs body my-scrollbar-settings">
-                    <!-- Sidebar Holder -->
-                    <nav id="sidebar">
-                        <div class="sidebar-header">
-
-
-                        </div>
-                        <div class="card border-warning mb-3 card-width">
-                            <div class="card-header card-header-style"><strong>ScoreCard</strong></div>
-                            <span class="topright">&times</span>
-                            <div class="card-body text-warning card-body-style">
-
-                                <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
-                                <p class="card-text">Match Score will Be Display Here Match Score will Be Display Here Match Score will Be Display Here</p>
-
-
-                            </div>
-                        </div>
-                        <div class="card border-warning mb-3 card-width">
-                            <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
-                            <span class="topright">&times</span>
-                            <div class="card-body text-warning card-body-style">
-
-                                <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
-
-                                <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">Match Odds</h5>
-                                <table style="margin-left: 5%;">
-                                    @*<tr><th>Match Odds</th></tr>*@
-                                    <tr>
-                                        <th class="my-td">
-                                            Selection
-                                        </th>
-                                        <th class="my-td">
-                                            Team Name
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td class="my-td" style="width:50%;">Rate</td>
-                                        <td><input type="text" name="Rate" value="7.50" style="width: 70%;" readonly>
-                                        <td>
-                                    </tr>
-                                    <tr>
-                                        <td class="my-td">Stake</td>
-                                        <td><input type="text" name="Stake" onfocus="this.value=''" value="Enter Stake" style="width: 70%;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="my-td">Return</td>
-                                        <td><input type="text" name="Return" value="To Return" style="width: 70%;" readonly></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <button class="btn btn-dark betslip-button">Place Bet</button>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-
-
-                            <h5 class="card-title card-title-style">Bet Title Here</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-
-
-                        <div class="card-body text-warning card-body-style">
-                            <h5 class="card-title card-title-style">Bet Title Here</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-
-                        <div class="card-body text-warning card-body-style">
-                            <h5 class="card-title card-title-style">Bet Title Here</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                </div>
-                <ul class="list-unstyled components"></ul>
-
-                </nav>
-                <!-- Page Content Holder -->
-
             </div>
         </div>
+        <!-- for the third partition in the  screen-->
+        <div class="col-sm-2 visible-lg visible-md padding-right-pane">
+            <div class="wrapper hidden-xs body my-scrollbar-settings">
+                <!-- Sidebar Holder -->
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+
+
+                    </div>
+                    <div class="card border-warning mb-3 card-width">
+                        <div class="card-header card-header-style"><strong>ScoreCard</strong></div>
+                        <span class="topright">&times</span>
+                        <div class="card-body text-warning card-body-style">
+
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+                            <p class="card-text">Match Score will Be Display Here Match Score will Be Display Here Match Score will Be Display Here</p>
+
+
+                        </div>
+                    </div>
+                    <div class="card border-warning mb-3 card-width">
+                        <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
+                        <span class="topright">&times</span>
+                        <div class="card-body text-warning card-body-style">
+
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+
+                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">Match Odds</h5>
+                            <table style="margin-left: 5%;">
+                                @*<tr><th>Match Odds</th></tr>*@
+                                <tr>
+                                    <th class="my-td">
+                                        Selection
+                                    </th>
+                                    <th class="my-td">
+                                        Team Name
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="my-td" style="width:50%;">Rate</td>
+                                    <td><input type="text" name="Rate" value="7.50" style="width: 70%;" readonly>
+                                    <td>
+                                </tr>
+                                <tr>
+                                    <td class="my-td">Stake</td>
+                                    <td><input type="text" name="Stake" onfocus="this.value=''" value="Enter Stake" style="width: 70%;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="my-td">Return</td>
+                                    <td><input type="text" name="Return" value="To Return" style="width: 70%;" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button class="btn btn-dark betslip-button">Place Bet</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+
+                        <h5 class="card-title card-title-style">Bet Title Here</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+
+                    <div class="card-body text-warning card-body-style">
+                        <h5 class="card-title card-title-style">Bet Title Here</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                    <div class="card-body text-warning card-body-style">
+                        <h5 class="card-title card-title-style">Bet Title Here</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+            </div>
+            <ul class="list-unstyled components"></ul>
+
+            </nav>
+            <!-- Page Content Holder -->
+
+        </div>
+    </div>
 
     </div>
     <!-- jQuery CDN -->
@@ -769,7 +850,7 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
-<!--Script for the left pane tabs Live,Future,Today-->
+    <!--Script for the left pane tabs Live,Future,Today-->
     <script>
         function openEvent(evt, eventName) {
             var i, tabcontent, tablinks;

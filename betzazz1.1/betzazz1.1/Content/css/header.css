@@ -520,7 +520,7 @@ body {
     font-size:12px;
 
 }
-<<<<<<< HEAD
+
 .close:hover {
     color: red;
     text-shadow: 0 1px 0 #c5220d;
@@ -536,11 +536,11 @@ body {
     overflow:scroll;
     overflow-x:hidden;
 }
-=======
+
 
     .button1:hover {
         background-color: #dc9a29;
         color: black;
         font-weight:bold;
     }
->>>>>>> ed68381d2b9378729cddb34e234851e2dd3cf286
+

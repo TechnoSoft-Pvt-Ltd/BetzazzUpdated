@@ -1,101 +1,4 @@
-<<<<<<< HEAD
-﻿
-<!DOCTYPE html>
-@{
-    Layout = null;
-}
-<html>
-<head>
-    <title>Betzazz-Online Gaming</title>
-    <!-- Libs CSS -->
-    <link href="~/website/assets/fonts/feather/feather.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/website/assets/libs/highlight/styles/vs2015.min.css">
-    <link rel="stylesheet" href="~/website/assets/libs/quill/dist/quill.core.css">
-    <link rel="stylesheet" href="~/website/assets/libs/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="~/website/assets/libs/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <base href="~/src/" />
-    <!-- Theme CSS -->
-    <!-- Values are "toggle", "light", and "dark". See "Getting Started" for more information -->
-    <!-- Toggle Mode: For demo only, but allows a user to seamlessly toggle between light/dark modes -->
 
-    <link href="~/website/assets/css/theme-dark.min.css" rel="" data-toggle="theme" data-theme-mode="dark">
-    <link href="~/website/assets/css/theme.min.css" rel="" data-toggle="theme" data-theme-mode="light">
-
-    <style>
-
-        body {
-            display: none;
-        }
-    </style>
-    <script>
-        var themeMode = (localStorage.getItem('dashkitThemeMode')) ? localStorage.getItem('dashkitThemeMode') : 'light';
-        var themeFile = document.querySelector('[data-toggle="theme"][data-theme-mode="' + themeMode + '"]');
-
-        // Enable stylesheet
-        themeFile.rel = 'stylesheet';
-
-        // Enable body content
-        themeFile.addEventListener('load', function () {
-            document.body.style.display = 'block';
-        });
-    </script>
-
-    <!-- Dark Mode -->
-    <!-- Light Mode -->
-
-</head>
-
-<body style="background-color:#333">
-  
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-md navbar-light d-none d-md-flex fixed-top d-block">
-        <div class="container-fluid">
-
-            <!-- Links -->
-            <div class="d-none d-sm-block">
-                <a class="img-responsive" href="@Url.Action("Index","Default")">
-                    <img src="~/website/assets/img/logo.png" class="img-responsive" alt="..." style="height:60px;width:208px">
-                </a>
-            </div>
-            <div class="d-block d-sm-none">
-                <a class="img-responsive" href="@Url.Action("Index","Default")">
-                    <img src="~/website/assets/img/logoxs.png" class="img-responsive" alt="..." style="height:30px;width:100px">
-                </a>
-            </div>
-            <!-- Form -->
-            <form class="form-inline mr-4 d-none d-md-flex">
-                <div class="input-group-merge">
-                    <label class="toggle" for="toggle">&#9776; <span>Menue</span></label>
-                    <ul class="nav nav-tabs nav-tabs-sm nav-overflow">
-                        <li class="nav-item">
-                            <a href="@Url.Action("Inplay","Events")" class="nav-link ">
-                                In-Play
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="@Url.Action("PreMatch","Events")" class="nav-link ">
-                                Coming Soon
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                Sports
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                Casino
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                Games
-                            </a>
-                        </li>
-                    </ul>
-=======
-﻿@*<div class="js">*@ <!--preloader div-->
     <!DOCTYPE html>
     @{
         Layout = null;
@@ -152,7 +55,7 @@
             <!-- NavBar -->
             <nav class="navbar navbar-expand-md navbar-light d-none d-md-flex fixed-top d-block">
                 <div class="container-fluid">
->>>>>>> 54667b759b503c9af8033979ffd8c5258b0e442d
+
 
                     <!-- Links -->
                     <div class="d-none d-sm-block">
@@ -1625,4 +1528,3 @@
     </div></body>
 
 </html>
-@*</div>*@
