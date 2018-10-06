@@ -536,17 +536,19 @@ body {
     overflow:scroll;
     overflow-x:hidden;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4d9876ab09ef9d34269e5ea581813819e175809d
-
 .button1:hover {
         background-color: #dc9a29;
         color: black;
         font-weight:bold;
-    }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4d9876ab09ef9d34269e5ea581813819e175809d
+}
+.my-button-betslip {
+    width: 70%;
+    background: #777;
+    font-weight: bold;
+    font-size: 12px;
+    color: #f19c0a;
+    border:none;
+    border-color: #dc9a29;
+}
+
