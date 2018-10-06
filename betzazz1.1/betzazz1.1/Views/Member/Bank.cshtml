@@ -4,91 +4,139 @@
     Layout = "~/Views/_Betzazz.cshtml";
 }
 <div class="container-fluid middle-container">
-<h2>Banks</h2>
-<div class="tab-setting">
-    <div class="tab">
-        <button class="tablinksBank" id="defaultOpen" onclick="openBank(event, 'Deposit')">Deposit</button>
-        <button class="tablinksBank" onclick="openBank(event, 'Withdraw')">Withdraw</button>
-        <button class="tablinksBank" onclick="openBank(event, 'Deposit')">Transfer</button>
+    <h2>Banks</h2>
+    <div class="tab-setting">
+        <div class="tab">
+            <button class="tablinksProfile" id="defaultOpenPersonal" onclick="openProfile(event, 'Deposit')">Deposit</button>
+            <button class="tablinksProfile" onclick="openProfile(event,'Withdraw')">Withdraw</button>
+            <button class="tablinksProfile" onclick="openProfile(event,'Summary')">Account Summary</button>
+        </div>
     </div>
-</div>
 
-<ul class="list-unstyled components tabcontentBank" id="Deposit">
-    <li class="active">
-        <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false">
-            <i class="glyphicon glyphicon-home"></i>
-            Cricket
-        </a>
-        <ul class="collapse list-unstyled" id="homeSubmenu1">
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-        </ul>
-        <ul class="collapse list-unstyled" id="homeSubmenu2">
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">T20</a></li>
-            <li><a href="#">International One Day</a></li>
-            <li><a href="#">Premium League</a></li>
+    <div class="tabcontentProfile" id="Deposit">
+        <h3>Deposit Information</h3>
+        <table class="table table-bordered" style="width:50%;align-items:center">
 
-        </ul>
-    </li>
-</ul>
+            <tr>
+                <th>Name</th>
+                <td>Harry</td>
+
+            </tr>
+
+            <tr>
+                <th>Currency</th>
+                <td>INR</td>
+
+            </tr>
+            <tr>
+                <th>Email-ID</th>
+                <td>harryporter@gmail.com</td>
+
+            </tr>
+
+        </table>
+        <button class="btn btn-danger">Edit Details</button>
+
+    </div>
+    <div class="tabcontentProfile" id="Withdraw">
+        <h3>Withdraw Information</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tabcontentProfile" id="Summary">
+        <h3>Account Summary</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 
 
 
     <!--Script for the Bank tabs -->
-    <script>
-        function openBank(evt, eventName) {
-            var i, tabcontentBank, tablinksBank;
-            tabcontentBank = document.getElementsByClassName("tabcontentBank");
-            for (i = 0; i < tabcontentBank.length; i++) {
-                tabcontentBank[i].style.display = "none";
-            }
-            tablinksBank = document.getElementsByClassName("tablinksBank");
-            for (i = 0; i < tablinksBank.length; i++) {
-                tablinksBank[i].className = tablinksBank[i].className.replace(" active", "");
-            }
-            document.getElementById(eventName).style.display = "block";
-            evt.currentTarget.className += " active";
+<script>
+    function openProfile(evt, eventName) {
+        var i, tabcontentProfile, tablinksProfile;
+        tabcontentProfile = document.getElementsByClassName("tabcontentProfile");
+        for (i = 0; i < tabcontentProfile.length; i++) {
+            tabcontentProfile[i].style.display = "none";
         }
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
+        tablinksProfile = document.getElementsByClassName("tablinksProfile");
+        for (i = 0; i < tablinksProfile.length; i++) {
+            tablinksProfile[i].className = tablinksProfile[i].className.replace(" active", "");
+        }
+        document.getElementById(eventName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpenPersonal").click();
+</script>

@@ -8,7 +8,7 @@
     <h2 class="text-center">Profile</h2>
     <div class="tab-setting-member">
         <div class="tab">
-            <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" id="defaultOpen" onclick="openProfile(event, 'Personal')">Personal</button>
+            <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" id="defaultOpenPersonal" onclick="openProfile(event, 'Personal')">Personal</button>
             <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" onclick="openProfile(event, 'Preferances')">Preferances</button>
             <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" onclick="openProfile(event, 'Password')">Password</button>
             <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" onclick="openProfile(event, 'Security')">Security Number</button>
@@ -69,6 +69,7 @@
             </tbody>
         </table>
     </div>
+
     <div class="tabcontentProfile" id="Password" style="border-radius: 5px;
     background-color: #333;
     padding: 20px;
@@ -109,7 +110,7 @@
         evt.currentTarget.className += " active";
     }
     // Get the element with id="defaultOpen" and click on it
-    //document.getElementById("defaultOpen").click();
+    document.getElementById("defaultOpenPersonal").click();
 </script>
 
 @*<script>
