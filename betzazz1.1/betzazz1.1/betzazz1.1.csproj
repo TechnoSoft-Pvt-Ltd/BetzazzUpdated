@@ -2148,7 +2148,7 @@
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.ttf" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernote291f.woff" />
     <Content Include="Content\AdminPanelCss\vendors\summernote\dist\font\summernoted41d.eot" />
-<<<<<<< HEAD
+
 
     <EntityDeploy Include="Models\UserControlModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -2158,8 +2158,6 @@
       <DependentUpon>UserControlModel.edmx</DependentUpon>
     </Content>
 
-=======
->>>>>>> 4d9876ab09ef9d34269e5ea581813819e175809d
     <Content Include="AdminPanel\AdminPanel.Master" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="AdminPanel\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -2281,7 +2279,7 @@
     <Content Include="Views\Football\PreMatch.cshtml" />
     <Content Include="Views\Tennis\Inplay.cshtml" />
     <Content Include="Views\Tennis\PreMatch.cshtml" />
-<<<<<<< HEAD
+
 
     <Content Include="Views\Member\Member.cshtml" />
     <Content Include="Views\Member\Bank.cshtml" />
@@ -2289,12 +2287,12 @@
 
     <Content Include="Views\Tennis\Index.cshtml" />
 
-=======
+
     <Content Include="Views\Member\Member.cshtml" />
     <Content Include="Views\Member\Bank.cshtml" />
     <Content Include="Views\Member\Bets.cshtml" />
     <Content Include="Views\Tennis\Index.cshtml" />
->>>>>>> 4d9876ab09ef9d34269e5ea581813819e175809d
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPanel\img\flags\" />
