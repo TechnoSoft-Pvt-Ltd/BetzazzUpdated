@@ -435,6 +435,7 @@ body {
         width: 33.333%;
         text-align: center;
         border-style: inherit;
+        white-space:nowrap;
     }
 
         /* Change background color of buttons on hover */
@@ -563,4 +564,11 @@ body {
     /* padding-left: 15px; */
     margin-right: auto;
     margin-left: auto;
+}
+.my-h2{
+    margin-left:15px;
+}
+.table-setting {
+    width: 100%;
+    align-items:center;
 }
