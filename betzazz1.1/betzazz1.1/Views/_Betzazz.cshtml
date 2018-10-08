@@ -91,7 +91,7 @@
         <div class="visible-xs visible-sm text-center">
             <ul class="nav navbar-nav my-nav" style="margin-top:-10px;">
                 <li><a href="@Url.Action("Inplay","Events")">In-Play</a></li>
-                <li><a href="@Url.Action("PreMatch","Events")">Coming Soon</a></li>
+                <li><a href="@Url.Action("PreMatch","Events")">Coming-Soon</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Games</a></li>
             </ul>
@@ -320,17 +320,17 @@
                     </ul>
                     <ul class="list-unstyled components tabcontent" id="prematch">
                         <li class="active">
-                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prhomeSubmenu" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-home"></i>
                                 Cricket <span class="pull-right" style="padding-right:20px;"></span>
                             </a>
-                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <ul class="collapse list-unstyled" id="prhomeSubmenu">
                                 <li>
-                                    <a href="#TestEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">Cricket  </span>
+                                    <a href="#prTestEvent" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;">Test  </span>
                                         <span class="pull-right" style="padding-right:20px"></span>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="TestEvent">
+                                    <ul class="collapse list-unstyled" id="prTestEvent">
                                         @*@if (Session["TstEventName"].ToString() != null)
                                         {
                                             ArrayList EventList = (ArrayList)Session["TstEventName"];
@@ -349,11 +349,11 @@
                                 </li>
                                 <li>
                                     <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["T20LeagueName"].ToString()  </span>
-                                        <span class="pull-right" style="padding-right:20px">@Session["T20Count"]</span>
+                                        <span style="font-size:14px;font-weight:bold;"> T20 @*@HttpContext.Current.Session["T20LeagueName"].ToString()*@  </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["T20Count"]*@</span>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="T20Event">
-                                        @if (Session["T20EventName"].ToString() != null)
+                                    <ul class="collapse list-unstyled" id="prT20Event">
+                                        @*@if (Session["T20EventName"].ToString() != null)
                                         {
                                             ArrayList T20EventList = (ArrayList)Session["T20EventName"];
                                             ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
@@ -366,16 +366,16 @@
                                                     </button>
                                                 </li>
                                             }
-                                        }
+                                        }*@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#ODIEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["ODILeagueName"].ToString()   </span>
-                                        <span class="pull-right" style="padding-right:20px">@Session["ODICount"]</span>
+                                    <a href="#prODIEvent" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;"> ODI @*@HttpContext.Current.Session["ODILeagueName"].ToString()*@   </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["ODICount"]*@</span>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="ODIEvent">
-                                        @if (Session["ODIEventName"].ToString() != null)
+                                    <ul class="collapse list-unstyled" id="prODIEvent">
+                                        @*@if (Session["ODIEventName"].ToString() != null)
                                         {
                                             ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
                                             ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
@@ -388,7 +388,7 @@
                                                     </button>
                                                 </li>
                                             }
-                                        }
+                                        }*@
                                     </ul>
                                 </li>
                                 <li><a href="#">International One Day <span class="pull-right"></span></a></li>
@@ -396,20 +396,20 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#football" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prfootball" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-briefcase"></i>
                                 Footbaal
                             </a>
-                            <ul class="collapse list-unstyled" id="football">
+                            <ul class="collapse list-unstyled" id="prfootball">
                                 <li><a href="#">Page 1</a></li>
                                 <li><a href="#">Page 2</a></li>
                                 <li><a href="#">Page 3</a></li>
                             </ul>
-                            <a href="#tennie" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prtennie" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-duplicate"></i>
                                 Tennis
                             </a>
-                            <ul class="collapse list-unstyled" id="tennie">
+                            <ul class="collapse list-unstyled" id="prtennie">
                                 <li><a href="#">Page 1</a></li>
                                 <li><a href="#">Page 2</a></li>
                                 <li><a href="#">Page 3</a></li>
@@ -417,66 +417,66 @@
                         </li>
 
                         <li>
-                            <a href="#casino" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prcasino" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-link"></i>
                                 Casino
                             </a>
-                            <ul class="collapse list-unstyled" id="casino">
+                            <ul class="collapse list-unstyled" id="prcasino">
                                 <li><a href="#">Casino is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
-                            <a href="#baseball" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prbaseball" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-link"></i>
                                 Badmintion
                             </a>
-                            <ul class="collapse list-unstyled" id="baseball">
+                            <ul class="collapse list-unstyled" id="prbaseball">
                                 <li><a href="#">Baseball is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
-                            <a href="#hocky" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prhocky" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-link"></i>
                                 Ice Hocky
                             </a>
-                            <ul class="collapse list-unstyled" id="hocky">
+                            <ul class="collapse list-unstyled" id="prhocky">
                                 <li><a href="#"> Ice Hocky is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
-                            <a href="#Basketball" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prBasketball" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-link"></i>
                                 Basket Ball
                             </a>
-                            <ul class="collapse list-unstyled" id="Basketball">
+                            <ul class="collapse list-unstyled" id="prBasketball">
                                 <li><a href="#">  BasketBall is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
-                            <a href="#TableTennis" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prTableTennis" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-link"></i>
                                 Table Tennis
                             </a>
-                            <ul class="collapse list-unstyled" id="TableTennis">
+                            <ul class="collapse list-unstyled" id="prTableTennis">
                                 <li><a href="#"> Table Tennis is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
-                            <a href="#badminton" data-toggle="collapse" aria-expanded="false">
+                            <a href="#prbadminton" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-link"></i>
                                 Badminton
                             </a>
-                            <ul class="collapse list-unstyled" id="badminton">
+                            <ul class="collapse list-unstyled" id="prbadminton">
                                 <li><a href="#"> Badmin is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>*@

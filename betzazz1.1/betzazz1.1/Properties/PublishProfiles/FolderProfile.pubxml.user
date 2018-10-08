@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\6 Oct Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\ A2 8 Oct Publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminPanel/AddBalanceaspx.aspx">
@@ -388,10 +388,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
     <File Include="bin/betzazz1.1.dll">
-      <publishTime>10/06/2018 18:40:48</publishTime>
+      <publishTime>10/08/2018 19:40:32</publishTime>
     </File>
     <File Include="bin/betzazz1.1.pdb">
-      <publishTime>10/06/2018 18:40:48</publishTime>
+      <publishTime>10/08/2018 19:40:32</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/06/2018 18:23:12</publishTime>
@@ -424,7 +424,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:12</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>10/06/2018 18:23:12</publishTime>
+      <publishTime>09/05/2018 16:10:50</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
@@ -442,37 +442,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe.config">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 12:18:12</publishTime>
     </File>
     <File Include="bin/roslyn/csc.rsp">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe.config">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 12:18:34</publishTime>
     </File>
     <File Include="bin/roslyn/csi.rsp">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
       <publishTime>10/06/2018 18:23:13</publishTime>
@@ -484,19 +484,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 12:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
       <publishTime>10/06/2018 18:23:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/05/2016 18:55:32</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>05/16/2018 03:29:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Console.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/05/2016 18:55:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
@@ -504,8 +510,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>11/05/2016 18:56:02</publishTime>
+    </File>
     <File Include="bin/roslyn/System.IO.Compression.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>11/05/2016 18:56:04</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
@@ -519,8 +531,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/System.IO.Pipes.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>11/05/2016 18:56:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>11/05/2016 18:56:34</publishTime>
+    </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>05/16/2018 03:29:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>11/05/2016 18:57:00</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.AccessControl.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
@@ -546,6 +567,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>11/05/2016 18:57:24</publishTime>
+    </File>
     <File Include="bin/roslyn/System.ValueTuple.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
@@ -565,16 +589,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe.config">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 12:18:18</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.rsp">
       <publishTime>10/06/2018 18:23:13</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 05:38:48</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>10/06/2018 18:23:13</publishTime>
+      <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="bin/System.Diagnostics.DiagnosticSource.dll">
       <publishTime>10/06/2018 18:23:13</publishTime>
@@ -608,6 +632,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/assets/abc.jpg">
       <publishTime>10/06/2018 18:23:06</publishTime>
+    </File>
+    <File Include="Content/assets/ErrorPage/style.css">
+      <publishTime>10/08/2018 19:21:56</publishTime>
     </File>
     <File Include="Content/assets/giphy.gif">
       <publishTime>10/06/2018 18:23:06</publishTime>
@@ -685,10 +712,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
     <File Include="Content/css/header.css">
-      <publishTime>10/06/2018 18:29:47</publishTime>
+      <publishTime>10/08/2018 19:17:03</publishTime>
     </File>
     <File Include="Content/css/index.css">
-      <publishTime>10/06/2018 18:23:06</publishTime>
+      <publishTime>10/08/2018 18:23:11</publishTime>
     </File>
     <File Include="Content/css/js/min.js">
       <publishTime>10/06/2018 18:23:06</publishTime>
@@ -698,6 +725,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/css/preloader.js">
       <publishTime>10/06/2018 18:23:06</publishTime>
+    </File>
+    <File Include="Content/ErrorPage/style.css">
+      <publishTime>10/08/2018 19:21:56</publishTime>
     </File>
     <File Include="Content/icons/badminton-equipment.svg">
       <publishTime>10/06/2018 18:23:06</publishTime>
@@ -770,6 +800,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/PagedList.css">
       <publishTime>10/06/2018 18:23:06</publishTime>
+    </File>
+    <File Include="Error404/index.html">
+      <publishTime>10/08/2018 19:32:16</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1441,13 +1474,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/Default/Index.cshtml">
-      <publishTime>10/06/2018 18:23:07</publishTime>
+      <publishTime>10/08/2018 18:23:19</publishTime>
     </File>
     <File Include="Views/Events/InPlay.cshtml">
-      <publishTime>10/06/2018 18:23:07</publishTime>
+      <publishTime>10/08/2018 17:52:58</publishTime>
     </File>
     <File Include="Views/Events/PreMatch.cshtml">
-      <publishTime>10/06/2018 18:23:07</publishTime>
+      <publishTime>10/08/2018 18:01:56</publishTime>
     </File>
     <File Include="Views/Football/Inplay.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1473,6 +1506,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Member/Member.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
+    <File Include="Views/Member/UserProfile.cshtml">
+      <publishTime>10/08/2018 14:39:29</publishTime>
+    </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
@@ -1492,7 +1528,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/_Betzazz.cshtml">
-      <publishTime>10/06/2018 18:23:07</publishTime>
+      <publishTime>10/08/2018 19:38:52</publishTime>
     </File>
     <File Include="Views/_LayoutAdminPanel.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1501,7 +1537,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/06/2018 18:35:38</publishTime>
+      <publishTime>10/08/2018 19:24:54</publishTime>
     </File>
     <File Include="website/assets/css/theme-dark.min.css">
       <publishTime>10/06/2018 18:23:08</publishTime>

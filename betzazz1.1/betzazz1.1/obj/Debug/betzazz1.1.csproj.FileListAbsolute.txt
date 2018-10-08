@@ -99,3 +99,4 @@ C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.dll
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.pdb
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csprojAssemblyReference.cache

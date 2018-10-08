@@ -354,6 +354,7 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Content\assets\abc.jpg" />
+    <Content Include="Content\ErrorPage\style.css" />
     <Content Include="Content\assets\giphy.gif" />
     <Content Include="Content\assets\js\my_js.js" />
     <Content Include="Content\assets\ldr.gif" />
@@ -607,6 +608,7 @@
     <Content Include="slider\svg\svg\loading\static-svg\spin.svg" />
     <Content Include="slider\svg\svg\loading\static-svg\tail-spin.svg" />
     <Content Include="slider.html" />
+    <Content Include="Error404\index.html" />
     <Content Include="website\assets\css\theme-dark.min.css" />
     <Content Include="website\assets\css\theme.min.css" />
     <Content Include="website\assets\fonts\feather\feather.min.css" />
