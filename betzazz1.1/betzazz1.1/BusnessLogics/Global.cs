@@ -220,34 +220,76 @@ namespace betzazz1._1.BusnessLogics
                             }
                         }
                     }
-
-                    //LiveEventList FTLiveList = serializer.Deserialize<LiveEventList>(ftipjson);
-                    //int matchcountFt = FTLiveList.results.Count();
-                    //if (FTLiveList.success == "1" && FTLiveList.results != null)
+                    // For football Inplay event Lis
+                   //LiveEventList FTLiveList = serializer.Deserialize<LiveEventList>(ftipjson);
+                   //int matchcountFt = FTLiveList.results.Count();
+                   //if (FTLiveList.success == "1" && FTLiveList.results != null)
+               
+                    //for (int j = 0; j < matchcountFt; j++)
                     //{
-                    //    for (int j = 0; j < matchcountFt; j++)
+                    //    FullNewELFT FTEventList = new FullNewELFT();
+                    //    FTEventList.sport_id = FTLiveList.results[j].sport_id;
+                    //    FTEventList.matchId = FTLiveList.results[j].id;
+                    //    FTEventList.time = FTLiveList.results[j].time;
+                    //    FTEventList.timeStatus = FTLiveList.results[j].time_status;
+                    //    FTEventList.leagueId = FTLiveList.results[j].league.id;
+                    //    FTEventList.leagueName = FTLiveList.results[j].league.name;
+                    //    FTEventList.homeTeamId = FTLiveList.results[j].home.id;
+                    //    FTEventList.homeTeamName = FTLiveList.results[j].home.name;
+                    //    FTEventList.awayTeamId = FTLiveList.results[j].away.id;
+                    //    FTEventList.awayTeamName = FTLiveList.results[j].away.name;
+                    //    int LocalLeaguid = Convert.ToInt32(FTEventList.leagueId);
+                    //    ftleagueid = Convert.ToInt32(FTEventList.leagueId);
+                    //    string Lname = FTEventList.leagueName;
+                    //    if (FTEventList.leagueName.Equals(Lname) && ftleagueid == LocalLeaguid)
                     //    {
-                    //        FullNewELFT FTEventList = new FullNewELFT();
-                    //        FTEventList.sport_id = FTLiveList.results[j].sport_id;
-                    //        FTEventList.matchId = FTLiveList.results[j].id;
-                    //        FTEventList.time = FTLiveList.results[j].time;
-                    //        FTEventList.timeStatus = FTLiveList.results[j].time_status;
-                    //        FTEventList.leagueId = FTLiveList.results[j].league.id;
-                    //        FTEventList.leagueName = FTLiveList.results[j].league.name;
-                    //        FTEventList.homeTeamId = FTLiveList.results[j].home.id;
-                    //        FTEventList.homeTeamName = FTLiveList.results[j].home.name;
-                    //        FTEventList.awayTeamId = FTLiveList.results[j].away.id;
-                    //        FTEventList.awayTeamName = FTLiveList.results[j].away.name;
-                    //        int LocalLeaguid = Convert.ToInt32(FTEventList.leagueId);
-                    //        ftleagueid = Convert.ToInt32(FTEventList.leagueId);
-
-                    //        if (FTEventList.leagueName.Contains("Test") && ftleagueid == LocalLeaguid)
+                    //        if (TestData == null && EventId == null)
                     //        {
-                    //            LocalLeaguid = 0;
+                    //            TestLeagueName = FTEventList.leagueName;
+                    //            EventId = EventId + CRLiveList.results[j].id;
+                    //            TestData = TestData + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
                     //        }
-
+                    //        else
+                    //        {
+                    //            EventId = EventId + "@" + CRLiveList.results[j].id;
+                    //            TestData = TestData + "@" + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
+                    //        }
+                    //        LocalLeaguid = 0;
+                    //        Lname = "";
                     //    }
+                    //    else if ((FTEventList.leagueName.Equals(FTEventList.leagueName) && ftleagueid == LocalLeaguid))
+                    //    {
+                    //        if (T20Data == null && EventId1 == null)
+                    //        {
+                    //            T20LeagueName = FTEventList.leagueName;
+                    //            EventId1 = EventId1 + CRLiveList.results[j].id;
+                    //            T20Data = T20Data + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
+                    //        }
+                    //        else
+                    //        {
+                    //            EventId1 = EventId1 + "@" + CRLiveList.results[j].id;
+                    //            T20Data = T20Data + "@" + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
+                    //        }
+                    //        LocalLeaguid = 0;
+                    //    }
+                    //    else if ((FTEventList.leagueName.Equals(FTEventList.leagueName) && ftleagueid == LocalLeaguid))
+                    //    {
+                    //        if (ODIData == null && EventId2 == null)
+                    //        {
+                    //            ODILeagueName = FTEventList.leagueName;
+                    //            EventId2 = EventId2 + CRLiveList.results[j].id;
+                    //            ODIData = ODIData + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
+                    //        }
+                    //        else
+                    //        {
+                    //            EventId2 = EventId2 + "@" + CRLiveList.results[j].id;
+                    //            ODIData = ODIData + "@" + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
+                    //        }
+                    //        LocalLeaguid = 0;
+                    //    }
+
                     //}
+                
                 }
                 catch (Exception et)
                 {

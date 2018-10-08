@@ -9,7 +9,7 @@ namespace betzazz1._1.Controllers
     public class MemberController : Controller
     {
         // GET: Member
-        public ActionResult Member()
+        public ActionResult UserProfile()
         {
             return View();
         }

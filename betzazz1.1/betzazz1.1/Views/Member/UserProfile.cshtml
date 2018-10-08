@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "UserProfile";
+    Layout = "~/Views/_Betzazz.cshtml";
+}
+
+<h2>UserProfile</h2>
+
+
+<div class="container-fluid middle-container">
+    <h2 class="text-center">Profile</h2>
+    <div class="tab-setting-member col col--xs-8 col--sm-10 col--md-4 col--lg-4">
+        <div class="tab">
+            <button class="tablinksProfile" style="width: 25%;     border-style: inherit;white-space:nowrap" id="defaultOpenPersonal" onclick="openProfile(event, 'Personal')">Personal</button>
+            <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" onclick="openProfile(event, 'Preferances')">Preferances</button>
+            <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" onclick="openProfile(event, 'Password')">Password</button>
+            <button class="tablinksProfile" style="width: 25%;     border-style: inherit;" onclick="openProfile(event, 'Security')">Security Number</button>
+        </div>
+    </div>
+
+    <div class="tabcontentProfile" id="Personal">
+        <h3>Personal Information</h3>
+        <table class="table table-bordered" style="width:50%;align-items:center">
+
+            <tr>
+                <th>Name</th>
+                <td>Harry</td>
+
+            </tr>
+
+            <tr>
+                <th>Currency</th>
+                <td>INR</td>
+
+            </tr>
+            <tr>
+                <th>Email-ID</th>
+                <td>harryporter@gmail.com</td>
+
+            </tr>
+
+        </table>
+        <button class="btn btn-danger">Edit Details</button>
+
+    </div>
+    <div class="tabcontentProfile" id="Preferances">
+        <h3>Personal Information</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tabcontentProfile" id="Password" style="border-radius: 5px;
+    background-color: #333;
+    padding: 20px;
+    margin-top: 14px;">
+
+
+
+        <div class="form-group">
+            <label for="pwd">Current Password:</label>
+            <input type="password" class="form-control" id="pwd">
+            <label for="pwd2">New Password:</label>
+            <input type="password" class="form-control" id="pwd2">
+            <label for="pwd3">Confirm Password:</label>
+            <input type="password" class="form-control" id="pwd3">
+            <br>
+            <button class="btn btn-primary" style="margin-left:35%;">Submit</button>
+            <button class="btn btn-danger" style="margin-left:15%;">Cancel</button>
+        </div>
+
+    </div>
+</div>
+
+
+<!--Script for the Bank tabs -->
+<!--Script for the left pane tabs Live,Future,Today-->
+<script>
+    function openProfile(evt, eventName) {
+        var i, tabcontentProfile, tablinksProfile;
+        tabcontentProfile = document.getElementsByClassName("tabcontentProfile");
+        for (i = 0; i < tabcontentProfile.length; i++) {
+            tabcontentProfile[i].style.display = "none";
+        }
+        tablinksProfile = document.getElementsByClassName("tablinksProfile");
+        for (i = 0; i < tablinksProfile.length; i++) {
+            tablinksProfile[i].className = tablinksProfile[i].className.replace(" active", "");
+        }
+        document.getElementById(eventName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpenPersonal").click();
+</script>
+
