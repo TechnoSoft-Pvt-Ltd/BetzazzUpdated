@@ -12924,8 +12924,8 @@ a:focus, button:focus {
     }
 
 .avatar-img {
-    width: 115%;
-    height: 115%;
+    width: 40px;
+    height: 40px;
     -o-object-fit: cover;
     object-fit: cover
 }
