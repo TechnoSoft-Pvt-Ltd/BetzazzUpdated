@@ -82,11 +82,14 @@ div.scrollmenu a {
 
 
 p {
+    margin-left:5%;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: black;
+    text-align:justify;
+    margin-right:3%;
 }
 
 a, a:hover, a:focus {
@@ -471,7 +474,12 @@ body {
     }
 
 .tab-setting {
-    width: 95%;
+    width: 100%;
+    height: 33px;
+    margin-top: 5px;
+}
+.tab-setting-sidebar {
+    width:95%;
     height: 33px;
     margin-top: 5px;
 }
@@ -511,7 +519,7 @@ body {
     margin-bottom: 12px;
     color: #333;
     border-radius: 0px;
-    width: 91%;
+    width: 95%;
 }
 
     .betslip-button:hover {
@@ -571,4 +579,12 @@ body {
 .table-setting {
     width: 100%;
     align-items:center;
+}
+.my-button-betslip {
+    width: 80%;
+    background-color: #333;
+    color: #ce870d;
+    text-align: center;
+    font-weight: bold;
+    border-color: #e9b449;
 }

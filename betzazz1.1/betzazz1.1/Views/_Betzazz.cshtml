@@ -62,11 +62,11 @@
 
         <div class="visible-xs  visible-sm text-center" style="align-items:center">
             <div class="pull-left">
-                <button type="button" class=" btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal">
+                <button type="button" class=" btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal" style="margin-top: 13px;">
                     <i class="glyphicon glyphicon-align-left"></i>
                 </button>
             </div>
-            <span class="text-center" style="margin-bottom:-10px;">
+            <span class="text-center" style="margin-bottom:-10px;margin-top:7px;">
                 <div class="visible-xs"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/mlogo.png" /></a></div>
                 <div class="visible-sm"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/logo.png" /></a></div>
             </span>
@@ -145,7 +145,7 @@
 
                         </div>
 
-                        <div class="tab-setting">
+                        <div class="tab-setting-sidebar">
                             <div class="tab">
                                 <button class="tablinks" id="defaultOpen" onclick="openEvent(event, 'Live')" style="border-style:none;">Live</button>
                                 <button class="tablinks" onclick="openEvent(event, 'prematch')" style="border-style:none;">Future</button>
@@ -500,8 +500,34 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">Left Sidebar</h4>
                         </div>
+                        <div id="inline" style="display: -webkit-box;border:none;">
 
-                        <ul class="list-unstyled components" style="padding: 10px">
+                            <select class="form-control my-form-control" style="border-radius:unset;">
+                                <option>Asian</option>
+                                <option>Modern</option>
+                                <option>Classic</option>
+                                <option>Combo</option>
+                                <option>Latest</option>
+                            </select>
+
+                            <select class="form-control my-form-control" style="border-radius:unset;">
+                                <option>Decimal</option>
+                                <option>Fraction</option>
+                                <option>American</option>
+                                <option>China</option>
+                                <option>indo</option>
+                            </select>
+
+                        </div>
+                        <div class="tab-setting-sidebar">
+                            <div class="tab">
+                                <button class="tablinks" id="defaultOpen" onclick="openEvent(event, 'Live1')" style="border-style:none;">Live</button>
+                                <button class="tablinks" onclick="openEvent(event, 'prematch1')" style="border-style:none;">Future</button>
+                                <button class="tablinks" onclick="openEvent(event, 'today1')" style="border-style:none;">Today</button>
+                            </div>
+                        </div>
+
+                        <ul class="list-unstyled components tabcontent" id="Live1" style="padding: 10px">
                             <li class="active">
                                 <div class="eventbDiv">
                                     <a href="#CricketMenu" data-toggle="collapse" aria-expanded="false">
@@ -668,6 +694,12 @@
 
 
                         </ul>
+                    <div class="tabcontent" id="prematch1">
+                        <p>The future list will display here</p>
+                        </div>
+                    <div class="tabcontent" id="today1">
+                        <p>Today's Matches will display here</p>
+                        </div>
                         <div class="modal-body">
 
                         </div>
@@ -701,9 +733,9 @@
 
 
                     </div>
-                    <div class="card border-warning mb-3 card-width">
+                    <div class="card border-warning mb-3 card-width"  id="myDiv">
                         <div class="card-header card-header-style"><strong>ScoreCard</strong></div>
-                        <span class="topright">&times</span>
+                        <span class="topright"  onclick="hide('myDiv')">&times</span>
                         <div class="card-body text-warning card-body-style">
 
                             <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
@@ -712,9 +744,9 @@
 
                         </div>
                     </div>
-                    <div class="card border-warning mb-3 card-width">
+                    <div class="card border-warning mb-3 card-width"  id="myDiv1">
                         <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
-                        <span class="topright">&times</span>
+                        <span class="topright" onclick="hide('myDiv1')">&times</span>
                         <div class="card-body text-warning card-body-style">
 
                             <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
@@ -731,7 +763,7 @@
                                     </th>
                                 </tr>
                                 <tr>
-                                    <td class="my-td" style="width:50%;">Rate</td>
+                                    <td class="my-td" style="width:45%;">Rate</td>
                                     <td><input type="text" name="Rate" value="7.50" class="my-button-betslip" readonly>
                                     <td>
                                 </tr>
@@ -742,7 +774,7 @@
                                 
                                 <tr>
                                     <td class="my-td">Return</td>
-                                    <td><input type="text" name="Return" onfocus="this.value=''" value="Total Return" class="my-button-betslip" readonly></td>
+                                    <td><input type="text" name="Return" onfocus="this.value=''" value="Total Return" class="my-button-betslip"></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -1029,6 +1061,11 @@
         }
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
+
+        // for close button
+        function hide(target) {
+            document.getElementById(target).style.display = 'none';
+        }
     </script>
 
 
