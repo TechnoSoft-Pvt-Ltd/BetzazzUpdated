@@ -19,7 +19,7 @@ namespace betzazz1._1.Controllers
     {
         public static string UName { get; set; }
         public static Double Balance { get; set; }
-
+        public static string Currency { get; set; }
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString);
         // GET: Default
         public ActionResult Index()
@@ -29,6 +29,7 @@ namespace betzazz1._1.Controllers
             {
                 ViewBag.Balance = Balance;
                 ViewBag.UName = UName;
+                ViewBag.Currency = Currency;
             }
            
             return View();
@@ -42,7 +43,7 @@ namespace betzazz1._1.Controllers
                 string userid = avm1.account.UserID;
                 string userpass = avm1.account.Password;
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("select ModlData.UserId, ModlData.UserName,ModlData.UserNameRandomGen,ModlData.CreatePass,UserBlnc.Balance from  ModalData as ModlData " +
+                using (SqlCommand cmd = new SqlCommand("select ModlData.UserId, ModlData.UserName,ModlData.UserNameRandomGen,ModlData.CreatePass,ModlData.AccountCuerrcy,UserBlnc.Balance from  ModalData as ModlData " +
                 "left join UserBalance as UserBlnc on ModlData.UserId = UserBlnc.UserId  where UserNameRandomGen =@username and CreatePass=@password", con))
                 {
                     //string UName = null;
@@ -61,12 +62,16 @@ namespace betzazz1._1.Controllers
                         {
                             Session["UserId"] = dr["UserId"].ToString();
                             Session["UserNameRandomGen"] = dr["UserNameRandomGen"].ToString();
-                            UName = dr["Username"].ToString();
+                            Session["UserName"] = dr["Username"].ToString();
+                            UName = Session["UserName"].ToString();
                             Session["Balance"] = dr["Balance"].ToString();
-                            Balance = Convert.ToDouble(dr["Balance"].ToString());
-                            Session["Password"] = dr["CreatePass"].ToString();
+                            Balance = Convert.ToDouble(dr["Balance"].ToString()); 
+                             Session["Password"] = dr["CreatePass"].ToString();
+                            Session["Currency"] = dr["AccountCuerrcy"].ToString();
+                            Currency = Session["Currency"].ToString();
                             ViewBag.Balance = Balance;
-                            ViewBag.UName = UName;
+                            ViewBag.UName = UName;                           
+                            ViewBag.Currency = Currency;
                             Response.Write("<script>alert('You are successfully login!');</script>");
                         }
                         else
