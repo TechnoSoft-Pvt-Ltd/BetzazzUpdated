@@ -8,13 +8,13 @@
     <h2 class="my-h2">Bets</h2>
     <div class="tab-setting-member">
         <div class="tab">
-            <button class="tablinksProfile" style="width: 25%;border-style: inherit;" id="defaultOpenPersonal" onclick="openProfile(event, 'Live_Bets')">Live Bets</button>
-            <button class="tablinksProfile" style="width: 25%;border-style: inherit;" onclick="openProfile(event, 'Bet_History')">Bet History</button>
-            <button class="tablinksProfile" style="width: 25%;border-style: inherit;" onclick="openProfile(event, 'Won')">Won</button>
-            <button class="tablinksProfile" style="width: 25%; border-style: inherit;" onclick="openProfile(event, 'Lose')">Lose</button>
+            <button class="tablinksProfile" style="border-style: inherit;" id="defaultOpenPersonal" onclick="openProfile(event, 'Bet_History')">Bet History</button>
+            <button class="tablinksProfile" style="border-style: inherit;" onclick="openProfile(event, 'Won')">Won</button>
+            <button class="tablinksProfile" style="border-style: inherit;" onclick="openProfile(event, 'Lose')">Lose</button>
+            @*<button class="tablinksProfile" style="width: 25%; border-style: inherit;" onclick="openProfile(event, 'Lose')">Lose</button>*@
         </div>
     </div>
-    <div class="tabcontentProfile" id="Live_Bets">
+    <div class="tabcontentProfile" id="Bet_History">
         <h3>Deposit Information</h3>
         <table class="table table-bordered table-setting">
 
@@ -39,7 +39,7 @@
         <button class="btn btn-danger">Edit Details</button>
 
     </div>
-    <div class="tabcontentProfile" id="Bet_History">
+    <div class="tabcontentProfile" id="Won">
         <h3>Withdraw Information</h3>
         <table class="table table-bordered">
             <thead>
@@ -69,55 +69,6 @@
         </table>
     </div>
 
-    <div class="tabcontentProfile" id="Won">
-        <h3>Account Summary</h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     <div class="tabcontentProfile" id="Lose">
         <h3>Account Summary</h3>
         <table class="table table-bordered">
@@ -164,6 +115,55 @@
                     <td>Dooley</td>
                     <td>july@example.com</td>
                 </tr>
+            </tbody>
+        </table>
+    </div>
+    @*<div class="tabcontentProfile" id="Lose">
+        <h3>Account Summary</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
                 <tr>
                     <td>July</td>
                     <td>Dooley</td>
@@ -181,7 +181,7 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div>*@
 
 </div>
 
