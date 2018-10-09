@@ -91,7 +91,7 @@
         <div class="visible-xs visible-sm text-center">
             <ul class="nav navbar-nav my-nav" style="margin-top:-10px;">
                 <li><a href="@Url.Action("Inplay","Events")">In-Play</a></li>
-                <li><a href="@Url.Action("PreMatch","Events")">Coming Soon</a></li>
+                <li><a href="@Url.Action("PreMatch","Events")">Coming-Soon</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Games</a></li>
             </ul>
@@ -106,7 +106,7 @@
                 <li><a href="@Url.Action("Inplay","Cricket")">Cricket</a></li>
                 <li><a href="@Url.Action("Inplay","Tennis")">Tennis</a></li>
                 <li><a href="@Url.Action("Bank","Member")">Virtual Sport</a></li>
-                <li><a href="@Url.Action("Member","Member")">Tournaments</a></li>
+                <li><a href="@Url.Action("UserProfile","Member")">Tournaments</a></li>
                 <li><a href="@Url.Action("Bets","Member")">Games</a></li>
                 <li><a href="#">Fantasy Sport</a></li>
                 <li><a href="#">Finebet</a></li>
@@ -148,14 +148,10 @@
                         <div class="tab-setting">
                             <div class="tab">
                                 <button class="tablinks" id="defaultOpen" onclick="openEvent(event, 'Live')" style="border-style:none;">Live</button>
-                                <button class="tablinks" onclick="openEvent(event, 'Live')" style="border-style:none;">Future</button>
+                                <button class="tablinks" onclick="openEvent(event, 'prematch')" style="border-style:none;">Future</button>
                                 <button class="tablinks" onclick="openEvent(event, 'Live')" style="border-style:none;">Today</button>
                             </div>
                         </div>
-
-
-
-
                     </div>
                     <ul class="list-unstyled components tabcontent" id="Live">
                         <li class="active">
@@ -187,49 +183,49 @@
                                     </ul>
                                 </li>
                                 <li>
-                                      <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
+                                    <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
                                         <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["T20LeagueName"].ToString()  </span>
                                         <span class="pull-right" style="padding-right:20px">@Session["T20Count"]</span>
-                                      </a>
-                                      <ul class="collapse list-unstyled" id="T20Event">
-                                          @if (Session["T20EventName"].ToString() != null)
-                                          {
-                                              ArrayList T20EventList = (ArrayList)Session["T20EventName"];
-                                              ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="T20Event">
+                                        @if (Session["T20EventName"].ToString() != null)
+                                        {
+                                            ArrayList T20EventList = (ArrayList)Session["T20EventName"];
+                                            ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
 
-                                              for (int i = 0; i < T20EventList.Count; i++)
-                                              {
-                                                  <li>
-                                                      <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                          @T20EventList[i]
-                                                      </button>
-                                                  </li>
-                                              }
-                                          }
-                                      </ul>
+                                            for (int i = 0; i < T20EventList.Count; i++)
+                                            {
+                                                <li>
+                                                    <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @T20EventList[i]
+                                                    </button>
+                                                </li>
+                                            }
+                                        }
+                                    </ul>
                                 </li>
-                               <li>
-                                       <a href="#ODIEvent" data-toggle="collapse" aria-expanded="false">
-                                           <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["ODILeagueName"].ToString()   </span>
-                                           <span class="pull-right" style="padding-right:20px">@Session["ODICount"]</span>
-                                       </a>
-                                       <ul class="collapse list-unstyled" id="ODIEvent">
-                                           @if (Session["ODIEventName"].ToString() != null)
-                                           {
-                                               ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
-                                               ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
+                                <li>
+                                    <a href="#ODIEvent" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["ODILeagueName"].ToString()   </span>
+                                        <span class="pull-right" style="padding-right:20px">@Session["ODICount"]</span>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="ODIEvent">
+                                        @if (Session["ODIEventName"].ToString() != null)
+                                        {
+                                            ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
+                                            ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
 
-                                               for (int i = 0; i < ODIEventList.Count; i++)
-                                               {
-                                                   <li>
-                                                       <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                           @ODIEventList[i]
-                                                       </button>
-                                                   </li>
-                                               }
-                                           }
-                                       </ul>
-                               </li>
+                                            for (int i = 0; i < ODIEventList.Count; i++)
+                                            {
+                                                <li>
+                                                    <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @ODIEventList[i]
+                                                    </button>
+                                                </li>
+                                            }
+                                        }
+                                    </ul>
+                                </li>
                                 <li><a href="#">International One Day <span class="pull-right"></span></a></li>
                                 <li><a href="#">Premium League</a></li>
                             </ul>
@@ -263,7 +259,7 @@
                             <ul class="collapse list-unstyled" id="casino">
                                 <li><a href="#">Casino is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>*@
+                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -274,7 +270,7 @@
                             <ul class="collapse list-unstyled" id="baseball">
                                 <li><a href="#">Baseball is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>*@
+                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -285,7 +281,7 @@
                             <ul class="collapse list-unstyled" id="hocky">
                                 <li><a href="#"> Ice Hocky is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>*@
+                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -296,7 +292,7 @@
                             <ul class="collapse list-unstyled" id="Basketball">
                                 <li><a href="#">  BasketBall is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>*@
+                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -307,7 +303,7 @@
                             <ul class="collapse list-unstyled" id="TableTennis">
                                 <li><a href="#"> Table Tennis is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>*@
+                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -318,7 +314,172 @@
                             <ul class="collapse list-unstyled" id="badminton">
                                 <li><a href="#"> Badmin is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>*@
+                    <li><a href="#">Page 3</a></li>*@
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled components tabcontent" id="prematch">
+                        <li class="active">
+                            <a href="#prhomeSubmenu" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Cricket <span class="pull-right" style="padding-right:20px;"></span>
+                            </a>
+                            <ul class="collapse list-unstyled" id="prhomeSubmenu">
+                                <li>
+                                    <a href="#prTestEvent" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;">Test  </span>
+                                        <span class="pull-right" style="padding-right:20px"></span>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="prTestEvent">
+                                        @*@if (Session["TstEventName"].ToString() != null)
+                                        {
+                                            ArrayList EventList = (ArrayList)Session["TstEventName"];
+                                            ArrayList EventId = (ArrayList)Session["Evntid"];
+
+                                            for (int i = 0; i < EventList.Count; i++)
+                                            {
+                                                <li>
+                                                    <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @EventList[i]
+                                                    </button>
+                                                </li>
+                                            }
+                                        }*@
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;"> T20 @*@HttpContext.Current.Session["T20LeagueName"].ToString()*@  </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["T20Count"]*@</span>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="prT20Event">
+                                        @*@if (Session["T20EventName"].ToString() != null)
+                                        {
+                                            ArrayList T20EventList = (ArrayList)Session["T20EventName"];
+                                            ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
+
+                                            for (int i = 0; i < T20EventList.Count; i++)
+                                            {
+                                                <li>
+                                                    <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @T20EventList[i]
+                                                    </button>
+                                                </li>
+                                            }
+                                        }*@
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#prODIEvent" data-toggle="collapse" aria-expanded="false">
+                                        <span style="font-size:14px;font-weight:bold;"> ODI @*@HttpContext.Current.Session["ODILeagueName"].ToString()*@   </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["ODICount"]*@</span>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="prODIEvent">
+                                        @*@if (Session["ODIEventName"].ToString() != null)
+                                        {
+                                            ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
+                                            ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
+
+                                            for (int i = 0; i < ODIEventList.Count; i++)
+                                            {
+                                                <li>
+                                                    <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @ODIEventList[i]
+                                                    </button>
+                                                </li>
+                                            }
+                                        }*@
+                                    </ul>
+                                </li>
+                                <li><a href="#">International One Day <span class="pull-right"></span></a></li>
+                                <li><a href="#">Premium League</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#prfootball" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-briefcase"></i>
+                                Footbaal
+                            </a>
+                            <ul class="collapse list-unstyled" id="prfootball">
+                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                            <a href="#prtennie" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-duplicate"></i>
+                                Tennis
+                            </a>
+                            <ul class="collapse list-unstyled" id="prtennie">
+                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#prcasino" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Casino
+                            </a>
+                            <ul class="collapse list-unstyled" id="prcasino">
+                                <li><a href="#">Casino is comming Soon</a></li>
+                                @*<li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#prbaseball" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Badmintion
+                            </a>
+                            <ul class="collapse list-unstyled" id="prbaseball">
+                                <li><a href="#">Baseball is comming Soon</a></li>
+                                @*<li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#prhocky" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Ice Hocky
+                            </a>
+                            <ul class="collapse list-unstyled" id="prhocky">
+                                <li><a href="#"> Ice Hocky is comming Soon</a></li>
+                                @*<li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#prBasketball" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Basket Ball
+                            </a>
+                            <ul class="collapse list-unstyled" id="prBasketball">
+                                <li><a href="#">  BasketBall is comming Soon</a></li>
+                                @*<li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#prTableTennis" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Table Tennis
+                            </a>
+                            <ul class="collapse list-unstyled" id="prTableTennis">
+                                <li><a href="#"> Table Tennis is comming Soon</a></li>
+                                @*<li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#prbadminton" data-toggle="collapse" aria-expanded="false">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Badminton
+                            </a>
+                            <ul class="collapse list-unstyled" id="prbadminton">
+                                <li><a href="#"> Badmin is comming Soon</a></li>
+                                @*<li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                     </ul>
@@ -518,7 +679,7 @@
 
         <!----------------------------------- left Model Ending here ------------------------------->
         <div class="col-md-8 mypadding padding-center-pane">
-            <div class="container-fluid middle-container" style="padding-right: 0px;padding-left: 0px;">
+            <div class="my-container-fluid middle-container">
 
                 <div class="app-content content">
                     <div class="content-wrapper">

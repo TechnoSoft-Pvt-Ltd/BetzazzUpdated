@@ -81,7 +81,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="@Url.Action("PreMatch","Events")" class="nav-link ">
-                                        Coming Soon
+                                        ComingSoon
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -674,10 +674,10 @@
                             <div class="row">
 
                                 <div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 text-center zoom">
-                                    <a>
+                                    <a href="#" data-toggle="modal" data-target="#modalRegisterForm">
 
 
-                                        <h1> Register</h1>
+                                        <h1> Registe </h1>
                                         <p>Create an Account</p>
 
                                     </a>
@@ -726,8 +726,11 @@
 
                             <h4 id="h4" class="card-title text-center">LIVE EVENTS</h4>
                             <hr id="hr1">
+                            
                             <span class="vibrate">
-                                <img src="~/Content/icons/offers/live.png" style="height:80px;width:80px;" />
+                                <a href="@Url.Action("Inplay","Events")">
+                                    <img src="~/Content/icons/offers/live.png" style="height:80px;width:80px;" />
+                                </a>
                             </span>
                             <br>
                             <button class="btn btn-primary">PLAY NOW</button>
@@ -744,7 +747,9 @@
                             <h4 id="h4" class="card-title text-center">UPCOMING EVENTS</h4>
                             <hr id="hr1">
                             <span class="vibrate">
+                                <a href="@Url.Action("PreMatch","Events")">
                                 <img src="~/Content/icons/offers/calendar-with-a-clock-time-tools.png" style="height:80px;width:80px;" />
+                                    </a>
                             </span>
                             <br>
                             <button class="btn btn-primary">PLAY NOW</button>
@@ -761,7 +766,9 @@
                             <h4 id="h4" class="card-title text-center">CRICKET</h4>
                             <hr id="hr1">
                             <span class="vibrate">
+                                <a href="@Url.Action("Inplay","Cricket")">
                                 <img src="~/Content/icons/offers/cricket (5).png" style="height:80px;width:80px;" />
+                                    </a>
                             </span>
                             <br>
                             <button class="btn btn-primary">PLAY NOW</button>
@@ -778,7 +785,9 @@
                             <h4 id="h4" class="card-title text-center">FOOTBALL</h4>
                             <hr id="hr1">
                             <span class="vibrate">
+                                <a href="@Url.Action("Inplay","Football")">
                                 <img src="~/Content/icons/offers/soccer-ball-variant.png" style="height:80px;width:80px;" />
+                                    </a>
                             </span>
                             <br>
                             <button class="btn btn-primary">PLAY NOW</button>

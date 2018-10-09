@@ -99,6 +99,9 @@ C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.dll
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.pdb
+<<<<<<< HEAD
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csprojAssemblyReference.cache
+=======
 C:\Users\Lenovo\source\repos\betzazz1.1\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\ApplicationInsights.config
 C:\Users\Lenovo\source\repos\betzazz1.1\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\betzazz1.1.dll.config
 C:\Users\Lenovo\source\repos\betzazz1.1\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\betzazz1.1.dll
@@ -201,3 +204,4 @@ C:\Users\Lenovo\source\repos\betzazz1.1\BetzazzUpdated\betzazz1.1\betzazz1.1\obj
 C:\Users\Lenovo\source\repos\betzazz1.1\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csproj.CopyComplete
 C:\Users\Lenovo\source\repos\betzazz1.1\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.dll
 C:\Users\Lenovo\source\repos\betzazz1.1\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.pdb
+>>>>>>> aae4b3424fc5cf65f712a3bb34e12815481b8d16
