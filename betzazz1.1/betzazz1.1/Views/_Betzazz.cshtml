@@ -149,7 +149,7 @@
                             <div class="tab">
                                 <button class="tablinks" id="defaultOpen" onclick="openEvent(event, 'Live')" style="border-style:none;">Live</button>
                                 <button class="tablinks" onclick="openEvent(event, 'prematch')" style="border-style:none;">Future</button>
-                                <button class="tablinks" onclick="openEvent(event, 'Live')" style="border-style:none;">Today</button>
+                                <button class="tablinks" onclick="openEvent(event, 'today')" style="border-style:none;">Today</button>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                                             for (int i = 0; i < EventList.Count; i++)
                                             {
                                                 <li>
-                                                    <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    <button type="button" onclick="show('myDiv1')" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                         @EventList[i]
                                                     </button>
                                                 </li>
@@ -196,8 +196,8 @@
                                             for (int i = 0; i < T20EventList.Count; i++)
                                             {
                                                 <li>
-                                                    <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                        @T20EventList[i]
+                                                    <button type="button" onclick="show('myDiv')" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @T20EventList[i] 
                                                     </button>
                                                 </li>
                                             }
@@ -218,7 +218,7 @@
                                             for (int i = 0; i < ODIEventList.Count; i++)
                                             {
                                                 <li>
-                                                    <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    <button type="button" onclick="show('myDiv1')" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                         @ODIEventList[i]
                                                     </button>
                                                 </li>
@@ -489,7 +489,7 @@
 
             </div>
         </div>
-        <!-- left Moder Starting from Here for mobile only-->
+        <!-- left Modal Starting from Here for mobile only-->
         <div class=" container visible-xs visible-sm">
 
 
@@ -549,7 +549,7 @@
                                                     for (int i = 0; i < EventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="show('myDiv1')" id="@EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @EventList[i]
                                                             </button>
                                                         </li>
@@ -571,7 +571,7 @@
                                                     for (int i = 0; i < T20EventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="show('myDiv1')" id="@T20EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @T20EventList[i]
                                                             </button>
                                                         </li>
@@ -593,7 +593,7 @@
                                                     for (int i = 0; i < ODIEventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="show('myDiv')"  id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @ODIEventList[i]
                                                             </button>
                                                         </li>
@@ -764,17 +764,21 @@
                                 </tr>
                                 <tr>
                                     <td class="my-td" style="width:45%;">Rate</td>
-                                    <td><input type="text" name="Rate" value="7.50" class="my-button-betslip" readonly>
+                                    <td><input type="text" name="Rate" id="Rate" value="7.50" class="my-button-betslip" readonly>
                                     <td>
                                 </tr>
                                 <tr>
                                     <td class="my-td">Stake</td>
-                                    <td><input type="text" name="Stake" onfocus="this.value=''"  value="Stake"  class="my-button-betslip"></td>
+                                    <td><input type="text" name="Stake" id="Stake" onfocus="this.value=''"  value="Stake"  class="my-button-betslip">
+                                        <a href="javascript: void(0)" onClick="calc()"></a></td>
                                 </tr>
                                 
                                 <tr>
                                     <td class="my-td">Return</td>
-                                    <td><input type="text" name="Return" onfocus="this.value=''" value="Total Return" class="my-button-betslip"></td>
+                                    <td>
+                                        <input type="text" name="Return" id="Return" onfocus="this.value=''" value="Total Return" class="my-button-betslip">
+                                        <a href="javascript: void(0)" onClick="cal()"></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -1062,10 +1066,27 @@
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
 
-        // for close button
+        // ----------------To show the Bet slip----------------------
+        function show(target) {
+            document.getElementById(target).style.display ='block';
+        }
+
+        // ---------------------------for close button-----------------------------
         function hide(target) {
             document.getElementById(target).style.display = 'none';
         }
+        // ---------------------------To calculate Bet Function--------------------
+        $("#Rate,#Stake").keyup(function () {
+
+            $('#Return').val($('#Rate').val() * $('#Stake').val());
+
+        });
+        $("#Rate,#Return").keyup(function () {
+
+            $('#Stake').val($('#Return').val() / $('#Rate').val());
+
+        });
+
     </script>
 
 
