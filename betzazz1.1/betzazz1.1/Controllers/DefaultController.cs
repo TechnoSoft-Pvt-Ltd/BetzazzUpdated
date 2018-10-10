@@ -11,6 +11,7 @@ using System.Net.Mail;
 using System.Net;
 using System.Web.UI;
 using System.Configuration;
+using System.Web.Security;
 
 namespace betzazz1._1.Controllers
 {
@@ -207,6 +208,13 @@ namespace betzazz1._1.Controllers
                 throw ex;
             }
             return View("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("index", "Default");
         }
     }
 }

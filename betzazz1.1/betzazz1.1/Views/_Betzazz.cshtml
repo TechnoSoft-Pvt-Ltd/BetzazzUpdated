@@ -34,23 +34,44 @@
                         </ul>
 
                     </div>
-                    <div class="col-xs-2 collapse navbar-collapse pull-right" style="line-height: 30px;">
-                        <!--<ul style="margin-bottom: 0px;">
-                          <li>
-                            <button type="button" class="btn btn-primary navbar-btn">Login</button>
-                            <button type="button" class="btn btn-primary navbar-btn">Register</button>
-                          </li>
-                        </ul>-->
-                        <span data-toggle="dropdown" data-hover="dropdown"><button class="glyphicon glyphicon-user pull-right img-circle" style="background-color:black; font-size: 25px;padding:10px;color:#e49b1e"></button></span>
-                        @*<button class="btn btn-default dropdown-toggle glyphicon glyphicon-user pull-right img-circle" type="button" data-toggle="dropdown" data-hover="dropdown">
-                                <span class="caret"></span>
-                            </button>*@
-                        <ul class="dropdown-menu" style="background-color:#333; text-align:center">
-                            <li><span data-toggle="modal" data-target="#modalLoginForm" style="cursor:pointer">LOG IN</span></li>
-                            <li><span data-toggle="modal" data-target="#modalRegisterForm" style="cursor:pointer"> REGISTER</span></li>
-                        </ul>
+                    @if (Session["UserNameRandomGen"] != null && Session["Password"] != null)
+                    {
+                       <div class="pull-right">
+                           <div class="col-xs-2 collapse navbar-collapse " style="line-height: 30px;">
+                               <span style="color:#d0a44d"><b>@HttpContext.Current.Session["Currency"].ToString()</b></span>&nbsp;
+                               <span style="color:#d0a44d"><b>@HttpContext.Current.Session["Balance"].ToString()</b></span>&nbsp;&nbsp;<br />
+                               <span style="color:#d0a44d"><b>@HttpContext.Current.Session["UserName"].ToString()</b></span>
+                           </div>
+                        <span data-toggle="dropdown" data-hover="dropdown" style="cursor:pointer">
+                           <button class="glyphicon glyphicon-user pull-right img-circle" style="background-color:black; font-size: 25px;padding:10px;color:#e49b1e">
+                           </button>
+                        </span>
+                        <ul class="dropdown-menu" style="background-color: #d0a44d;text-align: center;">
+                            <li><a href="@Url.Action("UserProfile","Member")" style="cursor:pointer">Manage Profile</a></li>
+                            <li><a href="@Url.Action("Bank","Member")" style="cursor:pointer">Manage Accounts</a></li>
+                            <li><a href="@Url.Action("Bets","Member")" style="cursor:pointer">Manage Bets</a></li>
 
-                    </div>
+                            <hr>
+                            @using (Html.BeginForm("Logout", "Events"))
+                            {
+                                <li><span style="cursor:pointer"> <input type="submit" value="Logout" class="btn btn-success" style="background-color:black;border-color:#d0a44d" /></span></li>
+                            }
+                        </ul>
+                       </div>
+
+                    }
+                    else
+                    {
+                        <div class="col-xs-2 collapse navbar-collapse pull-right" style="line-height: 30px;">
+                            <span data-toggle="dropdown" data-hover="dropdown"><button class="glyphicon glyphicon-user pull-right img-circle" style="background-color:black; font-size: 25px;padding:10px;color:#e49b1e"></button></span>
+                            <ul class="dropdown-menu" style="background-color:#333; text-align:center">
+                                <li><span data-toggle="modal" data-target="#modalLoginForm" style="cursor:pointer">LOG IN</span></li>
+                                <li><span data-toggle="modal" data-target="#modalRegisterForm" style="cursor:pointer"> REGISTER</span></li>
+                            </ul>
+
+                        </div>
+
+                    }
                 </div>
             </div>
 
@@ -67,26 +88,50 @@
                 </button>
             </div>
             <span class="text-center" style="margin-bottom:-10px;margin-top:7px;">
-                <div class="visible-xs"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/mlogo.png" /></a></div>
-                <div class="visible-sm"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/logo.png" /></a></div>
+                <span class="visible-sm"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/logo.png" /></a></span>
+                <div class="visible-xs" style="padding-left:60px"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/mlogo.png" /></a></div>
             </span>
-            @*<i class="glyphicon glyphicon-user pull-right img-circle" style="padding:10px;color:#e49b1e"></i>*@
-            <div class="pull-right" style=" padding:10px;">
-                <span data-toggle="dropdown" data-hover="dropdown"><button class="glyphicon glyphicon-user img-circle" style="background-color:black; font-size: 10px;padding:10px;color:#e49b1e"></button></span>
-                @*<button class="btn btn-default dropdown-toggle glyphicon glyphicon-user pull-right img-circle" type="button" data-toggle="dropdown" data-hover="dropdown">
-                        <span class="caret"></span>
-                    </button>*@
+
+            @if (Session["UserNameRandomGen"] != null && Session["Password"] != null)
+            {
+
+            <div class="pull-right" style="display:flex;font-size:10px;">
+                <div style="display:-webkit-inline-box;">
+                    <span class="my-balncshow" ><b>@HttpContext.Current.Session["Currency"].ToString()</b></span>
+                    <span class="my-balncshow"><b>@HttpContext.Current.Session["Balance"].ToString()</b></span><br />
+                    <span ><b>@HttpContext.Current.Session["UserName"].ToString()</b></span>
+
+                </div>
+                
+                <span data-toggle="dropdown" style="padding:5px" ><button class="glyphicon glyphicon-user img-circle" style="background-color:black; font-size: 10px;padding:10px;color:#e49b1e"></button></span>
+
                 <ul class="dropdown-menu my-dropdown-menu" style="background-color:#333;text-align:center">
-                    <li><span data-toggle="modal" data-target="#modalLoginForm" style="cursor:pointer">LOG IN</span></li>
-                    <li><span data-toggle="modal" data-target="#modalRegisterForm" style="cursor:pointer"> REGISTER</span></li>
+                    <li><span style="cursor:pointer"><a href="@Url.Action("UserProfile","Member")" style="cursor:pointer">Manage Profile</a></span></li>
+                    <li><span style="cursor:pointer"> <a href="@Url.Action("Bank","Member")" style="cursor:pointer">Manage Bank</a></span></li>
+                    <li><span style="cursor:pointer"> <a href="@Url.Action("Bets","Member")" style="cursor:pointer">Manage Bets</a></span></li>
+                    <hr>
+                    @using (Html.BeginForm("Logout", "Events"))
+                    {
+                        <li><span style="cursor:pointer"> <input type="submit" value="Logout" class="btn btn-success" style="background-color:black;border-color:#d0a44d" /></span></li>
+                    }
                 </ul>
             </div>
-            <!--<img class="pull-right img-circle" style="padding:10px;" src="../../assets/user-shape (1).png" />-->
-            <!--<div class="pull-right" style="color:#ce870d;padding:5px;font-weight:bold">
-              <a href="#" style="color:#ce870d;text-decoration:none"> <span>JOIN</span> </a>
-              <a href="#" style="color:#fca104;text-decoration:none"> <span>LOGIN</span></a>
-            </div>-->
+            }
+            else
+            {
+                <div class="visible-sm"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/logo.png" /></a></div>
+                <div class="pull-right" style=" padding:10px;">
+                    <span data-toggle="dropdown" data-hover="dropdown"><button class="glyphicon glyphicon-user img-circle" style="background-color:black; font-size: 10px;padding:10px;color:#e49b1e"></button></span>
+
+                    <ul class="dropdown-menu my-dropdown-menu" style="background-color:#333;text-align:center">
+                        <li><span data-toggle="modal" data-target="#modalLoginForm" style="cursor:pointer">LOG IN</span></li>
+                        <li><span data-toggle="modal" data-target="#modalRegisterForm" style="cursor:pointer"> REGISTER</span></li>
+                    </ul>
+                </div>
+            }
         </div>
+
+
         <hr style="background-color:#ce870d;margin-top: 0px; margin-bottom: 0;width:100%;">
         <div class="visible-xs visible-sm text-center">
             <ul class="nav navbar-nav my-nav" style="margin-top:-10px;">
