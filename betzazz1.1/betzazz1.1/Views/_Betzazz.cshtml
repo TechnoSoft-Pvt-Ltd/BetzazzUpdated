@@ -37,6 +37,7 @@
                     </div>
                     @if (Session["UserNameRandomGen"] != null && Session["Password"] != null)
                     {
+<<<<<<< HEAD
                         <div class="pull-right">
                             <div class="col-xs-2 collapse navbar-collapse " style="line-height: 30px;">
                                 <span style="color:#d0a44d"><b>@HttpContext.Current.Session["Currency"].ToString()</b></span>&nbsp;
@@ -58,6 +59,29 @@
                                 }
                             </ul>
                         </div>
+=======
+                    <div class="pull-right">
+                        <div style="display: -webkit-inline-box;">
+                            <span style="color:#d0a44d">@HttpContext.Current.Session["Currency"].ToString()</span>
+                            &nbsp;<span style="color:#d0a44d"><b>@HttpContext.Current.Session["Balance"].ToString()</b></span><b style="color:#d0a44d">&nbsp;</b><br />
+                            <span style="color:#d0a44d">&nbsp;&nbsp;<b>@HttpContext.Current.Session["UserName"].ToString()</b></span>&nbsp;&nbsp;&nbsp;
+                        </div>
+                        <span data-toggle="dropdown" data-hover="dropdown" style="cursor:pointer">
+                            <button class="glyphicon glyphicon-user pull-right img-circle" style="background-color:black; font-size: 25px;padding:10px;color:#e49b1e"></button>
+                        </span>
+                        <ul class="dropdown-menu" style="background-color: #d0a44d;text-align: center;">
+                            <li><a href="@Url.Action("UserProfile","Member")" style="cursor:pointer">Manage Profile</a></li>
+                            <li><a href="@Url.Action("Bank","Member")" style="cursor:pointer">Manage Accounts</a></li>
+                            <li><a href="@Url.Action("Bets","Member")" style="cursor:pointer">Manage Bets</a></li>
+
+                            <hr>
+                            @using (Html.BeginForm("Logout", "Events"))
+                            {
+                                <li><span style="cursor:pointer"> <input type="submit" value="Logout" class="btn btn-success" style="background-color:black;border-color:#d0a44d" /></span></li>
+                            }
+                        </ul>
+                    </div>
+>>>>>>> ea507ed400fb6d77c997fac35a989370f6f66e1a
 
                     }
                     else
@@ -194,7 +218,7 @@
                             <div class="tab">
                                 <button class="tablinks" id="defaultOpen" onclick="openEvent(event, 'Live')" style="border-style:none;">Live</button>
                                 <button class="tablinks" onclick="openEvent(event, 'prematch')" style="border-style:none;">Future</button>
-                                <button class="tablinks" onclick="openEvent(event, 'Live')" style="border-style:none;">Today</button>
+                                <button class="tablinks" onclick="openEvent(event, 'today')" style="border-style:none;">Today</button>
                             </div>
                         </div>
                     </div>
@@ -219,7 +243,7 @@
                                             for (int i = 0; i < EventList.Count; i++)
                                             {
                                                 <li>
-                                                    <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    <button type="button" onclick="show('myDiv1')" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                         @EventList[i]
                                                     </button>
                                                 </li>
@@ -241,8 +265,8 @@
                                             for (int i = 0; i < T20EventList.Count; i++)
                                             {
                                                 <li>
-                                                    <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                        @T20EventList[i]
+                                                    <button type="button" onclick="show('myDiv')" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @T20EventList[i] 
                                                     </button>
                                                 </li>
                                             }
@@ -263,7 +287,7 @@
                                             for (int i = 0; i < ODIEventList.Count; i++)
                                             {
                                                 <li>
-                                                    <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    <button type="button" onclick="show('myDiv1')" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                         @ODIEventList[i]
                                                     </button>
                                                 </li>
@@ -534,7 +558,7 @@
 
             </div>
         </div>
-        <!-- left Moder Starting from Here for mobile only-->
+        <!-- left Modal Starting from Here for mobile only-->
         <div class=" container visible-xs visible-sm">
 
 
@@ -594,7 +618,7 @@
                                                     for (int i = 0; i < EventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="show('myDiv1')" id="@EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @EventList[i]
                                                             </button>
                                                         </li>
@@ -616,7 +640,7 @@
                                                     for (int i = 0; i < T20EventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="show('myDiv1')" id="@T20EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @T20EventList[i]
                                                             </button>
                                                         </li>
@@ -638,7 +662,7 @@
                                                     for (int i = 0; i < ODIEventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="show('myDiv')"  id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @ODIEventList[i]
                                                             </button>
                                                         </li>
@@ -809,17 +833,25 @@
                                 </tr>
                                 <tr>
                                     <td class="my-td" style="width:45%;">Rate</td>
-                                    <td><input type="text" name="Rate" value="7.50" class="my-button-betslip" readonly>
+                                    <td><input type="text" name="Rate" id="Rate" value="7.50" class="my-button-betslip" readonly>
                                     <td>
                                 </tr>
                                 <tr>
                                     <td class="my-td">Stake</td>
+<<<<<<< HEAD
                                     <td><input type="text" name="Stake" onfocus="this.value=''" value="Stake" class="my-button-betslip"></td>
+=======
+                                    <td><input type="text" name="Stake" id="Stake" onfocus="this.value=''"  value="Stake"  class="my-button-betslip">
+                                        <a href="javascript: void(0)" onClick="calc()"></a></td>
+>>>>>>> ea507ed400fb6d77c997fac35a989370f6f66e1a
                                 </tr>
 
                                 <tr>
                                     <td class="my-td">Return</td>
-                                    <td><input type="text" name="Return" onfocus="this.value=''" value="Total Return" class="my-button-betslip"></td>
+                                    <td>
+                                        <input type="text" name="Return" id="Return" onfocus="this.value=''" value="Total Return" class="my-button-betslip">
+                                        <a href="javascript: void(0)" onClick="cal()"></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -1123,7 +1155,38 @@
             function hide(target) {
                 document.getElementById(target).style.display = 'none';
             }
+<<<<<<< HEAD
         </script>
+=======
+            document.getElementById(eventName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        // ----------------To show the Bet slip----------------------
+        function show(target) {
+            document.getElementById(target).style.display ='block';
+        }
+
+        // ---------------------------for close button-----------------------------
+        function hide(target) {
+            document.getElementById(target).style.display = 'none';
+        }
+        // ---------------------------To calculate Bet Function--------------------
+        $("#Rate,#Stake").keyup(function () {
+
+            $('#Return').val($('#Rate').val() * $('#Stake').val());
+
+        });
+        $("#Rate,#Return").keyup(function () {
+
+            $('#Stake').val($('#Return').val() / $('#Rate').val());
+
+        });
+
+    </script>
+>>>>>>> ea507ed400fb6d77c997fac35a989370f6f66e1a
 
 
     </body>

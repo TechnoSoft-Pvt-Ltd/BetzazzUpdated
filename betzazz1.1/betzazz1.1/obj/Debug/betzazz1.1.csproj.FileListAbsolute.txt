@@ -95,10 +95,12 @@ C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\Micros
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\Microsoft.AI.Web.xml
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csprojAssemblyReference.cache
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.dll
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.pdb
+<<<<<<< HEAD
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csprojAssemblyReference.cache
 D:\Shakeb Anwer\betzaz1.1(Updated)\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\ApplicationInsights.config
 D:\Shakeb Anwer\betzaz1.1(Updated)\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\betzazz1.1.dll.config
@@ -201,3 +203,5 @@ D:\Shakeb Anwer\betzaz1.1(Updated)\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debu
 D:\Shakeb Anwer\betzaz1.1(Updated)\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csproj.CopyComplete
 D:\Shakeb Anwer\betzaz1.1(Updated)\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.dll
 D:\Shakeb Anwer\betzaz1.1(Updated)\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.pdb
+=======
+>>>>>>> ea507ed400fb6d77c997fac35a989370f6f66e1a
