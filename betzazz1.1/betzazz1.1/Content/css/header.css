@@ -592,3 +592,14 @@ body {
     padding-top: 10px;
     text-align: left
 }
+.my-btn-login-signup {
+    background-color: black;
+    border-color: #d0a44d;
+    margin-right: 240px;
+    width:100px;
+}
+    .my-btn-login-signup:hover {
+        background: #ce870d;
+        color:black;
+        border-color:black;
+    }

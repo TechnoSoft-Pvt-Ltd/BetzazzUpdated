@@ -206,7 +206,7 @@ namespace betzazz1._1.Controllers
                 con.Close();
                 throw ex;
             }
-            return View();
+            return RedirectToAction("InPlay");
 
 
         }
@@ -321,7 +321,7 @@ namespace betzazz1._1.Controllers
             {
                 throw ex;
             }
-            return View("InPlay");
+            return RedirectToAction("InPlay");
         }
 
     }
