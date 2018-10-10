@@ -31,6 +31,7 @@ namespace betzazz1._1.BusnessLogics
         public  int ftleagueid { get; set; }
 
         public string TestLeagueName { get; set; }
+       
         public string TestData { get; set; }
         public string EventId { get; set; }
         public string EventId1 { get; set; }
@@ -44,6 +45,10 @@ namespace betzazz1._1.BusnessLogics
         public string ODIData { get; set; }
         public string ODILeagueName { get; set; }
 
+
+        public static string FootballLeageName { get; set; }
+        public  string FTData { get; set; }
+        public string FTEventId { get; set; }
         //public string  LeagueName { get; set; }
         //public string EventId { get; set; }
         //public string EventName { get; set; }
@@ -220,12 +225,11 @@ namespace betzazz1._1.BusnessLogics
                             }
                         }
                     }
-                    // For football Inplay event Lis
-                   //LiveEventList FTLiveList = serializer.Deserialize<LiveEventList>(ftipjson);
-                   //int matchcountFt = FTLiveList.results.Count();
-                   //if (FTLiveList.success == "1" && FTLiveList.results != null)
-               
-                    //for (int j = 0; j < matchcountFt; j++)
+                  // For football Inplay event Lis
+                    // LiveEventList FTLiveList = serializer.Deserialize<LiveEventList>(ftipjson);
+                    // int matchcountFt = FTLiveList.results.Count();
+                    // if (FTLiveList.success == "1" && FTLiveList.results != null)
+                    // for (int j = 0; j < matchcountFt; j++)
                     //{
                     //    FullNewELFT FTEventList = new FullNewELFT();
                     //    FTEventList.sport_id = FTLiveList.results[j].sport_id;
@@ -241,13 +245,13 @@ namespace betzazz1._1.BusnessLogics
                     //    int LocalLeaguid = Convert.ToInt32(FTEventList.leagueId);
                     //    ftleagueid = Convert.ToInt32(FTEventList.leagueId);
                     //    string Lname = FTEventList.leagueName;
-                    //    if (FTEventList.leagueName.Equals(Lname) && ftleagueid == LocalLeaguid)
+                    //    if (FTEventList.leagueName.Equals(Lname) && ftleagueid == LocalLeaguid && FTEventList.leagueName!= FootballLeageName)
                     //    {
-                    //        if (TestData == null && EventId == null)
+                    //        if (FTData == null && FTEventId == null)
                     //        {
-                    //            TestLeagueName = FTEventList.leagueName;
-                    //            EventId = EventId + CRLiveList.results[j].id;
-                    //            TestData = TestData + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
+                    //            FootballLeageName = FTEventList.leagueName;
+                    //            FTEventId = EventId + CRLiveList.results[j].id;
+                    //            FTData = TestData + FTEventList.homeTeamName + " VS " + FTEventList.awayTeamName;
                     //        }
                     //        else
                     //        {
@@ -289,7 +293,7 @@ namespace betzazz1._1.BusnessLogics
                     //    }
 
                     //}
-                
+
                 }
                 catch (Exception et)
                 {

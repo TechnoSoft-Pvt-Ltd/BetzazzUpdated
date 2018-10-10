@@ -307,9 +307,9 @@
                         @if (Session["UserNameRandomGen"] != null && Session["Password"] != null)
                          {
                         <div>
-                            <span style="color:#d0a44d">@ViewBag.Currency</span>
-                           &nbsp;<span style="color:#d0a44d"><b>@ViewBag.Balance</b></span><b style="color:#d0a44d">&nbsp;</b><br />
-                            <span style="color:#d0a44d">&nbsp;&nbsp;<b>@ViewBag.UName</b></span>&nbsp;&nbsp;&nbsp;
+                            <span style="color:#d0a44d">@HttpContext.Current.Session["Currency"].ToString()</span>
+                           &nbsp;<span style="color:#d0a44d"><b>@HttpContext.Current.Session["Balance"].ToString()</b></span><b style="color:#d0a44d">&nbsp;</b><br />
+                            <span style="color:#d0a44d">&nbsp;&nbsp;<b>@HttpContext.Current.Session["UserName"].ToString()</b></span>&nbsp;&nbsp;&nbsp;
                         </div>                    
                             <span data-toggle="dropdown" data-hover="dropdown" style="cursor:pointer">
                                 <img src="~/website/assets/img/avatars/profiles/user-shape (1).png" alt="..." class="avatar-img rounded-circle border-danger" />
@@ -1295,6 +1295,9 @@
             </div>
         }
         <!--End Register Popup Modal-->
+
+            
+
         <!-- Footer -->
         <!-- JAVASCRIPT
     ================================================== -->

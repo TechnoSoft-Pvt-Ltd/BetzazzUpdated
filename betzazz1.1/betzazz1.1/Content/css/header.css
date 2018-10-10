@@ -593,6 +593,7 @@ body {
     padding-top: 10px;
     text-align: left
 }
+<<<<<<< HEAD
 .dropdown-center-settings {
     font-size: 14px;
     font-weight: bold;
@@ -600,3 +601,16 @@ body {
     margin-bottom: 0;
     margin-left: 15px;
 }
+=======
+.my-btn-login-signup {
+    background-color: black;
+    border-color: #d0a44d;
+    margin-right: 240px;
+    width:100px;
+}
+    .my-btn-login-signup:hover {
+        background: #ce870d;
+        color:black;
+        border-color:black;
+    }
+>>>>>>> 0278a23d67c092795f0aa7738075f0c2597a2340
