@@ -140,6 +140,7 @@ i, span {
     color: #ce870d;
     transition: all 0.3s;
     margin-top: 120px;
+    min-height: -webkit-fill-available;
 }
 
 
@@ -162,7 +163,7 @@ i, span {
 
     #sidebar ul.components {
         padding: 20px 0;
-        border-bottom: 1px solid #ce870d;
+        
     }
 
     #sidebar ul li a {
@@ -189,9 +190,9 @@ a[data-toggle="collapse"] {
 
 a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     content: '\e259';
-    display: block;
-    position: absolute;
-    left: 90%;
+    /*display: contents;*/
+    position: inherit;
+    left: 95%;
     font-family: 'Glyphicons Halflings';
     font-size: 0.7em;
 }
@@ -591,4 +592,11 @@ body {
     font-size: 10px;
     padding-top: 10px;
     text-align: left
+}
+.dropdown-center-settings {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: -19px;
+    margin-bottom: 0;
+    margin-left: 15px;
 }

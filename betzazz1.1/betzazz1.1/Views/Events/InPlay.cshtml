@@ -22,15 +22,15 @@
                             @*<span class="caret"></span> <span></span>*@
                             <ul class="list-unstyled comments ">
                                 <li class="active">
-
                                     <a href="#Testinplayview" data-toggle="collapse" aria-expanded="false">
-                                      <span style="font-size:14px;font-weight:bold">  @ViewBag.LeagueName  </span>
+                                      <div class="dropdown-center-settings"> @ViewBag.LeagueName  </div>
                                     </a>
                                     <ul class="collapse list-unstyled" id="Testinplayview">
                                        
                                        
                                         @for(int i=0;i<ViewBag.ArrTestData.Length; i++)
                                          {
+
                                             <li>                                           
                                                 <button type="button" id="@ViewBag.Evntid[i]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                     @ViewBag.ArrTestData[i]
@@ -45,7 +45,7 @@
                             <ul class="list-unstyled components ">
                                 <li class="active">
                                     <a href="#Ondayinplayview" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.T20LeagueName  </span>
+                                        <div class="dropdown-center-settings">  @ViewBag.T20LeagueName  </div>
                                     </a>
                                     <ul class="collapse list-unstyled" id="Ondayinplayview">
                                         @for (int j = 0; j < ViewBag.ArrT20Data.Length; j++)
@@ -65,7 +65,7 @@
                             <ul class="list-unstyled components ">
                                 <li class="active">
                                     <a href="#ODI1inplayview" data-toggle="collapse" aria-expanded="false">
-                                    <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
+                                    <div class="dropdown-center-settings">  @ViewBag.ODILeagueName  </div>
                                     </a>
                                     <ul class="collapse list-unstyled" id="ODI1inplayview">
                                         @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
@@ -85,7 +85,7 @@
                             <ul class="list-unstyled components ">
                                 <li class="active">
                                     <a href="#ODIinplayview" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
+                                        <div class="dropdown-center-settings">  @ViewBag.ODILeagueName  </div>
                                     </a>
                                     <ul class="collapse list-unstyled" id="ODIinplayview">
                                         @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
@@ -104,7 +104,7 @@
                             <ul class="list-unstyled components ">
                                 <li class="active">
                                     <a href="#ODI2inplayview" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
+                                        <div class="dropdown-center-settings">  @ViewBag.ODILeagueName  </div>
                                     </a>
                                     <ul class="collapse list-unstyled" id="ODI2inplayview">
                                         @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)

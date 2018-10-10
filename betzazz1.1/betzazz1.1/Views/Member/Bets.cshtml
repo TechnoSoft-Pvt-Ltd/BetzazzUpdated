@@ -8,14 +8,14 @@
     <h2 class="my-h2">Bets</h2>
     <div class="tab-setting-member">
         <div class="tab">
-            <button class="tablinksProfile" style="border-style: inherit;" id="defaultOpenPersonal" onclick="openProfile(event, 'Bet_History')">Bet History</button>
-            <button class="tablinksProfile" style="border-style: inherit;" onclick="openProfile(event, 'Won')">Won</button>
-            <button class="tablinksProfile" style="border-style: inherit;" onclick="openProfile(event, 'Lose')">Lose</button>
-            @*<button class="tablinksProfile" style="width: 25%; border-style: inherit;" onclick="openProfile(event, 'Lose')">Lose</button>*@
+            <button class="tablinksProfile" style="width: 25%; border-style: inherit;" id="defaultOpenPersonal" onclick="openProfile(event, 'Active_Bets')">Active Bets</button>
+            <button class="tablinksProfile" style="width: 25%; border-style: inherit;" onclick="openProfile(event, 'Bet_History')">Bet History</button>
+            <button class="tablinksProfile" style="width: 25%; border-style: inherit;" onclick="openProfile(event, 'Won')">Won</button>
+            <button class="tablinksProfile" style="width: 25%; border-style: inherit;" onclick="openProfile(event, 'Lose')">Lose</button>
         </div>
     </div>
-    <div class="tabcontentProfile" id="Bet_History">
-        <h3>Deposit Information</h3>
+    <div class="tabcontentProfile" id="Active_Bets">
+        <h3>Live Bets</h3>
         <table class="table table-bordered table-setting">
 
             <tr>
@@ -39,8 +39,8 @@
         <button class="btn btn-danger">Edit Details</button>
 
     </div>
-    <div class="tabcontentProfile" id="Won">
-        <h3>Withdraw Information</h3>
+    <div class="tabcontentProfile" id="Bet_History">
+        <h3>Last Bets</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -69,8 +69,8 @@
         </table>
     </div>
 
-    <div class="tabcontentProfile" id="Lose">
-        <h3>Account Summary</h3>
+    <div class="tabcontentProfile" id="Won">
+        <h3>Won Bets</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -118,8 +118,8 @@
             </tbody>
         </table>
     </div>
-    @*<div class="tabcontentProfile" id="Lose">
-        <h3>Account Summary</h3>
+    <div class="tabcontentProfile" id="Lose">
+        <h3>Lose Bets</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -181,7 +181,7 @@
                 </tr>
             </tbody>
         </table>
-    </div>*@
+    </div>
 
 </div>
 
