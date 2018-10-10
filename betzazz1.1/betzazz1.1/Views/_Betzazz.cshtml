@@ -90,6 +90,7 @@
             <span class="text-center" style="margin-bottom:-10px;margin-top:7px;">
                 <span class="visible-sm"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/logo.png" /></a></span>
                 <div class="visible-xs" style="padding-left:60px"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/mlogo.png" /></a></div>
+
             </span>
 
             @if (Session["UserNameRandomGen"] != null && Session["Password"] != null)
@@ -119,7 +120,7 @@
             }
             else
             {
-                <div class="visible-sm"><a href="@Url.Action("Index","Default")"><img class="center-block" src="~/Content/assets/logo.png" /></a></div>
+                
                 <div class="pull-right" style=" padding:10px;">
                     <span data-toggle="dropdown" data-hover="dropdown"><button class="glyphicon glyphicon-user img-circle" style="background-color:black; font-size: 10px;padding:10px;color:#e49b1e"></button></span>
 
@@ -194,7 +195,7 @@
                             <div class="tab">
                                 <button class="tablinks" id="defaultOpen" onclick="openEvent(event, 'Live')" style="border-style:none;">Live</button>
                                 <button class="tablinks" onclick="openEvent(event, 'prematch')" style="border-style:none;">Future</button>
-                                <button class="tablinks" onclick="openEvent(event, 'today')" style="border-style:none;">Today</button>
+                                <button class="tablinks" onclick="openEvent(event, 'Live')" style="border-style:none;">Today</button>
                             </div>
                         </div>
                     </div>
