@@ -341,8 +341,7 @@ body {
 }
 
 .modal-header {
-    border-bottom-color: #EEEEEE;
-    background-color: #333333;
+    
 }
 
 .my-giphyicon {
@@ -587,4 +586,9 @@ body {
     text-align: center;
     font-weight: bold;
     border-color: #e9b449;
+}
+.my-balncshow {
+    font-size: 10px;
+    padding-top: 10px;
+    text-align: left
 }

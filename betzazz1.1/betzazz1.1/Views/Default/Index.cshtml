@@ -74,7 +74,7 @@
                         </a>
                     </div>
                     <!-- Form -->
-                    <form class="form-inline mr-4 d-none d-md-flex">
+                    <form class="form-inline mr-4 d-none d-md-flex" style="margin-bottom:unset">
                         <div class="input-group-merge">
                             <label class="toggle" for="toggle">&#9776; <span>Menue</span></label>
                             <ul class="nav nav-tabs nav-tabs-sm nav-overflow">
@@ -315,12 +315,15 @@
                                 <img src="~/website/assets/img/avatars/profiles/user-shape (1).png" alt="..." class="avatar-img rounded-circle border-danger" />
                             </span>
                             <ul class="dropdown-menu" style="background-color: #d0a44d;text-align: center;">
-                                <li><a href="@Url.Action("UserProfile","Member")"  style="cursor:pointer">Profile</a></li>
-                                <li><a href="@Url.Action("Bank","Member")"  style="cursor:pointer"> Bank</a></li>
-                                <li><a href="@Url.Action("Bets","Member")"  style="cursor:pointer"> Bets</a></li>
-                                <li><a href="#"  style="cursor:pointer">Change Password</a></li>
-                                <li><a href="#" style="cursor:pointer">Sign Out</a></li>
-                            </ul>
+                                <li><a href="@Url.Action("UserProfile","Member")" style="cursor:pointer">Manage Profile</a></li>
+                                <li><a href="@Url.Action("Bank","Member")" style="cursor:pointer">Manage Bank</a></li>
+                                <li><a href="@Url.Action("Bets","Member")" style="cursor:pointer">Manage Bets</a></li>
+                                <hr>
+                                @using (Html.BeginForm("Logout", "Default"))
+                                {
+                                    <li><span style="cursor:pointer"> <input type="submit" value="Logout" class="btn btn-success" style="background-color:black;border-color:#d0a44d" /></span></li>
+                                }
+                                </ul>
                         }
                         else
                         {
@@ -1195,28 +1198,30 @@
                                                 <i class="fa fa-user prefix grey-text"></i>
                                                 <label data-error="wrong" data-success="right" for="defaultForm-email">User id</label>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
-                                                @Html.TextBoxFor(model => model.account.UserID)
+                                                @Html.TextBoxFor(model => model.account.UserID, new { @class = "form-control validate", style = "width:400px;border-color:black;height:35px", placeholder = "Enter User id provided by Admin!" })
                                             </td>
                                         </tr>
-
-
 
                                         <tr>
                                             <td>
                                                 <i class="fa fa-lock prefix grey-text"></i>
                                                 <label data-error="wrong" data-success="right" for="defaultForm-pass">Password</label>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
-                                                @Html.PasswordFor(model => model.account.Password)
+                                                @Html.PasswordFor(model => model.account.Password, new { @class = "form-control validate", style = "width:400px;border-color:black;height:35px", placeholder = "Enter Password provided by Admin!" })
+
                                             <td>
                                         </tr>
                                     </table>
-                                </div>
-                                <span style="color:red">@ViewBag.Error</span>
+                                </div>                       
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
-                                <input type="submit" value="Login" class="btn btn-success" style="background-color:black;border-color:#d0a44d" />
+                                <input type="submit" value="Login" class="btn btn-success" style="background-color:black;border-color:#d0a44d;width:100px;" />
                                 @*<button class="btn btn-success" value="" style="background-color:black;border-color:#d0a44d">Sign in</button>*@
                             </div>
                         </center>

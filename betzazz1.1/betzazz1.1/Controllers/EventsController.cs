@@ -11,6 +11,7 @@ using betzazz1._1.BusnessLogics;
 using betzazz1._1.Models;
 using System.Web.Script.Serialization;
 using System.Collections;
+using System.Web.Security;
 
 namespace betzazz1._1.Controllers
 {
@@ -130,6 +131,12 @@ namespace betzazz1._1.Controllers
         {
            
             return View();
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("Inplay", "Events");
         }
 
     }
