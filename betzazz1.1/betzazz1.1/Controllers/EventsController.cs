@@ -14,6 +14,7 @@ using System.Collections;
 using System.Web.Security;
 using betzazz1._1.ViewModels;
 using System.Net.Mail;
+using Newtonsoft.Json;
 
 namespace betzazz1._1.Controllers
 {
@@ -131,10 +132,14 @@ namespace betzazz1._1.Controllers
             Session["CRTotalEvent"] = CRTotalEvent;
 
 
-            FottballInplay = GBLClass.FotballIPGetJson;
-            var serilezer = new JavaScriptSerializer();
-            LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
 
+            //FottballInplay = GBLClass.FotballIPGetJson;
+
+            //var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
+
+
+            //LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
+            //ViewBag.LiveFT = LiveFT;
             return View();
 
 
