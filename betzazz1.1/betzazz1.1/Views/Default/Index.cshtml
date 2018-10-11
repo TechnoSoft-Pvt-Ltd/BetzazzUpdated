@@ -1258,7 +1258,8 @@
                             <div class="md-form mb-4">
                                 <i class="fa fa-user prefix grey-text"></i>
                                 <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
-                                @Html.TextBoxFor(model => model.account.Username)
+                                @Html.TextBoxFor(model => model.account.Username, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your Name!" })
+                                
 
                             </div>
                             <div>
@@ -1274,12 +1275,12 @@
                                   new SelectListItem{Text="CAD",Value="CAD"},
                                   new SelectListItem{Text="AUD",Value="AUD"}
 
-                                },"---select state---",new { @class="form-control"})
+                                },"---select currency---",new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your Name!" })
                             </div>
                             <div class="md-form mb-4">
-                                <i class="fa fa-lock prefix grey-text"></i>
+                                <i class="fa fa-envelope prefix grey-text"></i>
                                 <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Email</label>
-                                @Html.TextBoxFor(model => model.account.emailid)
+                                @Html.PasswordFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please enter your E-mail ID!" })
 
 
                             </div>
