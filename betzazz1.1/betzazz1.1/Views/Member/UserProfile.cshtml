@@ -3,6 +3,8 @@
     ViewBag.Title = "UserProfile";
     Layout = "~/Views/_Betzazz.cshtml";
 }
+@model betzazz1._1.ViewModels.AccountViewModel
+
 <div class="container-fluid middle-container">
     <h2 class="text-center">Profile</h2>
     <div class="tab-setting-member col col--xs-8 col--sm-10 col--md-4 col--lg-4">
@@ -75,18 +77,23 @@
     margin-top: 14px;">
 
 
-
+        @using (Html.BeginForm("Change_Password", "Events"))
+        {
         <div class="form-group">
-            <label for="pwd">Current Password:</label>
-            <input type="password" class="form-control" id="pwd">
-            <label for="pwd2">New Password:</label>
-            <input type="password" class="form-control" id="pwd2">
-            <label for="pwd3">Confirm Password:</label>
-            <input type="password" class="form-control" id="pwd3">
+            <label for="E_Mail">E_Mail ID:</label>
+            @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your E_Mail !" })
+
+            <label for="pwd1">New Password:</label>
+            @Html.PasswordFor(model => model.account.NPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter New Password !" })
+
+            <label for="pwd2">Confirm Password:</label>
+            @Html.PasswordFor(model => model.account.CPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Confirm Password !" })
             <br>
-            <button class="btn btn-primary" style="margin-left:35%;">Submit</button>
+            @*<button class="btn btn-primary" style="margin-left:35%;">Submit</button>*@
+            <input type="submit" value="Change_Password" class="btn btn-success" style="margin-left:35%;" />
             <button class="btn btn-danger" style="margin-left:15%;">Cancel</button>
         </div>
+        }
 
     </div>
 </div>

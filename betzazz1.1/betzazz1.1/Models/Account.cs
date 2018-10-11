@@ -17,6 +17,16 @@ namespace betzazz1._1.Models
             get;
             set;
         }
+        public string NPassword
+        {
+            get;
+            set;
+        }
+        public string CPassword
+        {
+            get;
+            set;
+        }
 
         public string Username
         {
