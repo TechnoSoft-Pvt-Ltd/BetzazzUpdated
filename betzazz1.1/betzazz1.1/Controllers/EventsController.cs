@@ -19,6 +19,8 @@ namespace betzazz1._1.Controllers
 {
     public class EventsController : Controller
     {
+        public string FottballInplay { get; set; }
+
         public static string UName { get; set; }
         public static Double Balance { get; set; }
         public static string Currency { get; set; }
@@ -127,6 +129,12 @@ namespace betzazz1._1.Controllers
             int CRTotalEvent = TestCount + T20Count + ODICount;
             ViewBag.CRTotalEvent = CRTotalEvent;
             Session["CRTotalEvent"] = CRTotalEvent;
+
+
+            FottballInplay = GBLClass.FotballIPGetJson;
+            var serilezer = new JavaScriptSerializer();
+            LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
+
             return View();
 
 
