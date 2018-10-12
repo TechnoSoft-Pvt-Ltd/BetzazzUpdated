@@ -133,13 +133,14 @@ namespace betzazz1._1.Controllers
 
 
 
-            //FottballInplay = GBLClass.FotballIPGetJson;
+            FottballInplay = GBLClass.FotballIPGetJson;
 
-            //var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
+           // var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
 
-
-            //LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
-            //ViewBag.LiveFT = LiveFT;
+            var serilezer = new JavaScriptSerializer();
+            LiveList LiveFT = serilezer.Deserialize<LiveList>(FottballInplay);
+            string[]
+            ViewBag.LiveFT = LiveFT;
             return View();
 
 

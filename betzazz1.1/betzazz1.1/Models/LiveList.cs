@@ -7,9 +7,9 @@ namespace betzazz1._1.Models
 {
     public class LiveList
     {
-        public IEnumerable<result> results { get; set; }
+        public IEnumerable<ftResult> results { get; set; }
     }
-    public class result
+    public class ftResult
     {
         public string id { get; set; }
         public string sport_id { get; set; }
