@@ -1,4 +1,6 @@
-﻿
+﻿@using System.Data;
+@using System.Data.SqlClient;
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Bets";
     Layout = "~/Views/_Betzazz.cshtml";
@@ -16,56 +18,72 @@
     </div>
     <div class="tabcontentProfile" id="Active_Bets">
         <h3>Live Bets</h3>
-        <table class="table table-bordered table-setting">
+        <table class="table table-bordered table-setting table-responsive-sm">
 
-            <tr>
-                <th>Name</th>
-                <td>Harry</td>
+            <thead>
+                <tr>
+                    <th>TX ID</th>
+                    <th>Event ID</th>
+                    <th>Bet Type</th>
+                    <th>Amount</th>
+                    <th>Result</th>
+                    <th>Loss Profit</th>
+                </tr>
+            </thead>
 
-            </tr>
-
-            <tr>
-                <th>Currency</th>
-                <td>INR</td>
-
-            </tr>
-            <tr>
-                <th>Email-ID</th>
-                <td>harryporter@gmail.com</td>
-
-            </tr>
+            <tbody>
+                @foreach (DataTable dt1 in ViewBag.ds2.Tables)
+                {
+                    foreach (DataRow dr1 in dt1.Rows)
+                    {
+                        <tr>
+                            <td><a href="#">@dr1["TransectionId"]</a></td>
+                            <td>@dr1["EventId"]</td>
+                            <td>@dr1["BetType"]</td>
+                            <td>@dr1["Amount"]</td>
+                            <td>@dr1["Result"]</td>
+                            <td>@dr1["LossProfit"]</td>
+                        </tr>
+                    }
+                }
+            </tbody>
 
         </table>
         <button class="btn btn-danger">Edit Details</button>
 
     </div>
     <div class="tabcontentProfile" id="Bet_History">
-        <h3>Last Bets</h3>
-        <table class="table table-bordered">
+        <h3>Setteled Bets</h3>
+        <table class="table table-bordered table-setting table-responsive">
+
             <thead>
                 <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
+                    <th>TX ID</th>
+                    <th>Event ID</th>
+                    <th>Bet Type</th>
+                    <th>Amount</th>
+                    <th>Result</th>
+                    <th>Loss Profit</th>
                 </tr>
             </thead>
+
             <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
+                @foreach (DataTable dt2 in ViewBag.ds1.Tables)
+                {
+                    foreach (DataRow dr2 in dt2.Rows)
+                    {
+                        <tr>
+                            <td><a href="#">@dr2["TransectionId"]</a></td>
+                            <td>@dr2["EventId"]</td>
+                            <td>@dr2["BetType"]</td>
+                            <td>@dr2["Amount"]</td>
+                            <td>@dr2["Result"]</td>
+                            <td>@dr2["LossProfit"]</td>
+                        </tr>
+                    }
+                }
             </tbody>
+
         </table>
     </div>
 
@@ -74,47 +92,30 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
+                    <th>TX ID</th>
+                    <th>Event ID</th>
+                    <th>Bet Type</th>
+                    <th>Amount</th>
+                    <th>Result</th>
+                    <th>Loss Profit</th>
                 </tr>
             </thead>
+
             <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
+                @foreach (DataTable dt1 in ViewBag.WB.Tables)
+                {
+                    foreach (DataRow dr1 in dt1.Rows)
+                    {
+                        <tr>
+                            <td><a href="#">@dr1["TransectionId"]</a></td>
+                            <td>@dr1["EventId"]</td>
+                            <td>@dr1["BetType"]</td>
+                            <td>@dr1["Amount"]</td>
+                            <td>@dr1["Result"]</td>
+                            <td>@dr1["LossProfit"]</td>
+                        </tr>
+                    }
+                }
             </tbody>
         </table>
     </div>
@@ -123,62 +124,30 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
+                    <th>TX ID</th>
+                    <th>Event ID</th>
+                    <th>Bet Type</th>
+                    <th>Amount</th>
+                    <th>Result</th>
+                    <th>Loss Profit</th>
                 </tr>
             </thead>
+
             <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
+                @foreach (DataTable dt1 in ViewBag.LB.Tables)
+                {
+                    foreach (DataRow dr1 in dt1.Rows)
+                    {
+                        <tr>
+                            <td><a href="#">@dr1["TransectionId"]</a></td>
+                            <td>@dr1["EventId"]</td>
+                            <td>@dr1["BetType"]</td>
+                            <td>@dr1["Amount"]</td>
+                            <td>@dr1["Result"]</td>
+                            <td>@dr1["LossProfit"]</td>
+                        </tr>
+                    }
+                }
             </tbody>
         </table>
     </div>

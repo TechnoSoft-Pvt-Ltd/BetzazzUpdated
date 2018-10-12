@@ -337,47 +337,7 @@ namespace betzazz1._1.Controllers
             return RedirectToAction("InPlay");
         }
 
-        public ActionResult Change_Password(AccountViewModel avm3)
-        {
-              try
-                {
-                    string NPass = avm3.account.NPassword;
-                    string CPass = avm3.account.CPassword;
-                    string email = avm3.account.emailid;
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("Update Modaldata set createPass='" + NPass.ToString() + "',CreatedDate='" + DateTime.Today.ToShortDateString() + "' where UserId='" + Session["UserId"] + "' ", con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    Response.Write("<script>alert('Update Successfull!');</script>");
-                    string msgsubject = "New Password";
-
-                    string msgbody = "Hello, " + Session["Username"] + "!\nYour Password has been updated successfully.\n" +
-                    "Your new password is " + NPass.ToString() + "\n\nBest\nTeam ZAZZ ";
-
-                    MailMessage msg = new MailMessage("accounts@betzazz.com", email.ToString());
-                    msg.Subject = msgsubject.ToString();
-                    msg.Body = msgbody;
-
-                    SmtpClient client = new SmtpClient("mail.betzazz.com", 587);
-                    client.Credentials = new System.Net.NetworkCredential()
-                    {
-                        UserName = "accounts@betzazz.com",
-                        Password = "Password@123"
-                    };
-                    client.EnableSsl = false;
-                    client.Send(msg);
-
-
-                    return View("UserProfile");
-                }
-                catch (Exception ex2)
-                {
-                    throw ex2;
-                }
-
-            
-           
-        }
+       
 
     }
 
