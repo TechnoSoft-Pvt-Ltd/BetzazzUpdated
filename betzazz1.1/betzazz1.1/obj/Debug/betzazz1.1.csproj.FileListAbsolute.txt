@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\ApplicationInsights.config
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\betzazz1.1.dll.config
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\bin\betzazz1.1.dll
@@ -205,3 +206,7 @@ C:\Users\7097\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\be
 =======
 C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csprojAssemblyReference.cache
 >>>>>>> b4ab74475b58182d733dc15b89eb1f37b678e96a
+=======
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csprojAssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\BetzazzUpdated\betzazz1.1\betzazz1.1\obj\Debug\betzazz1.1.csproj.CoreCompileInputs.cache
+>>>>>>> cc08c5e19a75c8a3c70dd2a4b426ed3a9c11faab
