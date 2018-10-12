@@ -38,7 +38,6 @@ namespace betzazz1._1.Controllers
             }
             catch (Exception ex)
             {
-
             }
             return View();
         }

@@ -6,6 +6,7 @@
 @{
     ViewBag.Title = "InPlay";
     Layout = "~/Views/_Betzazz.cshtml";
+    string x = "";
 }
 <div class="content-body content-margins">
     <!-- Revenue, Hit Rate & Deals -->
@@ -129,56 +130,61 @@
                 <div class="card-body my-card-body">
                     <div class="col col--xs-8 col--sm-10 col--md-10 col--lg-11">
                         <span class="flex-row--title text-left"><h4>Football</h4></span>
+                       
+                        @foreach (var result in ViewBag.LiveFT.results)
+                        {
 
-                        <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                            @*<span class="caret"></span> <span></span>*@
-                            <ul class="list-unstyled components ">
-                                <li class="active">
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                @*<span class="caret"></span> <span></span>*@
+                                <ul class="list-unstyled components ">
+                                    <li class="active">
 
-                                    @*@foreach (var result in Model)
-                                    {
-                                        <a href="#FTTestinplayview" data-toggle="collapse" aria-expanded="false">
-                                            <span> @result.league.name</span>
-                                        </a>
-                                        
+                                        @if (result.league.id == x)
+                                         {
+
+                                       
+                                            <a href="#@result.league.name" data-toggle="collapse" aria-expanded="false">
+                                                   <span> @result.league.name</span>
+                                            </a>
+                                        }
+                                        @{
+                                            
+                                                Session["Lid"] = result.league.id;                                                                                      
+                                                x =Session["Lid"].ToString();
+                                            
                                             string T1 = result.home.name;
                                             string T2 = result.away.name;
-                                        
-                                        <ul class="collapse list-unstyled" id="FTTestinplayview">
-                                            <button type="button" id="@result.id" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
 
-                                                @T1+" VS "+@T2
-                                            </button>
-                                        </ul>
-                                    }*@
-                                    @*<a href="#FTTestinplayview" data-toggle="collapse" aria-expanded="false">
-            Test Matches
-        </a>
-        <ul class="collapse list-unstyled" id="FTTestinplayview">
-            <li><a href="#"></a></li>
-            <li><a href="#">Home 2</a></li>
-            <li><a href="#">Home 3</a></li>
-        </ul>*@
-                                </li>
-                            </ul>
-                        </div>
+                                            <ul class="collapse list-unstyled" id="@result.league.name">
+                                                <button type="button" id="@result.id" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+
+                                                    @T1 VS @T2
+                                                </button>
+                                            </ul>
+
+                                        }
+
+                                    </li>
+                                </ul>
+                            </div>
+                        }
                         <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                             <ul class="list-unstyled components ">
                                 @*<li class="active">
-                                    <a href="#T20inplayview" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
-                                    </a>
-                                    <ul class="collapse list-unstyled" id="T20inplayview">
-                                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
-                                        {
-                                            <li>
-                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                    @ViewBag.ArrODIData[k]
-                                                </button>
-                                            </li>
-                                        }
-                                    </ul>
-                                </li>*@
+                    <a href="#T20inplayview" data-toggle="collapse" aria-expanded="false">
+                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="T20inplayview">
+                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
+                        {
+                            <li>
+                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                    @ViewBag.ArrODIData[k]
+                                </button>
+                            </li>
+                        }
+                    </ul>
+                </li>*@
                             </ul>
                         </div>
                         <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
