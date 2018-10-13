@@ -19,7 +19,11 @@
     </div>
 
     <div class="tabcontentProfile" id="Personal">
-        <h3>Manage Profile</h3>
+        <h3>
+            Manage Profile
+            <input type="submit" value="Edit_Details" class="btn btn-success" data-toggle="collapse" aria-expanded="false" data-target="#DivEditDeatils" />
+
+        </h3>
         <table class="table table-bordered" id="myTable">
             <thead>
                 <tr>
@@ -49,8 +53,38 @@
             </tbody>
         </table>
 
-        @*<button class="btn btn-danger">Edit Details</button>*@
-        <input type="submit" value="Edit_Details" class="btn btn-success" style="margin-left:35%;" />
+        @using (Html.BeginForm("Update", "Member"))
+        {
+            <div class="collapse" id="DivEditDeatils">
+                <form action="#">
+                    <table>
+                        @foreach (DataTable dt in ViewBag.ds.Tables)
+                        {
+                            foreach (DataRow dr in dt.Rows)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.TextBoxFor(model => model.account.Username, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder="User Name"})
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "Emial Id" })
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(model => model.account.currency, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "Currency" })
+                                    </td>
+                                    <td><input type="submit" value="Update" class="btn btn-success"></td>
+                                </tr>
+                            }
+                        }
+                    </table>
+
+                </form>
+
+
+            </div>
+        }
+
+
 
     </div>
 

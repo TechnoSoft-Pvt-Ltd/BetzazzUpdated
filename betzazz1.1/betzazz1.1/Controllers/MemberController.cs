@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using betzazz1._1.ViewModels;
 using System.Net.Mail;
+using betzazz1._1.Models;
 
 namespace betzazz1._1.Controllers
 {
@@ -38,6 +39,38 @@ namespace betzazz1._1.Controllers
 
             return View();
         }
+        //User detail update code
+        public ActionResult Update(AccountViewModel avm)
+        {
+            string UN = avm.account.Username;
+            string EI = avm.account.emailid;
+            string C=avm.account.currency;
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("update ModalData set UserName=@Username,UserEmail=@emailid,AccountCuerrcy=@Currency where UserId=@userid", con))
+                {
+                    cmd.Parameters.AddWithValue("@userid",Session["UserID"].ToString());
+                    cmd.Parameters.AddWithValue("@Username", UN.ToString());
+                    cmd.Parameters.AddWithValue("@emailid", EI.ToString());
+                    cmd.Parameters.AddWithValue("@Currency", C.ToString());
+                    con.Open();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    con.Close();
+
+
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            UserProfile();
+            return View("UserProfile");
+        }
+
+
         public ActionResult Change_Password(AccountViewModel avm3)
         {
             try
@@ -100,7 +133,12 @@ namespace betzazz1._1.Controllers
             {
 
                 throw ex2;
+<<<<<<< HEAD
+
+            }
+=======
              }
+>>>>>>> 75ac6c7ad66372cf105b808ad4fb1fece20b6683
             return View();
         }
         public ActionResult Bets()
