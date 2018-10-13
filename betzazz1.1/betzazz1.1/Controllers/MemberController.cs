@@ -133,8 +133,12 @@ namespace betzazz1._1.Controllers
             {
 
                 throw ex2;
+<<<<<<< HEAD
 
             }
+=======
+             }
+>>>>>>> 75ac6c7ad66372cf105b808ad4fb1fece20b6683
             return View();
         }
         public ActionResult Bets()
