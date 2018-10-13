@@ -71,7 +71,36 @@
     </div>
     <div class="tabcontentProfile table-responsive" id="Summary">
         <h3>Account Summary</h3>
-        <table class="table table-bordered" id="myTable">
+        <ul>
+            @foreach (var item in Model.Items)
+            {
+                <li>@item</li>
+            }
+        </ul>
+
+        <!-- pager -->
+        @if (Model.Pager.EndPage > 1)
+        {
+            <ul class="pagination">
+                @if (Model.Pager.CurrentPage > 1)
+                {
+                   
+                }
+
+                @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+                {
+                    <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                        
+                    </li>
+                }
+
+                @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+                {
+                    
+                }
+            </ul>
+        }
+        @*  <table class="table table-bordered" id="myTable">
             <thead>
                 <tr>
                     <th>User ID</th>
@@ -101,8 +130,42 @@
                         </tr>
                     }
                 }
+                <!-- pager -->
+                @if (Model.Pager.EndPage > 1)
+                {
+                    <tr class="pagination">
+                        @if (Model.Pager.CurrentPage > 1)
+                        {
+                            <td>
+                                <a href="~/Home/Index">First</a>
+                            </td>
+                            <td>
+                                <a href="~/Home/Index?page=@(Model.Pager.CurrentPage - 1)">Previous</a>
+                            </td>
+                        }
+
+                        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+                        {
+                            <td class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                                <a href="~/Home/Index?page=@page">@page</a>
+                            </td>
+                        }
+
+                        @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+                        {
+                            <td>
+                                <a href="~/Home/Index?page=@(Model.Pager.CurrentPage + 1)">Next</a>
+                            </td>
+                            <td>
+                                <a href="~/Home/Index?page=@(Model.Pager.TotalPages)">Last</a>
+                            </td>
+                        }
+                    </tr>
+                }
             </tbody>
         </table>
+        *@
+
     </div>
 
 </div>

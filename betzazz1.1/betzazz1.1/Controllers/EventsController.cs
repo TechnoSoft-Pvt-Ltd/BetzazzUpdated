@@ -139,7 +139,6 @@ namespace betzazz1._1.Controllers
 
             var serilezer = new JavaScriptSerializer();
             LiveList LiveFT = serilezer.Deserialize<LiveList>(FottballInplay);
-            string[]
             ViewBag.LiveFT = LiveFT;
             return View();
 
