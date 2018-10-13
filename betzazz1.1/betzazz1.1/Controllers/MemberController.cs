@@ -98,11 +98,9 @@ namespace betzazz1._1.Controllers
             }
             catch (Exception ex2)
             {
-<<<<<<< HEAD
+
                 throw ex2;
-=======
->>>>>>> b4ab74475b58182d733dc15b89eb1f37b678e96a
-            }
+             }
             return View();
         }
         public ActionResult Bets()

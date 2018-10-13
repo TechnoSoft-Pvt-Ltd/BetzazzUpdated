@@ -138,8 +138,43 @@ namespace betzazz1._1.Controllers
            // var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
 
             var serilezer = new JavaScriptSerializer();
-            LiveList LiveFT = serilezer.Deserialize<LiveList>(FottballInplay);
-            string[]
+            LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
+            
+            //int count = LiveFT.results.Count();
+            //ArrayList newList = new ArrayList();
+            //ArrayList newList1 = new ArrayList();
+            //ArrayList Arr1 = new ArrayList();
+            //for (int i=0;i<count;i++)
+            //{
+            //    ArrayList ArrList = new ArrayList();
+            //    string MatchId= LiveFT.results[i].id;
+            //    string Sportid = LiveFT.results[i].sport_id;
+            //    string Time= LiveFT.results[i].time;
+            //    string TimeStatus= LiveFT.results[i].time_status;
+            //    string leagueId= LiveFT.results[i].league.id;
+            //    string leagueName= LiveFT.results[i].league.name;
+            //    string EventName= LiveFT.results[i].home.name+" VS "+ LiveFT.results[i].away.name;
+
+                
+            //    ArrList.Add(MatchId);
+            //    ArrList.Add(Sportid);
+            //    ArrList.Add(Time);
+            //    ArrList.Add(TimeStatus);
+            //    ArrList.Add(leagueName);
+            //    ArrList.Add(EventName);
+                
+            //    if (leagueName== ArrList[4].ToString())
+            //    {
+            //        newList.Add(ArrList);
+            //    }
+            //    else if(leagueName != ArrList[4].ToString())
+            //    {
+            //        newList1.Add(ArrList);
+            //    }
+
+            //   // Arr1.Add(newList);
+            //}
+            
             ViewBag.LiveFT = LiveFT;
             return View();
 

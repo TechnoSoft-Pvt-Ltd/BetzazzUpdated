@@ -130,32 +130,29 @@
                 <div class="card-body my-card-body">
                     <div class="col col--xs-8 col--sm-10 col--md-10 col--lg-11">
                         <span class="flex-row--title text-left"><h4>Football</h4></span>
-                       
+                       @{ 
+                           string leagueid;
+                           int m = 0;
+                           
+                       }
                         @foreach (var result in ViewBag.LiveFT.results)
                         {
-
+                                m = m + 1;
                             <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                 @*<span class="caret"></span> <span></span>*@
                                 <ul class="list-unstyled components ">
                                     <li class="active">
-
-                                        @if (result.league.id == x)
-                                         {
-
                                        
-                                            <a href="#@result.league.name" data-toggle="collapse" aria-expanded="false">
+                                            <a href="#@m" data-toggle="collapse" aria-expanded="false">
                                                    <span> @result.league.name</span>
                                             </a>
-                                        }
-                                        @{
-                                            
-                                                Session["Lid"] = result.league.id;                                                                                      
-                                                x =Session["Lid"].ToString();
-                                            
+                                        @{                                       
+                                            Session["Lid"] = result.league.id;                                                                                      
+                                            x =Session["Lid"].ToString();                                            
                                             string T1 = result.home.name;
                                             string T2 = result.away.name;
 
-                                            <ul class="collapse list-unstyled" id="@result.league.name">
+                                            <ul class="collapse list-unstyled" id="@m">
                                                 <button type="button" id="@result.id" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
 
                                                     @T1 VS @T2
@@ -167,26 +164,8 @@
                                     </li>
                                 </ul>
                             </div>
-                        }
-                        <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                            <ul class="list-unstyled components ">
-                                @*<li class="active">
-                    <a href="#T20inplayview" data-toggle="collapse" aria-expanded="false">
-                        <span style="font-size:14px;font-weight:bold">  @ViewBag.ODILeagueName  </span>
-                    </a>
-                    <ul class="collapse list-unstyled" id="T20inplayview">
-                        @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
-                        {
-                            <li>
-                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                    @ViewBag.ArrODIData[k]
-                                </button>
-                            </li>
-                        }
-                    </ul>
-                </li>*@
-                            </ul>
-                        </div>
+                         }
+                       
                         <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
 
                             <ul class="list-unstyled components ">
