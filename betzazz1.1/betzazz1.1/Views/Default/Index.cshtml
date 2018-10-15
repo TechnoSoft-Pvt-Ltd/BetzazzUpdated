@@ -1192,6 +1192,7 @@
 
                                 <div class="modal-body mx-3">
                                     <div class="md-form mb-4">
+                                       
                                         <table>
                                             <tr>
                                                 <td>
@@ -1202,6 +1203,7 @@
                                             <tr>
                                                 <td>
                                                     @Html.TextBoxFor(model => model.account.UserID, new { @class = "form-control validate", style = "width:400px;border-color:black;height:35px", placeholder = "Enter User id provided by Admin!" })
+                                                    
                                                 </td>
                                             </tr>
 
@@ -1214,8 +1216,8 @@
                                             <tr>
                                                 <td>
                                                     @Html.PasswordFor(model => model.account.Password, new { @class = "form-control validate", style = "width:400px;border-color:black;height:35px", placeholder = "Enter Password provided by Admin!" })
-
-                                                <td>
+                                                    
+                                                <td> 
                                             </tr>
                                         </table>
                                     </div>
@@ -1255,12 +1257,11 @@
                                 </button>
                             </div>
                             <div class="modal-body mx-3">
-                                @Html.ValidationSummary();
                                 <div class="md-form mb-4">
                                     <i class="fa fa-user prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
                                     @Html.TextBoxFor(model => model.account.Username, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your Name!" })
-                                    @Html.ValidationMessageFor(model => model.account.Username,"*");
+                                  
 
                                 </div>
                                 <div>
@@ -1277,13 +1278,13 @@
                                       new SelectListItem{Text="AUD",Value="AUD"}
 
                                     },"---select currency---",new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your Name!" })
-                                    @Html.ValidationMessageFor(model => model.account.currency, "*")
+                                    
                                 </div>
                                 <div class="md-form mb-4">
                                     <i class="fa fa-envelope prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Email</label>
                                     @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please enter your E-mail ID!" })
-                                    @Html.ValidationMessageFor(model => model.account.emailid, "*");
+                                    
 
                                 </div>
 
@@ -1298,7 +1299,7 @@
                 </div>
             }
             <!--End Register Popup Modal-->
-            <!--Forgot Password-->>
+            <!--Forgot Password-->
             @using (Html.BeginForm("Submit", "Default"))
             {
                 <div class="modal fade" id="modalForgetPasswordForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
