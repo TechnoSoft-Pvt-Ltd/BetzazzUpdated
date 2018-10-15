@@ -11,11 +11,13 @@ namespace betzazz1._1.Controllers
         // GET: Cricket
         public ActionResult Inplay()
         {
+
             return View();
         }
         public ActionResult PreMatch()
         {
             return View();
         }
+       
     }
 }

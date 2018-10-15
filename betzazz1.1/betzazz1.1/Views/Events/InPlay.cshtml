@@ -32,14 +32,16 @@
 
 
                                         @for (int i = 0; i < ViewBag.ArrTestData.Length; i++)
-                                        {
-
+                                         {
+                                            //var id = @ViewBag.Evntid[i];
                                             <li>
-                                                <button type="button" id="@ViewBag.Evntid[i]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                
+                                                <button type="button" id="@ViewBag.Evntid[i]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv"
+                                                        value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @ViewBag.Evntid[i]">
                                                     @ViewBag.ArrTestData[i]
                                                 </button>
                                             </li>
-                                        }
+                                         }
                                     </ul>
                                 </li>
                             </ul>
@@ -54,7 +56,8 @@
                                         @for (int j = 0; j < ViewBag.ArrT20Data.Length; j++)
                                         {
                                             <li>
-                                                <button type="button" id="@ViewBag.T20EventId[j]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                <button type="button" id="@ViewBag.T20EventId[j]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" 
+                                                         value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @ViewBag.T20EventId[j]">
                                                     @ViewBag.ArrT20Data[j]
                                                 </button>
                                             </li>
@@ -74,7 +77,8 @@
                                         @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
                                         {
                                             <li>
-                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" 
+                                                        value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @ViewBag.ODIEventId[k]">
                                                     @ViewBag.ArrODIData[k]
                                                 </button>
                                             </li>
@@ -93,8 +97,10 @@
                                     <ul class="collapse list-unstyled" id="ODIinplayview">
                                         @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
                                         {
+                                            var Tid = @ViewBag.ODIEventId[k];
                                             <li>
-                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv"
+                                                        value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+  @ViewBag.ODIEventId[k]">
                                                     @ViewBag.ArrODIData[k]
                                                 </button>
                                             </li>
@@ -113,7 +119,8 @@
                                         @for (int k = 0; k < ViewBag.ArrODIData.Length; k++)
                                         {
                                             <li>
-                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                <button type="button" id="@ViewBag.ODIEventId[k]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" 
+                                                       value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+  @ViewBag.ODIEventId[k]"  >
                                                     @ViewBag.ArrODIData[k]
                                                 </button>
                                             </li>
