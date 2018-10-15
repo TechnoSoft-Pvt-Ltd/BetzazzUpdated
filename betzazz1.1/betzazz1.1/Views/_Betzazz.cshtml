@@ -124,7 +124,7 @@
             }
             else
             {
-                
+
                 <div class="pull-right" style=" padding:10px;">
                     <span data-toggle="dropdown" data-hover="dropdown"><button class="glyphicon glyphicon-user img-circle" style="background-color:black; font-size: 10px;padding:10px;color:#e49b1e"></button></span>
 
@@ -311,7 +311,7 @@
                             <ul class="collapse list-unstyled" id="casino">
                                 <li><a href="#">Casino is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -322,7 +322,7 @@
                             <ul class="collapse list-unstyled" id="baseball">
                                 <li><a href="#">Baseball is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -333,7 +333,7 @@
                             <ul class="collapse list-unstyled" id="hocky">
                                 <li><a href="#"> Ice Hocky is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -344,7 +344,7 @@
                             <ul class="collapse list-unstyled" id="Basketball">
                                 <li><a href="#">  BasketBall is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -355,7 +355,7 @@
                             <ul class="collapse list-unstyled" id="TableTennis">
                                 <li><a href="#"> Table Tennis is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -366,7 +366,7 @@
                             <ul class="collapse list-unstyled" id="badminton">
                                 <li><a href="#"> Badmin is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                     </ul>
@@ -385,19 +385,19 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="prTestEvent">
                                         @*@if (Session["TstEventName"].ToString() != null)
-                            {
-                                ArrayList EventList = (ArrayList)Session["TstEventName"];
-                                ArrayList EventId = (ArrayList)Session["Evntid"];
+                                            {
+                                                ArrayList EventList = (ArrayList)Session["TstEventName"];
+                                                ArrayList EventId = (ArrayList)Session["Evntid"];
 
-                                for (int i = 0; i < EventList.Count; i++)
-                                {
-                                    <li>
-                                        <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                            @EventList[i]
-                                        </button>
-                                    </li>
-                                }
-                            }*@
+                                                for (int i = 0; i < EventList.Count; i++)
+                                                {
+                                                    <li>
+                                                        <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            @EventList[i]
+                                                        </button>
+                                                    </li>
+                                                }
+                                            }*@
                                     </ul>
                                 </li>
                                 <li>
@@ -407,19 +407,19 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="prT20Event">
                                         @*@if (Session["T20EventName"].ToString() != null)
-                            {
-                                ArrayList T20EventList = (ArrayList)Session["T20EventName"];
-                                ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
+                                            {
+                                                ArrayList T20EventList = (ArrayList)Session["T20EventName"];
+                                                ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
 
-                                for (int i = 0; i < T20EventList.Count; i++)
-                                {
-                                    <li>
-                                        <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                            @T20EventList[i]
-                                        </button>
-                                    </li>
-                                }
-                            }*@
+                                                for (int i = 0; i < T20EventList.Count; i++)
+                                                {
+                                                    <li>
+                                                        <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            @T20EventList[i]
+                                                        </button>
+                                                    </li>
+                                                }
+                                            }*@
                                     </ul>
                                 </li>
                                 <li>
@@ -429,19 +429,19 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="prODIEvent">
                                         @*@if (Session["ODIEventName"].ToString() != null)
-                            {
-                                ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
-                                ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
+                                            {
+                                                ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
+                                                ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
 
-                                for (int i = 0; i < ODIEventList.Count; i++)
-                                {
-                                    <li>
-                                        <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                            @ODIEventList[i]
-                                        </button>
-                                    </li>
-                                }
-                            }*@
+                                                for (int i = 0; i < ODIEventList.Count; i++)
+                                                {
+                                                    <li>
+                                                        <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            @ODIEventList[i]
+                                                        </button>
+                                                    </li>
+                                                }
+                                            }*@
                                     </ul>
                                 </li>
                                 <li><a href="#">International One Day <span class="pull-right"></span></a></li>
@@ -477,7 +477,7 @@
                             <ul class="collapse list-unstyled" id="prcasino">
                                 <li><a href="#">Casino is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -488,7 +488,7 @@
                             <ul class="collapse list-unstyled" id="prbaseball">
                                 <li><a href="#">Baseball is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -499,7 +499,7 @@
                             <ul class="collapse list-unstyled" id="prhocky">
                                 <li><a href="#"> Ice Hocky is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -510,7 +510,7 @@
                             <ul class="collapse list-unstyled" id="prBasketball">
                                 <li><a href="#">  BasketBall is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -521,7 +521,7 @@
                             <ul class="collapse list-unstyled" id="prTableTennis">
                                 <li><a href="#"> Table Tennis is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -532,7 +532,7 @@
                             <ul class="collapse list-unstyled" id="prbadminton">
                                 <li><a href="#"> Badmin is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                     </ul>
@@ -551,19 +551,19 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="prTestEvent">
                                         @*@if (Session["TstEventName"].ToString() != null)
-                            {
-                                ArrayList EventList = (ArrayList)Session["TstEventName"];
-                                ArrayList EventId = (ArrayList)Session["Evntid"];
+                                            {
+                                                ArrayList EventList = (ArrayList)Session["TstEventName"];
+                                                ArrayList EventId = (ArrayList)Session["Evntid"];
 
-                                for (int i = 0; i < EventList.Count; i++)
-                                {
-                                    <li>
-                                        <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                            @EventList[i]
-                                        </button>
-                                    </li>
-                                }
-                            }*@
+                                                for (int i = 0; i < EventList.Count; i++)
+                                                {
+                                                    <li>
+                                                        <button type="button" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            @EventList[i]
+                                                        </button>
+                                                    </li>
+                                                }
+                                            }*@
                                     </ul>
                                 </li>
                                 <li>
@@ -573,19 +573,19 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="prT20Event">
                                         @*@if (Session["T20EventName"].ToString() != null)
-                            {
-                                ArrayList T20EventList = (ArrayList)Session["T20EventName"];
-                                ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
+                                            {
+                                                ArrayList T20EventList = (ArrayList)Session["T20EventName"];
+                                                ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
 
-                                for (int i = 0; i < T20EventList.Count; i++)
-                                {
-                                    <li>
-                                        <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                            @T20EventList[i]
-                                        </button>
-                                    </li>
-                                }
-                            }*@
+                                                for (int i = 0; i < T20EventList.Count; i++)
+                                                {
+                                                    <li>
+                                                        <button type="button" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            @T20EventList[i]
+                                                        </button>
+                                                    </li>
+                                                }
+                                            }*@
                                     </ul>
                                 </li>
                                 <li>
@@ -595,19 +595,19 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="prODIEvent">
                                         @*@if (Session["ODIEventName"].ToString() != null)
-                            {
-                                ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
-                                ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
+                                            {
+                                                ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
+                                                ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
 
-                                for (int i = 0; i < ODIEventList.Count; i++)
-                                {
-                                    <li>
-                                        <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                            @ODIEventList[i]
-                                        </button>
-                                    </li>
-                                }
-                            }*@
+                                                for (int i = 0; i < ODIEventList.Count; i++)
+                                                {
+                                                    <li>
+                                                        <button type="button" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            @ODIEventList[i]
+                                                        </button>
+                                                    </li>
+                                                }
+                                            }*@
                                     </ul>
                                 </li>
                                 <li><a href="#">International One Day <span class="pull-right"></span></a></li>
@@ -643,7 +643,7 @@
                             <ul class="collapse list-unstyled" id="prcasino">
                                 <li><a href="#">Casino is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -654,7 +654,7 @@
                             <ul class="collapse list-unstyled" id="prbaseball">
                                 <li><a href="#">Baseball is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -665,7 +665,7 @@
                             <ul class="collapse list-unstyled" id="prhocky">
                                 <li><a href="#"> Ice Hocky is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -676,7 +676,7 @@
                             <ul class="collapse list-unstyled" id="prBasketball">
                                 <li><a href="#">  BasketBall is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -687,7 +687,7 @@
                             <ul class="collapse list-unstyled" id="prTableTennis">
                                 <li><a href="#"> Table Tennis is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                         <li>
@@ -698,7 +698,7 @@
                             <ul class="collapse list-unstyled" id="prbadminton">
                                 <li><a href="#"> Badmin is comming Soon</a></li>
                                 @*<li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>*@
+                                    <li><a href="#">Page 3</a></li>*@
                             </ul>
                         </li>
                     </ul>
@@ -811,7 +811,7 @@
                                                     for (int i = 0; i < ODIEventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" onclick="show('myDiv')"  id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="show('myDiv')" id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @ODIEventList[i]
                                                             </button>
                                                         </li>
@@ -988,8 +988,10 @@
                                 <tr>
                                     <td class="my-td">Stake</td>
 
-                                    <td><input type="text" name="Stake" id="Stake" onfocus="this.value=''"  value="Stake"  class="my-button-betslip">
-                                        <a href="javascript: void(0)" onClick="calc()"></a></td>
+                                    <td>
+                                        <input type="text" name="Stake" id="Stake" onfocus="this.value=''" value="Stake" class="my-button-betslip">
+                                        <a href="javascript: void(0)" onClick="calc()"></a>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -1204,21 +1206,49 @@
 
                         <div class="md-form mb-4">
                             <i class="glyphicon glyphicon-eye-open"></i>
-                            <label data-error="wrong" data-success="right" for="defaultForm-pass" >Your password</label>
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
                             @Html.PasswordFor(model => model.account.Password, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Enter Password provided by Admin!" })
 
                         </div>
 
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <input type="submit" value="Login" class="btn btn-success my-btn-login-signup"  />
-                        @*<button class="btn btn-success" style="background-color:black;border-color:#d0a44d">Sign in</button>*@
+                        <input type="submit" value="Login" class="btn btn-success my-btn-login-signup" />
+                        <span data-toggle="modal" data-target="#modalForgetPasswordForm" data-dismiss="modal" style="cursor:pointer">Forgot Password</span>
                     </div>
                 </div>
             </div>
         </div>
     }
     <!--End Login Popup Modal-->
+    <!--Forgot Password-->>
+    @using (Html.BeginForm("Submit", "Default"))
+    {
+        <div class="modal fade" id="modalForgetPasswordForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">For New password !</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-4">
+                            <i class="fa fa-envelope prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Email</label>
+                            @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please enter your E-mail ID!" })
+                        </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <input type="submit" value="Submit" class="btn btn-success" style="background-color:black;border-color:#d0a44d" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <!--Forgot Password-->
     <!--Register Popup Modal-->
     @using (Html.BeginForm("SignUp", "Events"))
     {
@@ -1266,40 +1296,40 @@
 
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <input type="submit" value="SignUp" class="btn btn-success my-btn-login-signup"  />
+                        <input type="submit" value="SignUp" class="btn btn-success my-btn-login-signup" />
                         @*<button class="btn btn-success" style="background-color:black;border-color:#d0a44d">Sign Up</button>*@
                     </div>
                 </div>
             </div>
         </div>
     }
-        <!--End Register Popup Modal-->
-        <script>
-            $(document).ready(function () {
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-        </script>
-        <!--Script for the left pane tabs Live,Future,Today-->
-        <script>
-            function openEvent(evt, eventName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(eventName).style.display = "block";
-                evt.currentTarget.className += " active";
+    <!--End Register Popup Modal-->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <!--Script for the left pane tabs Live,Future,Today-->
+    <script>
+        function openEvent(evt, eventName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();                  
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(eventName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
 
         // ----------------To show the Bet slip----------------------
         function show(target) {
-            document.getElementById(target).style.display ='block';
+            document.getElementById(target).style.display = 'block';
         }
 
         // ---------------------------for close button-----------------------------
@@ -1322,5 +1352,5 @@
 
 
 
-    </body>
+</body>
 </html>
