@@ -99,6 +99,7 @@ namespace betzazz1._1.Controllers
 
         }
 
+        //Code for Forgot Password...
         public ActionResult Submit(AccountViewModel avm)
         {
             string email = avm.account.emailid;
