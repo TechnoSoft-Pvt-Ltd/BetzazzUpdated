@@ -1,6 +1,208 @@
 ﻿
 @{
-    ViewBag.Title = "In-Play Cricket";
+    ViewBag.Title = "Cricket Live Events";
     Layout = "~/Views/_Betzazz.cshtml";
 }
-<h3>Cricket</h3>
+<div class="content-body">
+    <!-- Revenue, Hit Rate & Deals -->
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card inplay">
+                @*This card for Cricket Inplay Events*@
+                <h4 class="flex-row--title text-center">Live</h4>
+                <div class="card-body my-card-body">
+                    <!--Event Name-->
+                    <div class="col col--xs-8 col--sm-10 col--md-10 col--lg-11">
+                        <span class="flex-row--title text-center"><h4>TeamA VS TeamB</h4></span>
+                    </div>
+                    <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main visible-xs" style="height:200px;font-size:14px">
+                        <span style="margin:5px">Score Board Available here!</span>
+                        <div class="img-responsive">
+                            <img src="~/Content/assets/VRDE.gif" style="width:100%;height:120px">
+                        </div>
+                        <div class="pull-left" style="margin:10px">INDIA <span>350/9</span></div>
+                        <div class="pull-right" style="margin:10px">Timeline</div>
+
+                    </div>
+
+
+
+
+                        <!--Match Odds Market-->
+                        <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                            <span style="margin:5px">Match Odds</span>
+                        </div>
+                        @*<span class="caret"></span> <span></span>*@
+                        <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                            <div class="pull-left Live-btn-div">
+                                <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                            </div>
+
+                            <div class="pull-right Live-btn-div">
+                                <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                            </div>
+                        </div>
+
+
+                        <!--Team A Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team A Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:40px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" class="pull-right Live-odds-btn">Click Me!</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

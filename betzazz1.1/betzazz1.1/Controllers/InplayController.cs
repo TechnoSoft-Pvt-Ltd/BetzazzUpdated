@@ -22,5 +22,11 @@ namespace betzazz1._1.Controllers
         {
             return View();
         }
+        public void btn_Onclick()
+        {
+            string Eventid = Request.QueryString["Eventid"];
+            Response.Redirect("Cricket?eventid=" + Eventid);
+            //return View("InPlay");
+        }
     }
 }

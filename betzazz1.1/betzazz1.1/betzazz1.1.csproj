@@ -358,6 +358,7 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Content\assets\abc.jpg" />
+    <Content Include="Content\assets\VRDE.gif" />
     <Content Include="Content\ErrorPage\style.css" />
     <Content Include="Content\assets\giphy.gif" />
     <Content Include="Content\assets\js\my_js.js" />
