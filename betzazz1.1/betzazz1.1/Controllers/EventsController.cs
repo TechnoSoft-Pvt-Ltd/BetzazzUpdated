@@ -140,7 +140,10 @@ namespace betzazz1._1.Controllers
            // var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
 
             var serilezer = new JavaScriptSerializer();
+<<<<<<< HEAD
            // LiveList LiveFT = serilezer.Deserialize<LiveList>(FottballInplay);
+=======
+>>>>>>> a94cc11c4c48271b286459b1fda33b2b5962f1c3
 
             LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
             
