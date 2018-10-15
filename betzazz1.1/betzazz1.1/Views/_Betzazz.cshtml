@@ -226,7 +226,7 @@
                                             for (int i = 0; i < EventList.Count; i++)
                                             {
                                                 <li>
-                                                    <button type="button" onclick="show('myDiv1')" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                    <button type="button" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @EventId[i]" id="@EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                         @EventList[i]
                                                     </button>
                                                 </li>
@@ -245,11 +245,11 @@
                                             ArrayList T20EventList = (ArrayList)Session["T20EventName"];
                                             ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
 
-                                            for (int i = 0; i < T20EventList.Count; i++)
+                                            for (int j = 0; j < T20EventList.Count; j++)
                                             {
                                                 <li>
-                                                    <button type="button" onclick="show('myDiv')" id="@T20EventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                        @T20EventList[i]
+                                                    <button type="button" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @T20EventId[j]"  id="@T20EventId[j]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @T20EventList[j]
                                                     </button>
                                                 </li>
                                             }
@@ -267,11 +267,11 @@
                                             ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
                                             ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
 
-                                            for (int i = 0; i < ODIEventList.Count; i++)
+                                            for (int k = 0; k < ODIEventList.Count; k++)
                                             {
                                                 <li>
-                                                    <button type="button" onclick="show('myDiv1')" id="@ODIEventId[i]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
-                                                        @ODIEventList[i]
+                                                    <button type="button"  onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @ODIEventId[k]" id="@ODIEventId[k]" style="white-space: inherit;height:auto" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                        @ODIEventList[k]
                                                     </button>
                                                 </li>
                                             }
@@ -767,7 +767,7 @@
                                                     for (int i = 0; i < EventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" onclick="show('myDiv1')" id="@EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @EventId[i]" id="@EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @EventList[i]
                                                             </button>
                                                         </li>
@@ -789,7 +789,7 @@
                                                     for (int i = 0; i < T20EventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" onclick="show('myDiv1')" id="@T20EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @T20EventId[i]" id="@T20EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @T20EventList[i]
                                                             </button>
                                                         </li>
@@ -811,7 +811,7 @@
                                                     for (int i = 0; i < ODIEventList.Count; i++)
                                                     {
                                                         <li>
-                                                            <button type="button" onclick="show('myDiv')" id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
+                                                            <button type="button" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @ODIEventId[i]" id="@ODIEventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @ODIEventList[i]
                                                             </button>
                                                         </li>

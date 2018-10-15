@@ -638,6 +638,7 @@ body {
     color: black;
     height: 25px;
     font-weight: bold;
+    width:50px;
 }
 .Live-odds-btn:hover {
         background:black;

@@ -120,7 +120,7 @@ namespace betzazz1._1.Controllers
             {
                 using (SqlCommand cmd1 = new SqlCommand("BalanceHistoryPro", con))
                 {
-                    cmd1.Parameters.AddWithValue("@UserID", Session["UserID"].ToString());
+                    cmd1.Parameters.AddWithValue("@UserId", Session["UserId"].ToString());
                     cmd1.CommandType = CommandType.StoredProcedure;
                     con.Open();
                     SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
