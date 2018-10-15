@@ -64,13 +64,23 @@
                             {
                                 <tr>
                                     <td>
-                                        @Html.TextBoxFor(model => model.account.Username, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder="User Name"})
+                                        @Html.TextBoxFor(model => model.account.Username, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "User Name" })
                                     </td>
                                     <td>
-                                        @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "Emial Id" })
+                                        @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "Email Id" })
                                     </td>
                                     <td>
-                                        @Html.TextBoxFor(model => model.account.currency, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "Currency" })
+                                        @Html.DropDownListFor(model=>model.account.currency,new List<SelectListItem>
+                                        {
+                                           new SelectListItem{Text="INR",Value="INR"},
+                                           new SelectListItem{Text="USD",Value="USD"},
+                                           new SelectListItem{Text="EUR",Value="EUR"},
+                                           new SelectListItem{Text="GBP",Value="GBP"},
+                                           new SelectListItem{Text="AED",Value="AED"},
+                                           new SelectListItem{Text="CAD",Value="CAD"},
+                                           new SelectListItem{Text="AUD",Value="AUD"}
+
+                                         },"---select currency---",new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px"})
                                     </td>
                                     <td><input type="submit" value="Update" class="btn btn-success"></td>
                                 </tr>
