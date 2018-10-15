@@ -22,7 +22,8 @@ namespace betzazz1._1.Controllers
         public static Double Balance { get; set; }
         public static string Currency { get; set; }
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString);
-        // GET: Default
+        string msgsubject = string.Empty;
+        string msgbody = string.Empty;
         public ActionResult Index()
         {
             //ViewBag.ShowDiv = false;
@@ -96,6 +97,55 @@ namespace betzazz1._1.Controllers
 
 
 
+        }
+
+        public ActionResult Submit(AccountViewModel avm)
+        {
+            string email = avm.account.emailid;
+            string password = avm.account.Password;
+            try
+            {
+                //code for random genrate paasword for Forgot Password
+                string pass = "abcdeABCDEFfghijklmn56789GHIJKopqrstuvwxyzLMNOPQR01234STUVWXYZ";
+                Random r = new Random();
+                char[] mypass = new char[5];
+                for (int z = 0; z < 5; z++)
+                {
+                    mypass[z] = pass[(int)(60 * r.NextDouble())];
+
+                }
+                password = new string(mypass);
+
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Update Modaldata set createPass='" + password.ToString()+ "',CreatedDate='" + DateTime.Today.ToShortDateString() + "' where UserEmail='" + email.ToString()+ "' ", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('New Password has been send to your email address!')</script>");
+                msgsubject = "Forget Password";
+
+                msgbody = "Hello,!\nYour Password has been Updated.\n" +
+                          "Your new password is:- " + password.ToString() + "\n\nBest\nTeam ZAZZ ";
+
+                string subject= msgsubject; 
+                string body= msgbody;
+                MailMessage msg = new MailMessage("accounts@betzazz.com", email.ToString());
+                msg.Subject = subject.ToString();
+                msg.Body = body;
+
+                SmtpClient client = new SmtpClient("mail.betzazz.com", 587);
+                client.Credentials = new System.Net.NetworkCredential()
+                {
+                    UserName = "accounts@betzazz.com",
+                    Password = "Password@123"
+                };
+                client.EnableSsl = false;
+                client.Send(msg);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return View("Index");
         }
 
         public ActionResult SignUp(AccountViewModel avm2)

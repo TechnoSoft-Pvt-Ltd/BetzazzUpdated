@@ -47,6 +47,7 @@ namespace betzazz1._1.Controllers
             string C=avm.account.currency;
             try
             {
+
                 using (SqlCommand cmd = new SqlCommand("update ModalData set UserName=@Username,UserEmail=@emailid,AccountCuerrcy=@Currency where UserId=@userid", con))
                 {
                     cmd.Parameters.AddWithValue("@userid",Session["UserID"].ToString());
@@ -133,14 +134,13 @@ namespace betzazz1._1.Controllers
             {
 
                 throw ex2;
-<<<<<<< HEAD
 
             }
-=======
-             }
->>>>>>> 75ac6c7ad66372cf105b808ad4fb1fece20b6683
             return View();
         }
+
+           
+    
         public ActionResult Bets()
         {
             try

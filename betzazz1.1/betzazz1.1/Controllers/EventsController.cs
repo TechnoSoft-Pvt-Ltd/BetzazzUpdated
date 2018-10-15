@@ -138,9 +138,9 @@ namespace betzazz1._1.Controllers
            // var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
 
             var serilezer = new JavaScriptSerializer();
-<<<<<<< HEAD
-            LiveList LiveFT = serilezer.Deserialize<LiveList>(FottballInplay);
-=======
+
+           // LiveList LiveFT = serilezer.Deserialize<LiveList>(FottballInplay);
+
             LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
             
             //int count = LiveFT.results.Count();
@@ -178,7 +178,6 @@ namespace betzazz1._1.Controllers
             //   // Arr1.Add(newList);
             //}
             
->>>>>>> 75ac6c7ad66372cf105b808ad4fb1fece20b6683
             ViewBag.LiveFT = LiveFT;
             return View();
 
