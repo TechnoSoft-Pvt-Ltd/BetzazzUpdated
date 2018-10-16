@@ -140,10 +140,8 @@ namespace betzazz1._1.Controllers
            // var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
 
             var serilezer = new JavaScriptSerializer();
-<<<<<<< HEAD
-           // LiveList LiveFT = serilezer.Deserialize<LiveList>(FottballInplay);
-=======
->>>>>>> a94cc11c4c48271b286459b1fda33b2b5962f1c3
+
+
 
             LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
             
@@ -180,24 +178,124 @@ namespace betzazz1._1.Controllers
             //    }
 
             //   // Arr1.Add(newList);
-            //}
-            
-
+            //}           
             ViewBag.LiveFT = LiveFT;
             return View();
-
-
 
         }
 
        
 
         // Methods for PreMatch Cricket and Football
-        public ActionResult PreMatch()
+        public ActionResult PreMatch(string[] ArrPMTestData,string[] PMTestEvntid, string[] ArrPMT20Data, string[] PMT20Evntid, string[] ArrPMODIData, string[] PMODIEvntid)
         {
-           
+            GBLClass.PreMatch();
+
+            // For Test Matches.
+            string GetTestData = GBLClass.PMTestData;
+
+            string EDate = GBLClass.PMTestEventDate;
+            string[] TestEventDate = EDate.Split('@');
+            ViewBag.TestEventDate = TestEventDate;
+
+            ArrPMTestData = GetTestData.Split('@');
+            int PMTestCount = ArrPMTestData.Length;
+            //  ViewBag.TestCount = TestCount;
+            Session["PMTestCount"] = PMTestCount;
+            ViewBag.ArrPMTestData = ArrPMTestData;
+            ViewBag.PMLeagueName = GBLClass.PMTestLeagueName;
+            Session["PMLeagueName"] = GBLClass.PMTestLeagueName;
+            string id = GBLClass.PMEventId;
+            PMTestEvntid = id.Split('@');
+            ViewBag.PMTestEvntid = PMTestEvntid;
+            //Cricket for Test Event id
+            ArrayList Eid = new ArrayList();
+            for (int i = 0; i < ArrPMTestData.Length; i++)
+            {
+                Eid.Add(PMTestEvntid[i]);
+                Session["PMEvntid"] = Eid;
+            }
+            // for Test Event Name
+            ArrayList displayDetail1 = new ArrayList();
+            for (int j = 0; j < ArrPMTestData.Length; j++)
+            {
+                displayDetail1.Add(ArrPMTestData[j]);
+                Session["PMTstEventName"] = displayDetail1;
+            }
+
+
+            // For Tweenty 20
+            string GetT20tData = GBLClass.PMT20Data;
+            string EDatet20 = GBLClass.PMT20EventDate;
+            string[] T20EventDate = EDatet20.Split('@');
+            ViewBag.T20EventDate = T20EventDate;
+            ArrPMT20Data = GetT20tData.Split('@');
+            int PMT20Count = ArrPMT20Data.Length;
+            //  ViewBag.TestCount = TestCount;
+            Session["PMT20Count"] = PMT20Count;
+            ViewBag.ArrPMT20Data = ArrPMT20Data;
+            ViewBag.PMT20LeagueName = GBLClass.PMT20LeagueName;
+            Session["PMT20LeagueName"] = GBLClass.PMT20LeagueName;
+            string idT20 = GBLClass.PMT20EventId;
+            PMT20Evntid = idT20.Split('@');
+            ViewBag.PMT20Evntid = PMT20Evntid;
+            //Cricket for Test Event id
+            ArrayList EidT20 = new ArrayList();
+            for (int i = 0; i < ArrPMT20Data.Length; i++)
+            {
+                EidT20.Add(PMT20Evntid[i]);
+                Session["PMEvntidT20"] = EidT20;
+            }
+            // for Test Event Name
+            ArrayList displayDetailT20 = new ArrayList();
+            for (int j = 0; j < ArrPMT20Data.Length; j++)
+            {
+                displayDetailT20.Add(ArrPMT20Data[j]);
+                Session["PMT20EventName"] = displayDetailT20;
+            }
+
+            // For ODI
+            string GetODIData = GBLClass.PMODIData;
+
+            string EDateODI = GBLClass.PMODIEventDate;
+            string[] ODIEventDate = EDateODI.Split('@');
+            ViewBag.ODIEventDate = ODIEventDate;
+            ArrPMODIData = GetODIData.Split('@');
+            int PMODICount = ArrPMODIData.Length;
+            ViewBag.PMODIEventDate = GBLClass.PMODIEventDate;
+            //  ViewBag.TestCount = TestCount;
+            Session["PMODICount"] = PMODICount;
+            ViewBag.ArrPMODIData = ArrPMODIData;
+            ViewBag.PMODILeagueName = GBLClass.PMODILeagueName;
+            Session["PMODILeagueName"] = GBLClass.PMODILeagueName;
+            string idODI = GBLClass.PMODIEventId;
+            PMODIEvntid = idODI.Split('@');
+            ViewBag.PMODIEvntid = PMODIEvntid;
+            //Cricket for Test Event id
+            ArrayList EidODI = new ArrayList();
+            for (int i = 0; i < ArrPMODIData.Length; i++)
+            {
+                EidODI.Add(PMODIEvntid[i]);
+                Session["ODIPMEvntid"] = EidODI;
+            }
+            // for Test Event Name
+            ArrayList displayDetailODI = new ArrayList();
+            for (int j = 0; j < ArrPMODIData.Length; j++)
+            {
+                displayDetailODI.Add(ArrPMODIData[j]);
+                Session["PMODIEventName"] = displayDetailODI;
+            }
+
+            int PMCRTotalEvent = PMTestCount + PMT20Count + PMODICount;
+            ViewBag.CRTotalEvent = PMCRTotalEvent;
+            Session["PMCRTotalEvent"] = PMCRTotalEvent;
+
             return View();
         }
+
+
+
+
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();

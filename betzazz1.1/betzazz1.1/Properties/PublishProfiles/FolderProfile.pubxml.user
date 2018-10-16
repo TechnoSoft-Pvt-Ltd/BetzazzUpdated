@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\15 Oct</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\A1 15 Oct</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminPanel/AddBalanceaspx.aspx">
@@ -388,10 +388,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
     <File Include="bin/betzazz1.1.dll">
-      <publishTime>10/15/2018 18:30:20</publishTime>
+      <publishTime>10/15/2018 20:08:27</publishTime>
     </File>
     <File Include="bin/betzazz1.1.pdb">
-      <publishTime>10/15/2018 18:30:20</publishTime>
+      <publishTime>10/15/2018 20:08:27</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/06/2018 18:23:12</publishTime>
@@ -715,7 +715,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
     <File Include="Content/css/header.css">
-      <publishTime>10/15/2018 18:18:36</publishTime>
+      <publishTime>10/15/2018 19:47:09</publishTime>
     </File>
     <File Include="Content/css/index.css">
       <publishTime>10/08/2018 18:23:11</publishTime>
@@ -1480,7 +1480,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/Default/Index.cshtml">
-      <publishTime>10/15/2018 18:27:06</publishTime>
+      <publishTime>10/15/2018 19:52:33</publishTime>
     </File>
     <File Include="Views/Events/InPlay.cshtml">
       <publishTime>10/15/2018 14:21:46</publishTime>
@@ -1495,7 +1495,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/Inplay/Cricket.cshtml">
-      <publishTime>10/15/2018 18:23:08</publishTime>
+      <publishTime>10/15/2018 19:41:18</publishTime>
     </File>
     <File Include="Views/Inplay/Football.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1504,7 +1504,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/Member/Bank.cshtml">
-      <publishTime>10/13/2018 19:49:22</publishTime>
+      <publishTime>10/15/2018 19:52:33</publishTime>
     </File>
     <File Include="Views/Member/Bets.cshtml">
       <publishTime>10/12/2018 19:50:31</publishTime>
@@ -1534,7 +1534,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/_Betzazz.cshtml">
-      <publishTime>10/15/2018 18:27:06</publishTime>
+      <publishTime>10/15/2018 20:06:38</publishTime>
     </File>
     <File Include="Views/_LayoutAdminPanel.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1543,7 +1543,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/15/2018 18:30:20</publishTime>
+      <publishTime>10/15/2018 20:08:27</publishTime>
     </File>
     <File Include="website/assets/css/theme-dark.min.css">
       <publishTime>10/06/2018 18:23:08</publishTime>

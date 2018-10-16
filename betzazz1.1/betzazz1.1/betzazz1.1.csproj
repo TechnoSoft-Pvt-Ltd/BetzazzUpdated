@@ -242,6 +242,7 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\LiveEventList.cs" />
     <Compile Include="Models\LiveList.cs" />
+    <Compile Include="Models\NewLive.cs" />
     <Compile Include="Models\test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AccountViewModel.cs" />
@@ -898,13 +899,13 @@
     <Content Include="Views\Tennis\Index.cshtml" />
     <Content Include="Views\Member\Bank.cshtml" />
     <Content Include="Views\Member\UserProfile.cshtml" />
+    <Content Include="Views\Prematch\Cricket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPanel\img\flags\" />
     <Folder Include="AdminPanel\vendor\font-awesome\less\" />
     <Folder Include="AdminPanel\vendor\font-awesome\scss\" />
     <Folder Include="Views\LayoutData\" />
-    <Folder Include="Views\Prematch\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

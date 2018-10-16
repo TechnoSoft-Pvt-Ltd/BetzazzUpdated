@@ -209,16 +209,16 @@
                         <li class="active">
                             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-home"></i>
-                                Cricket <span class="pull-right" style="padding-right:20px;">@Session["CRTotalEvent"]</span>
+                                Cricket <span class="pull-right" style="padding-right:20px;">@*@Session["CRTotalEvent"]*@</span>
                             </a>
                             <ul class="collapse list-unstyled" id="homeSubmenu">
                                 <li>
                                     <a href="#TestEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">@HttpContext.Current.Session["LeagueName"].ToString()  </span>
-                                        <span class="pull-right" style="padding-right:20px">@Session["TestCount"]</span>
+                                        <span style="font-size:14px;font-weight:bold;">Test @*@HttpContext.Current.Session["LeagueName"].ToString()*@  </span>
+                                        <span class="pull-right" style="padding-right:20px"@*>@Session["TestCount"]*@</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="TestEvent">
-                                        @if (Session["TstEventName"].ToString() != null)
+                                        @*@if (Session["TstEventName"].ToString() != null)
                                         {
                                             ArrayList EventList = (ArrayList)Session["TstEventName"];
                                             ArrayList EventId = (ArrayList)Session["Evntid"];
@@ -231,16 +231,16 @@
                                                     </button>
                                                 </li>
                                             }
-                                        }
+                                        }*@
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["T20LeagueName"].ToString()  </span>
-                                        <span class="pull-right" style="padding-right:20px">@Session["T20Count"]</span>
+                                        <span style="font-size:14px;font-weight:bold;"> Twenty20 @*@HttpContext.Current.Session["T20LeagueName"].ToString()*@  </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["T20Count"]*@</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="T20Event">
-                                        @if (Session["T20EventName"].ToString() != null)
+                                        @*@if (Session["T20EventName"].ToString() != null)
                                         {
                                             ArrayList T20EventList = (ArrayList)Session["T20EventName"];
                                             ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
@@ -253,16 +253,16 @@
                                                     </button>
                                                 </li>
                                             }
-                                        }
+                                        }*@
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#ODIEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">  @HttpContext.Current.Session["ODILeagueName"].ToString()   </span>
-                                        <span class="pull-right" style="padding-right:20px">@Session["ODICount"]</span>
+                                        <span style="font-size:14px;font-weight:bold;"> ODI @*@HttpContext.Current.Session["ODILeagueName"].ToString()*@   </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["ODICount"]*@</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="ODIEvent">
-                                        @if (Session["ODIEventName"].ToString() != null)
+                                        @*@if (Session["ODIEventName"].ToString() != null)
                                         {
                                             ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
                                             ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
@@ -275,7 +275,7 @@
                                                     </button>
                                                 </li>
                                             }
-                                        }
+                                        }*@
                                     </ul>
                                 </li>
                                 <li><a href="#">International One Day <span class="pull-right"></span></a></li>
@@ -370,24 +370,26 @@
                             </ul>
                         </li>
                     </ul>
+
+
                     @*Side Baar list for Pre Match*@
                     <ul class="list-unstyled components tabcontent" id="prematch">
                         <li class="active">
                             <a href="#prhomeSubmenu" data-toggle="collapse" aria-expanded="false">
                                 <i class="glyphicon glyphicon-home"></i>
-                                Cricket <span class="pull-right" style="padding-right:20px;"></span>
+                                Cricket <span class="pull-right" style="padding-right:20px;">@*@ViewBag.CRTotalEvent*@</span>
                             </a>
                             <ul class="collapse list-unstyled" id="prhomeSubmenu">
                                 <li>
                                     <a href="#prTestEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;">Test  </span>
-                                        <span class="pull-right" style="padding-right:20px"></span>
+                                        <span style="font-size:14px;font-weight:bold;">Test @*@HttpContext.Current.Session["PMLeagueName"].ToString()*@  </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["PMTestCount"]*@</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="prTestEvent">
-                                        @*@if (Session["TstEventName"].ToString() != null)
+                                        @*@if (Session["PMTstEventName"].ToString() != null)
                                             {
-                                                ArrayList EventList = (ArrayList)Session["TstEventName"];
-                                                ArrayList EventId = (ArrayList)Session["Evntid"];
+                                                ArrayList EventList = (ArrayList)Session["PMTstEventName"];
+                                                ArrayList EventId = (ArrayList)Session["PMEvntid"];
 
                                                 for (int i = 0; i < EventList.Count; i++)
                                                 {
@@ -402,14 +404,14 @@
                                 </li>
                                 <li>
                                     <a href="#T20Event" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;"> T20 @*@HttpContext.Current.Session["T20LeagueName"].ToString()*@  </span>
-                                        <span class="pull-right" style="padding-right:20px">@*@Session["T20Count"]*@</span>
+                                        <span style="font-size:14px;font-weight:bold;"> T20 @*@HttpContext.Current.Session["PMT20LeagueName"].ToString()*@ </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["PMT20Count"]*@</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="prT20Event">
-                                        @*@if (Session["T20EventName"].ToString() != null)
+                                        @*@if (Session["PMT20EventName"].ToString() != null)
                                             {
-                                                ArrayList T20EventList = (ArrayList)Session["T20EventName"];
-                                                ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
+                                                ArrayList T20EventList = (ArrayList)Session["PMT20EventName"];
+                                                ArrayList T20EventId = (ArrayList)Session["PMEvntidT20"];
 
                                                 for (int i = 0; i < T20EventList.Count; i++)
                                                 {
@@ -424,14 +426,14 @@
                                 </li>
                                 <li>
                                     <a href="#prODIEvent" data-toggle="collapse" aria-expanded="false">
-                                        <span style="font-size:14px;font-weight:bold;"> ODI @*@HttpContext.Current.Session["ODILeagueName"].ToString()*@   </span>
-                                        <span class="pull-right" style="padding-right:20px">@*@Session["ODICount"]*@</span>
+                                        <span style="font-size:14px;font-weight:bold;"> ODI @*@HttpContext.Current.Session["PMODILeagueName"].ToString()*@  </span>
+                                        <span class="pull-right" style="padding-right:20px">@*@Session["PMODICount"]*@</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="prODIEvent">
-                                        @*@if (Session["ODIEventName"].ToString() != null)
+                                        @*@if (Session["PMODIEventName"].ToString() != null)
                                             {
-                                                ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
-                                                ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
+                                                ArrayList ODIEventList = (ArrayList)Session["PMODIEventName"];
+                                                ArrayList ODIEventId = (ArrayList)Session["ODIPMEvntid"];
 
                                                 for (int i = 0; i < ODIEventList.Count; i++)
                                                 {
@@ -750,16 +752,16 @@
                                 <div class="eventbDiv">
                                     <a href="#CricketMenu" data-toggle="collapse" aria-expanded="false">
                                         <i class="glyphicon glyphicon-home my-giphyicon"></i>
-                                        Cricket <span class="pull-right" style="padding-right:20px;">@Session["CRTotalEvent"]</span>
+                                        Cricket <span class="pull-right" style="padding-right:20px;">@*@Session["CRTotalEvent"]*@</span>
                                     </a>
                                     <ul class="collapse list-unstyled" id="CricketMenu">
                                         <li>
                                             <a href="#MTestEvent" data-toggle="collapse" aria-expanded="false">
-                                                <span style="font-size:12px;font-weight:bold;">@HttpContext.Current.Session["LeagueName"].ToString()  </span>
-                                                <span class="pull-right" style="padding-right:20px">@Session["TestCount"]</span>
+                                                <span style="font-size:12px;font-weight:bold;">Test Matches @*@HttpContext.Current.Session["LeagueName"].ToString()*@  </span>
+                                                <span class="pull-right" style="padding-right:20px">@*@Session["TestCount"]*@</span>
                                             </a>
                                             <ul class="collapse list-unstyled" id="MTestEvent">
-                                                @if (Session["TstEventName"].ToString() != null)
+                                                @*@if (Session["TstEventName"].ToString() != null)
                                                 {
                                                     ArrayList EventList = (ArrayList)Session["TstEventName"];
                                                     ArrayList EventId = (ArrayList)Session["Evntid"];
@@ -770,18 +772,18 @@
                                                             <button type="button" onclick="location.href='@Url.Action("btn_Onclick", "Inplay")?Eventid='+ @EventId[i]" id="@EventId[i]" style="white-space: inherit;height:auto;font-size:10px;font-weight:bold" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                                                                 @EventList[i]
                                                             </button>
-                                                        </li>
+                                                        </li>*@
                                                     }
                                                 }
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="#MT20Event" data-toggle="collapse" aria-expanded="false">
-                                                <span style="font-size:12px;font-weight:bold;">  @HttpContext.Current.Session["T20LeagueName"].ToString()  </span>
-                                                <span class="pull-right" style="padding-right:20px">@Session["T20Count"]</span>
+                                                <span style="font-size:12px;font-weight:bold;"> Tweenty20 @*@HttpContext.Current.Session["T20LeagueName"].ToString()*@  </span>
+                                                <span class="pull-right" style="padding-right:20px">@*@Session["T20Count"]*@</span>
                                             </a>
                                             <ul class="collapse list-unstyled" id="MT20Event">
-                                                @if (Session["T20EventName"].ToString() != null)
+                                                @*@if (Session["T20EventName"].ToString() != null)
                                                 {
                                                     ArrayList T20EventList = (ArrayList)Session["T20EventName"];
                                                     ArrayList T20EventId = (ArrayList)Session["T20Evntid"];
@@ -794,16 +796,16 @@
                                                             </button>
                                                         </li>
                                                     }
-                                                }
+                                                }*@
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="#MODIEvent" data-toggle="collapse" aria-expanded="false">
-                                                <span style="font-size:12px;font-weight:bold;">  @HttpContext.Current.Session["ODILeagueName"].ToString()   </span>
-                                                <span class="pull-right" style="padding-right:20px">@Session["ODICount"]</span>
+                                                <span style="font-size:12px;font-weight:bold;"> ODI @*@HttpContext.Current.Session["ODILeagueName"].ToString()*@   </span>
+                                                <span class="pull-right" style="padding-right:20px">@*@Session["ODICount"]*@</span>
                                             </a>
                                             <ul class="collapse list-unstyled" id="MODIEvent">
-                                                @if (Session["ODIEventName"].ToString() != null)
+                                                @*@if (Session["ODIEventName"].ToString() != null)
                                                 {
                                                     ArrayList ODIEventList = (ArrayList)Session["ODIEventName"];
                                                     ArrayList ODIEventId = (ArrayList)Session["ODIEvntid"];
@@ -816,7 +818,7 @@
                                                             </button>
                                                         </li>
                                                     }
-                                                }
+                                                }*@
                                             </ul>
                                         </li>
                                         <li><a href="#">Premium League</a></li>
@@ -1347,6 +1349,11 @@
             $('#Stake').val($('#Return').val() / $('#Rate').val());
 
         });
+         // ---------------------------To Hide Betslip on Page Load--------------------
+        window.onload = function () {
+            $("#myDiv1").hide();
+        };
+
 
     </script>
 
