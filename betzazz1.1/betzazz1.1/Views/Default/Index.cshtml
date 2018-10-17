@@ -58,7 +58,7 @@
                                 <li><a href="@Url.Action("Bets","Member")" style="cursor:pointer">Manage Bets</a></li>
 
                                 <hr>
-                                @using (Html.BeginForm("Logout", "Events"))
+                                @using (Html.BeginForm("Logout", "Default"))
                                 {
                                     <li><span style="cursor:pointer"> <input type="submit" value="Logout" class="btn btn-success" style="background-color:black;border-color:#d0a44d" /></span></li>
                                 }
@@ -120,7 +120,7 @@
                         <li><span style="cursor:pointer"> <a href="@Url.Action("Bank","Member")" style="cursor:pointer">Manage Bank</a></span></li>
                         <li><span style="cursor:pointer"> <a href="@Url.Action("Bets","Member")" style="cursor:pointer">Manage Bets</a></span></li>
                         <hr>
-                        @using (Html.BeginForm("Logout", "Events"))
+                        @using (Html.BeginForm("Logout", "Default"))
                         {
                             <li><span style="cursor:pointer"> <input type="submit" value="Logout" class="btn btn-success" style="background-color:black;border-color:#d0a44d" /></span></li>
                         }
@@ -601,7 +601,7 @@
         </div>
     </footer>
     <!--Login Popup Modal-->
-    @using (Html.BeginForm("Login", "Events"))
+    @using (Html.BeginForm("Login", "Default"))
     {
         <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -638,7 +638,7 @@
     }
     <!--End Login Popup Modal-->
     <!--Register Popup Modal-->
-    @using (Html.BeginForm("SignUp", "Events"))
+    @using (Html.BeginForm("SignUp", "Default"))
     {
         <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

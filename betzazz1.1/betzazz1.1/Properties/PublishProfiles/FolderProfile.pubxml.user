@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\16 Oct brtPublish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\17 Oct brtPublish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminPanel/AddBalanceaspx.aspx">
@@ -388,10 +388,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
     <File Include="bin/betzazz1.1.dll">
-      <publishTime>10/16/2018 19:55:07</publishTime>
+      <publishTime>10/17/2018 17:11:06</publishTime>
     </File>
     <File Include="bin/betzazz1.1.pdb">
-      <publishTime>10/16/2018 19:55:07</publishTime>
+      <publishTime>10/17/2018 17:11:06</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/06/2018 18:23:12</publishTime>
@@ -630,8 +630,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/assets/.gitkeep">
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
+    <File Include="Content/assets/27512b78a17394baf7e63a274267df70.png">
+      <publishTime>10/17/2018 17:03:24</publishTime>
+    </File>
+    <File Include="Content/assets/373533.jpg">
+      <publishTime>10/17/2018 17:03:24</publishTime>
+    </File>
     <File Include="Content/assets/abc.jpg">
       <publishTime>10/06/2018 18:23:06</publishTime>
+    </File>
+    <File Include="Content/assets/abd.jpg">
+      <publishTime>10/17/2018 17:03:24</publishTime>
+    </File>
+    <File Include="Content/assets/badminton.jpg">
+      <publishTime>10/17/2018 17:03:24</publishTime>
+    </File>
+    <File Include="Content/assets/Cricket-Png-Background.png">
+      <publishTime>10/17/2018 17:03:24</publishTime>
     </File>
     <File Include="Content/assets/ErrorPage/style.css">
       <publishTime>10/08/2018 19:21:56</publishTime>
@@ -639,8 +654,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/assets/giphy.gif">
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
+    <File Include="Content/assets/hd0146-H264 75.mov">
+      <publishTime>10/17/2018 17:03:25</publishTime>
+    </File>
     <File Include="Content/assets/js/my_js.js">
       <publishTime>10/06/2018 18:23:06</publishTime>
+    </File>
+    <File Include="Content/assets/kisspng-fifa-world-cup-football-player-football-vector-5a916d73590096.1830379015194801793646.png">
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Content/assets/ldr.gif">
       <publishTime>10/06/2018 18:23:06</publishTime>
@@ -656,6 +677,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/assets/mlogo.png">
       <publishTime>10/06/2018 18:23:06</publishTime>
+    </File>
+    <File Include="Content/assets/ronaldo.jpg">
+      <publishTime>10/17/2018 17:03:25</publishTime>
+    </File>
+    <File Include="Content/assets/tennis.jpg">
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Content/assets/user-shape %281%29.png">
       <publishTime>10/06/2018 18:23:06</publishTime>
@@ -714,11 +741,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap/js/npm.js">
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
+    <File Include="Content/bznew copy.png">
+      <publishTime>10/17/2018 17:03:25</publishTime>
+    </File>
     <File Include="Content/css/header.css">
-      <publishTime>10/15/2018 19:47:09</publishTime>
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Content/css/index.css">
-      <publishTime>10/08/2018 18:23:11</publishTime>
+      <publishTime>10/17/2018 17:03:25</publishTime>
+    </File>
+    <File Include="Content/css/index.js">
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Content/css/js/min.js">
       <publishTime>10/06/2018 18:23:06</publishTime>
@@ -731,6 +764,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/ErrorPage/style.css">
       <publishTime>10/08/2018 19:21:56</publishTime>
+    </File>
+    <File Include="Content/hd0036.mov">
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Content/icons/badminton-equipment.svg">
       <publishTime>10/06/2018 18:23:06</publishTime>
@@ -803,6 +839,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/PagedList.css">
       <publishTime>10/06/2018 18:23:06</publishTime>
+    </File>
+    <File Include="Content/socer.jpg">
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Error404/index.html">
       <publishTime>10/08/2018 19:56:58</publishTime>
@@ -1480,7 +1519,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/Default/Index.cshtml">
-      <publishTime>10/15/2018 19:52:33</publishTime>
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Views/Events/InPlay.cshtml">
       <publishTime>10/15/2018 14:21:46</publishTime>
@@ -1507,13 +1546,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/15/2018 19:52:33</publishTime>
     </File>
     <File Include="Views/Member/Bets.cshtml">
-      <publishTime>10/12/2018 19:50:31</publishTime>
+      <publishTime>10/17/2018 15:52:57</publishTime>
     </File>
     <File Include="Views/Member/Member.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/Member/UserProfile.cshtml">
-      <publishTime>10/15/2018 18:04:24</publishTime>
+      <publishTime>10/17/2018 15:49:52</publishTime>
     </File>
     <File Include="Views/Prematch/Cricket.cshtml">
       <publishTime>10/16/2018 19:53:54</publishTime>
@@ -1537,7 +1576,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/_Betzazz.cshtml">
-      <publishTime>10/16/2018 16:49:21</publishTime>
+      <publishTime>10/17/2018 17:03:25</publishTime>
     </File>
     <File Include="Views/_LayoutAdminPanel.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1546,7 +1585,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/16/2018 19:55:07</publishTime>
+      <publishTime>10/17/2018 17:11:06</publishTime>
     </File>
     <File Include="website/assets/css/theme-dark.min.css">
       <publishTime>10/06/2018 18:23:08</publishTime>

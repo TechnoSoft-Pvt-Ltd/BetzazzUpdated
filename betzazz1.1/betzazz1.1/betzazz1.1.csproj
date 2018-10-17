@@ -361,7 +361,6 @@
     <Content Include="Content\assets\27512b78a17394baf7e63a274267df70.png" />
     <Content Include="Content\assets\373533.jpg" />
     <Content Include="Content\assets\abc.jpg" />
-<<<<<<< HEAD
     <Content Include="Content\assets\abd.jpg" />
     <Content Include="Content\assets\badminton.jpg" />
     <Content Include="Content\assets\Cricket-Png-Background.png" />
@@ -370,9 +369,7 @@
     <Content Include="Content\assets\ronaldo.jpg" />
     <Content Include="Content\assets\tennis.jpg" />
     <Content Include="Content\bznew copy.png" />
-=======
     <Content Include="Content\assets\VRDE.gif" />
->>>>>>> 9512d6ba271ceeba162ab00d612dc9e32029fc3a
     <Content Include="Content\ErrorPage\style.css" />
     <Content Include="Content\assets\giphy.gif" />
     <Content Include="Content\assets\js\my_js.js" />
@@ -915,12 +912,12 @@
     <Content Include="Views\Member\Bank.cshtml" />
     <Content Include="Views\Member\UserProfile.cshtml" />
     <Content Include="Views\Prematch\Cricket.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPanel\img\flags\" />
     <Folder Include="AdminPanel\vendor\font-awesome\less\" />
     <Folder Include="AdminPanel\vendor\font-awesome\scss\" />
-    <Folder Include="Views\Default\" />
     <Folder Include="Views\LayoutData\" />
   </ItemGroup>
   <ItemGroup>
