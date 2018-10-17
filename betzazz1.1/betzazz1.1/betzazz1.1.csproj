@@ -241,6 +241,8 @@
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\LiveEventList.cs" />
+    <Compile Include="Models\LiveList.cs" />
+    <Compile Include="Models\NewLive.cs" />
     <Compile Include="Models\test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AccountViewModel.cs" />
@@ -359,6 +361,7 @@
     <Content Include="Content\assets\27512b78a17394baf7e63a274267df70.png" />
     <Content Include="Content\assets\373533.jpg" />
     <Content Include="Content\assets\abc.jpg" />
+<<<<<<< HEAD
     <Content Include="Content\assets\abd.jpg" />
     <Content Include="Content\assets\badminton.jpg" />
     <Content Include="Content\assets\Cricket-Png-Background.png" />
@@ -367,6 +370,9 @@
     <Content Include="Content\assets\ronaldo.jpg" />
     <Content Include="Content\assets\tennis.jpg" />
     <Content Include="Content\bznew copy.png" />
+=======
+    <Content Include="Content\assets\VRDE.gif" />
+>>>>>>> 9512d6ba271ceeba162ab00d612dc9e32029fc3a
     <Content Include="Content\ErrorPage\style.css" />
     <Content Include="Content\assets\giphy.gif" />
     <Content Include="Content\assets\js\my_js.js" />
@@ -800,6 +806,7 @@
     <Content Include="AdminPanel\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="AdminPanel\vendor\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Web.config" />
+    <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -894,7 +901,6 @@
     <Content Include="website\fontawesome-free-5.3.1-web\fontawesome-free-5.3.1-web\webfonts\fa-solid-900.ttf" />
     <Content Include="website\fontawesome-free-5.3.1-web\fontawesome-free-5.3.1-web\webfonts\fa-solid-900.woff" />
     <Content Include="website\fontawesome-free-5.3.1-web\fontawesome-free-5.3.1-web\webfonts\fa-solid-900.woff2" />
-    <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Events\InPlay.cshtml" />
     <Content Include="Views\Events\PreMatch.cshtml" />
     <Content Include="Views\_LayoutAdminPanel.cshtml" />
@@ -908,13 +914,14 @@
     <Content Include="Views\Tennis\Index.cshtml" />
     <Content Include="Views\Member\Bank.cshtml" />
     <Content Include="Views\Member\UserProfile.cshtml" />
+    <Content Include="Views\Prematch\Cricket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPanel\img\flags\" />
     <Folder Include="AdminPanel\vendor\font-awesome\less\" />
     <Folder Include="AdminPanel\vendor\font-awesome\scss\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\LayoutData\" />
-    <Folder Include="Views\Prematch\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,8 +1,12 @@
-﻿
+﻿@using System.Data;
+@using System.Data.SqlClient;
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "UserProfile";
     Layout = "~/Views/_Betzazz.cshtml";
 }
+@model betzazz1._1.ViewModels.AccountViewModel
+
 <div class="container-fluid middle-container">
     <h2 class="text-center">Profile</h2>
     <div class="tab-setting-member col col--xs-8 col--sm-10 col--md-4 col--lg-4">
@@ -15,30 +19,85 @@
     </div>
 
     <div class="tabcontentProfile" id="Personal">
-        <h3>Personal Information</h3>
-        <table class="table table-bordered table-setting">
+        <h3>
+            Manage Profile
+            <input type="submit" value="Edit_Details" class="btn btn-success" data-toggle="collapse" aria-expanded="false" data-target="#DivEditDeatils" />
 
-            <tr>
-                <th>Name</th>
-                <td>Harry</td>
-
-            </tr>
-
-            <tr>
-                <th>Currency</th>
-                <td>INR</td>
-
-            </tr>
-            <tr>
-                <th>Email-ID</th>
-                <td>harryporter@gmail.com</td>
-
-            </tr>
-
+        </h3>
+        <table class="table table-bordered" id="myTable">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Login Id</th>
+                    <th>Email ID</th>
+                    <th>Currency</th>
+                    <th>Created Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataTable dt in ViewBag.ds.Tables)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        <tr>
+                            <td>@dr["UserId"]</td>
+                            <td>@dr["UserName"]</td>
+                            <td>@dr["UserNameRandomGen"]</td>
+                            <td>@dr["UserEmail"]</td>
+                            <td>@dr["AccountCuerrcy"]</td>
+                            <td>@dr["CreatedDate"]</td>
+                        </tr>
+                    }
+                }
+            </tbody>
         </table>
-        <button class="btn btn-danger">Edit Details</button>
+
+        @using (Html.BeginForm("Update", "Member"))
+        {
+            <div class="collapse" id="DivEditDeatils">
+                <form action="#">
+                    <table>
+                        @foreach (DataTable dt in ViewBag.ds.Tables)
+                        {
+                            foreach (DataRow dr in dt.Rows)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.TextBoxFor(model => model.account.Username, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "User Name" })
+                                    </td>
+                                    <td>
+                                        @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px", placeholder = "Email Id" })
+                                    </td>
+                                    <td>
+                                        @Html.DropDownListFor(model=>model.account.currency,new List<SelectListItem>
+                                        {
+                                           new SelectListItem{Text="INR",Value="INR"},
+                                           new SelectListItem{Text="USD",Value="USD"},
+                                           new SelectListItem{Text="EUR",Value="EUR"},
+                                           new SelectListItem{Text="GBP",Value="GBP"},
+                                           new SelectListItem{Text="AED",Value="AED"},
+                                           new SelectListItem{Text="CAD",Value="CAD"},
+                                           new SelectListItem{Text="AUD",Value="AUD"}
+
+                                         },"---select currency---",new { @class = "form-control validate", style = "width:200px;border-color:black;height:35px"})
+                                    </td>
+                                    <td><input type="submit" value="Update" class="btn btn-success"></td>
+                                </tr>
+                            }
+                        }
+                    </table>
+
+                </form>
+
+
+            </div>
+        }
+
+
 
     </div>
+
     <div class="tabcontentProfile" id="Preferances">
         <h3>Personal Information</h3>
         <table class="table table-bordered">
@@ -73,20 +132,32 @@
     background-color: #333;
     padding: 20px;
     margin-top: 14px;">
+        <h3>Change Password</h3>
 
-
-
-        <div class="form-group">
-            <label for="pwd">Current Password:</label>
-            <input type="password" class="form-control" id="pwd">
-            <label for="pwd2">New Password:</label>
-            <input type="password" class="form-control" id="pwd2">
-            <label for="pwd3">Confirm Password:</label>
-            <input type="password" class="form-control" id="pwd3">
+        @using (Html.BeginForm("Change_Password", "Member"))
+        {
+        <div class="form-group col col--xs-8 col--sm-10 col--md-4 col--lg-4">
+            <label for="E_Mail">E_Mail ID:</label>
+            @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your E_Mail !" })
+            @Html.ValidationMessageFor(model => model.account.emailid, "", new { style = "color:White" })
+           <br/>
+            <label for="pwd1">New Password:</label>
+            @Html.PasswordFor(model => model.account.NPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter New Password !" })
+            @Html.ValidationMessageFor(model => model.account.NPassword, "", new { style = "color:White" })
+            <br />
+            <label for="pwd2">Confirm Password:</label>
+            @Html.PasswordFor(model => model.account.CPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Confirm Password !" })
+            @Html.ValidationMessageFor(model => model.account.CPassword, "", new { style = "color:White" })
             <br>
-            <button class="btn btn-primary" style="margin-left:35%;">Submit</button>
-            <button class="btn btn-danger" style="margin-left:15%;">Cancel</button>
-        </div>
+            @*<button class="btn btn-primary" style="margin-left:35%;">Submit</button>*@
+            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4">
+                <div class="pull-left" style="width:50%">
+                    <input type="submit" value="Change_Password" class="btn btn-success" style="margin-left:0px;" />
+                </div>
+                
+                </div>
+            </div>
+        }
 
     </div>
 </div>

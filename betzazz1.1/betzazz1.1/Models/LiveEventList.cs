@@ -9,6 +9,7 @@ namespace betzazz1._1.Models
     {
         public string success { get; set; }
         public System.Collections.ObjectModel.Collection<Results> results { get; set; }
+
     }
     public class Results
     {

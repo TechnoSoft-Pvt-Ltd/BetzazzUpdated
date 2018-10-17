@@ -22,12 +22,19 @@
                             <ul class="list-unstyled components ">
                                 <li class="active">
                                     <a href="#Testinplayview" data-toggle="collapse" aria-expanded="false">
-                                        Test Matches
+                                        <div class="dropdown-center-settings"> @ViewBag.PMLeagueName  </div>
                                     </a>
                                     <ul class="collapse list-unstyled" id="Testinplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                        <li>
+                                            @for (int i = 0; i < ViewBag.ArrPMTestData.Length; i++)
+                                             {
+                                               
+                                                <button type="button" id="@ViewBag.PMTestEvntid[i]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv"
+                                                        value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "PreMatch")?Eventid='+ @ViewBag.PMTestEvntid[i]" style="height:auto">
+                                                    @ViewBag.ArrPMTestData[i]  <br />  @ViewBag.TestEventDate[i]
+                                                </button>
+                                             }
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -35,13 +42,22 @@
                         <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv">
                             <ul class="list-unstyled components ">
                                 <li class="active">
-                                    <a href="#Ondayinplayview" data-toggle="collapse" aria-expanded="false">
-                                        One-Day Internationals
+                                    <a href="#T20Div" data-toggle="collapse" aria-expanded="false">
+                                        <div class="dropdown-center-settings"> @ViewBag.PMT20LeagueName  </div>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="Ondayinplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                    <ul class="collapse list-unstyled" id="T20Div">
+                                        <li>
+
+                                            @for (int i = 0; i < ViewBag.ArrPMT20Data.Length; i++)
+                                            {
+
+                                            <button type="button" id="@ViewBag.PMT20Evntid[i]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv"
+                                                    value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "PreMatch")?Eventid='+ @ViewBag.PMT20Evntid[i]" style="height:auto">
+                                                @ViewBag.ArrPMT20Data[i]  <br />  @ViewBag.T20EventDate[i]
+                                            </button>
+                                            }
+                                        </li>
+                                        
                                     </ul>
                                 </li>
                             </ul>
@@ -50,13 +66,22 @@
 
                             <ul class="list-unstyled components ">
                                 <li class="active">
-                                    <a href="#T20inplayview" data-toggle="collapse" aria-expanded="false">
-                                        Twenty 20
+                                    <a href="#ODiDiv" data-toggle="collapse" aria-expanded="false">
+                                        <div class="dropdown-center-settings"> @ViewBag.PMODILeagueName  </div>
                                     </a>
-                                    <ul class="collapse list-unstyled" id="T20inplayview">
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 2</a></li>
-                                        <li><a href="#">Home 3</a></li>
+                                    <ul class="collapse list-unstyled" id="ODiDiv">
+                                        <li>
+
+                                            @for (int i = 0; i < ViewBag.ArrPMODIData.Length; i++)
+                                            {
+
+                                            <button type="button" id="@ViewBag.PMODIEvntid[i]" class="btn  button1 col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv"
+                                                    value="btn_Onclick" onclick="location.href='@Url.Action("btn_Onclick", "PreMatch")?Eventid='+ @ViewBag.PMODIEvntid[i]" style="height:auto">
+                                                @ViewBag.ArrPMODIData[i]  <br />  @ViewBag.ODIEventDate[i]
+                                            </button>
+                                            }
+                                        </li>
+                                        
                                     </ul>
                                 </li>
                             </ul>

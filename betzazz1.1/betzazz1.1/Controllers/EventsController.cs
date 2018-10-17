@@ -14,15 +14,20 @@ using System.Collections;
 using System.Web.Security;
 using betzazz1._1.ViewModels;
 using System.Net.Mail;
+using Newtonsoft.Json;
 
 namespace betzazz1._1.Controllers
 {
     public class EventsController : Controller
     {
+        public string FottballInplay { get; set; }
+
         public static string UName { get; set; }
         public static Double Balance { get; set; }
         public static string Currency { get; set; }
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString);
+        string msgsubject = string.Empty;
+        string msgbody = string.Empty;
         Global GBLClass = new Global();
         LiveEventList Live = new LiveEventList();
 
@@ -127,20 +132,170 @@ namespace betzazz1._1.Controllers
             int CRTotalEvent = TestCount + T20Count + ODICount;
             ViewBag.CRTotalEvent = CRTotalEvent;
             Session["CRTotalEvent"] = CRTotalEvent;
+
+
+
+            FottballInplay = GBLClass.FotballIPGetJson;
+
+           // var deserialized = JsonConvert.DeserializeObject<LiveList>(FottballInplay);
+
+            var serilezer = new JavaScriptSerializer();
+
+
+
+            LiveEventList LiveFT = serilezer.Deserialize<LiveEventList>(FottballInplay);
+            
+            //int count = LiveFT.results.Count();
+            //ArrayList newList = new ArrayList();
+            //ArrayList newList1 = new ArrayList();
+            //ArrayList Arr1 = new ArrayList();
+            //for (int i=0;i<count;i++)
+            //{
+            //    ArrayList ArrList = new ArrayList();
+            //    string MatchId= LiveFT.results[i].id;
+            //    string Sportid = LiveFT.results[i].sport_id;
+            //    string Time= LiveFT.results[i].time;
+            //    string TimeStatus= LiveFT.results[i].time_status;
+            //    string leagueId= LiveFT.results[i].league.id;
+            //    string leagueName= LiveFT.results[i].league.name;
+            //    string EventName= LiveFT.results[i].home.name+" VS "+ LiveFT.results[i].away.name;
+
+                
+            //    ArrList.Add(MatchId);
+            //    ArrList.Add(Sportid);
+            //    ArrList.Add(Time);
+            //    ArrList.Add(TimeStatus);
+            //    ArrList.Add(leagueName);
+            //    ArrList.Add(EventName);
+                
+            //    if (leagueName== ArrList[4].ToString())
+            //    {
+            //        newList.Add(ArrList);
+            //    }
+            //    else if(leagueName != ArrList[4].ToString())
+            //    {
+            //        newList1.Add(ArrList);
+            //    }
+
+            //   // Arr1.Add(newList);
+            //}           
+            ViewBag.LiveFT = LiveFT;
             return View();
-
-
 
         }
 
        
 
         // Methods for PreMatch Cricket and Football
-        public ActionResult PreMatch()
+        public ActionResult PreMatch(string[] ArrPMTestData,string[] PMTestEvntid, string[] ArrPMT20Data, string[] PMT20Evntid, string[] ArrPMODIData, string[] PMODIEvntid)
         {
-           
+            GBLClass.PreMatch();
+
+            // For Test Matches.
+            string GetTestData = GBLClass.PMTestData;
+
+            string EDate = GBLClass.PMTestEventDate;
+            string[] TestEventDate = EDate.Split('@');
+            ViewBag.TestEventDate = TestEventDate;
+
+            ArrPMTestData = GetTestData.Split('@');
+            int PMTestCount = ArrPMTestData.Length;
+            //  ViewBag.TestCount = TestCount;
+            Session["PMTestCount"] = PMTestCount;
+            ViewBag.ArrPMTestData = ArrPMTestData;
+            ViewBag.PMLeagueName = GBLClass.PMTestLeagueName;
+            Session["PMLeagueName"] = GBLClass.PMTestLeagueName;
+            string id = GBLClass.PMEventId;
+            PMTestEvntid = id.Split('@');
+            ViewBag.PMTestEvntid = PMTestEvntid;
+            //Cricket for Test Event id
+            ArrayList Eid = new ArrayList();
+            for (int i = 0; i < ArrPMTestData.Length; i++)
+            {
+                Eid.Add(PMTestEvntid[i]);
+                Session["PMEvntid"] = Eid;
+            }
+            // for Test Event Name
+            ArrayList displayDetail1 = new ArrayList();
+            for (int j = 0; j < ArrPMTestData.Length; j++)
+            {
+                displayDetail1.Add(ArrPMTestData[j]);
+                Session["PMTstEventName"] = displayDetail1;
+            }
+
+
+            // For Tweenty 20
+            string GetT20tData = GBLClass.PMT20Data;
+            string EDatet20 = GBLClass.PMT20EventDate;
+            string[] T20EventDate = EDatet20.Split('@');
+            ViewBag.T20EventDate = T20EventDate;
+            ArrPMT20Data = GetT20tData.Split('@');
+            int PMT20Count = ArrPMT20Data.Length;
+            //  ViewBag.TestCount = TestCount;
+            Session["PMT20Count"] = PMT20Count;
+            ViewBag.ArrPMT20Data = ArrPMT20Data;
+            ViewBag.PMT20LeagueName = GBLClass.PMT20LeagueName;
+            Session["PMT20LeagueName"] = GBLClass.PMT20LeagueName;
+            string idT20 = GBLClass.PMT20EventId;
+            PMT20Evntid = idT20.Split('@');
+            ViewBag.PMT20Evntid = PMT20Evntid;
+            //Cricket for Test Event id
+            ArrayList EidT20 = new ArrayList();
+            for (int i = 0; i < ArrPMT20Data.Length; i++)
+            {
+                EidT20.Add(PMT20Evntid[i]);
+                Session["PMEvntidT20"] = EidT20;
+            }
+            // for Test Event Name
+            ArrayList displayDetailT20 = new ArrayList();
+            for (int j = 0; j < ArrPMT20Data.Length; j++)
+            {
+                displayDetailT20.Add(ArrPMT20Data[j]);
+                Session["PMT20EventName"] = displayDetailT20;
+            }
+
+            // For ODI
+            string GetODIData = GBLClass.PMODIData;
+
+            string EDateODI = GBLClass.PMODIEventDate;
+            string[] ODIEventDate = EDateODI.Split('@');
+            ViewBag.ODIEventDate = ODIEventDate;
+            ArrPMODIData = GetODIData.Split('@');
+            int PMODICount = ArrPMODIData.Length;
+            ViewBag.PMODIEventDate = GBLClass.PMODIEventDate;
+            //  ViewBag.TestCount = TestCount;
+            Session["PMODICount"] = PMODICount;
+            ViewBag.ArrPMODIData = ArrPMODIData;
+            ViewBag.PMODILeagueName = GBLClass.PMODILeagueName;
+            Session["PMODILeagueName"] = GBLClass.PMODILeagueName;
+            string idODI = GBLClass.PMODIEventId;
+            PMODIEvntid = idODI.Split('@');
+            ViewBag.PMODIEvntid = PMODIEvntid;
+            //Cricket for Test Event id
+            ArrayList EidODI = new ArrayList();
+            for (int i = 0; i < ArrPMODIData.Length; i++)
+            {
+                EidODI.Add(PMODIEvntid[i]);
+                Session["ODIPMEvntid"] = EidODI;
+            }
+            // for Test Event Name
+            ArrayList displayDetailODI = new ArrayList();
+            for (int j = 0; j < ArrPMODIData.Length; j++)
+            {
+                displayDetailODI.Add(ArrPMODIData[j]);
+                Session["PMODIEventName"] = displayDetailODI;
+            }
+
+            int PMCRTotalEvent = PMTestCount + PMT20Count + PMODICount;
+            ViewBag.CRTotalEvent = PMCRTotalEvent;
+            Session["PMCRTotalEvent"] = PMCRTotalEvent;
+
             return View();
         }
+
+
+
+
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
@@ -157,6 +312,8 @@ namespace betzazz1._1.Controllers
             {
                 string userid = avm1.account.UserID;
                 string userpass = avm1.account.Password;
+                if(userid!=null || userpass!=null)
+                { 
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand("select ModlData.UserId, ModlData.UserName,ModlData.UserNameRandomGen,ModlData.CreatePass,ModlData.AccountCuerrcy,UserBlnc.Balance from  ModalData as ModlData " +
                 "left join UserBalance as UserBlnc on ModlData.UserId = UserBlnc.UserId  where UserNameRandomGen =@username and CreatePass=@password", con))
@@ -199,20 +356,74 @@ namespace betzazz1._1.Controllers
                         Response.Write("<script>alert('Usename Or Password Incorrect !');</script>");
                     }
                 }
-                
+                }
+                //else
+                //{
+                //    ViewBag.ErrorMassage = "Please enter Userid and Password";
+                //}
             }
             catch (Exception ex)
             {
                 con.Close();
-                throw ex;
+               // throw ex;
             }
             return RedirectToAction("InPlay");
 
 
         }
 
+        //Code for Forgot Password...
+        public ActionResult Submit(AccountViewModel avm)
+        {
+            string email = avm.account.emailid;
+            string password = avm.account.Password;
+            try
+            {
+                //code for random genrate paasword for Forgot Password
+                string pass = "abcdeABCDEFfghijklmn56789GHIJKopqrstuvwxyzLMNOPQR01234STUVWXYZ";
+                Random r = new Random();
+                char[] mypass = new char[5];
+                for (int z = 0; z < 5; z++)
+                {
+                    mypass[z] = pass[(int)(60 * r.NextDouble())];
+
+                }
+                password = new string(mypass);
+
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Update Modaldata set createPass='" + password.ToString() + "',CreatedDate='" + DateTime.Today.ToShortDateString() + "' where UserEmail='" + email.ToString() + "' ", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('New Password has been send to your email address!')</script>");
+                msgsubject = "Forget Password";
+
+                msgbody = "Hello,!\nYour Password has been Updated.\n" +
+                          "Your new password is:- " + password.ToString() + "\n\nBest\nTeam ZAZZ ";
+
+                string subject = msgsubject;
+                string body = msgbody;
+                MailMessage msg = new MailMessage("accounts@betzazz.com", email.ToString());
+                msg.Subject = subject.ToString();
+                msg.Body = body;
+
+                SmtpClient client = new SmtpClient("mail.betzazz.com", 587);
+                client.Credentials = new System.Net.NetworkCredential()
+                {
+                    UserName = "accounts@betzazz.com",
+                    Password = "Password@123"
+                };
+                client.EnableSsl = false;
+                client.Send(msg);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return View("InPlay");
+        }
+
         //SignUp
-        public ActionResult SignUp(AccountViewModel avm2)
+        public void SignUp(AccountViewModel avm2)
         {
             try
             {
@@ -321,8 +532,11 @@ namespace betzazz1._1.Controllers
             {
                 throw ex;
             }
-            return RedirectToAction("InPlay");
+            Response.Redirect("InPlay");
+           // return RedirectToAction("");
         }
+
+      
 
     }
 

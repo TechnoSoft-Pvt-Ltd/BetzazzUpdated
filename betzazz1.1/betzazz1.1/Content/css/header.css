@@ -613,4 +613,38 @@ body {
         color:black;
         border-color:black;
     }
+<<<<<<< HEAD
+=======
+.Live-page-div-main {
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #808080;
+    color: #e49b1e;
+}
+.Live-btn-div {
+    background: #808080;
+    width: 50%;
+    height:25px;
+}
+.Live-Odds-Page-span {
+    color: #e49b1e;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 2px;
+    margin-left:7px;
+}
+.Live-odds-btn {
+    border: none;
+    background: #e49b1e;
+    color: black;
+    height: 25px;
+    font-weight: bold;
+    width:50px;
+}
+.Live-odds-btn:hover {
+        background:black;
+        color: white;
+    }
+>>>>>>> 9512d6ba271ceeba162ab00d612dc9e32029fc3a
 
