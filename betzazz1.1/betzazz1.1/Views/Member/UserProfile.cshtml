@@ -136,19 +136,26 @@
 
         @using (Html.BeginForm("Change_Password", "Member"))
         {
-            <div class="form-group">
-                <label for="E_Mail">E_Mail ID:</label>
-                @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your E_Mail !" })
-
-                <label for="pwd1">New Password:</label>
-                @Html.PasswordFor(model => model.account.NPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter New Password !" })
-
-                <label for="pwd2">Confirm Password:</label>
-                @Html.PasswordFor(model => model.account.CPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Confirm Password !" })
-                <br>
-                @*<button class="btn btn-primary" style="margin-left:35%;">Submit</button>*@
-                <input type="submit" value="Change_Password" class="btn btn-success" style="margin-left:35%;" />
-                <button class="btn btn-danger" style="margin-left:15%;">Cancel</button>
+        <div class="form-group col col--xs-8 col--sm-10 col--md-4 col--lg-4">
+            <label for="E_Mail">E_Mail ID:</label>
+            @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your E_Mail !" })
+            @Html.ValidationMessageFor(model => model.account.emailid, "", new { style = "color:White" })
+           <br/>
+            <label for="pwd1">New Password:</label>
+            @Html.PasswordFor(model => model.account.NPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter New Password !" })
+            @Html.ValidationMessageFor(model => model.account.NPassword, "", new { style = "color:White" })
+            <br />
+            <label for="pwd2">Confirm Password:</label>
+            @Html.PasswordFor(model => model.account.CPassword, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Confirm Password !" })
+            @Html.ValidationMessageFor(model => model.account.CPassword, "", new { style = "color:White" })
+            <br>
+            @*<button class="btn btn-primary" style="margin-left:35%;">Submit</button>*@
+            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4">
+                <div class="pull-left" style="width:50%">
+                    <input type="submit" value="Change_Password" class="btn btn-success" style="margin-left:0px;" />
+                </div>
+                
+                </div>
             </div>
         }
 

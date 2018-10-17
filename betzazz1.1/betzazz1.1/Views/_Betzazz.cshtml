@@ -7,8 +7,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <link href="~/Content/css/header.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 </head>
 
 <body style="background-color:black;color:#ce870d">
@@ -1187,7 +1190,7 @@
         </div>
     </footer>
     <!--Login Popup Modal-->
-    @using (Html.BeginForm("Login", "Events"))
+    @using (Html.BeginForm("Login", "Events",new {@id="LoginFormId" }))
     {
         <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -1202,17 +1205,17 @@
                         <div class="md-form mb-4">
                             <i class="glyphicon glyphicon-user"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-email">User id</label>
-                            @Html.TextBoxFor(model => model.account.UserID, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Enter User id provided by Admin!" })
-
+                            @Html.TextBoxFor(model => model.account.UserID, new { @id = "UserId", @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Enter User id provided by Admin!" })
+                            @Html.ValidationMessageFor(model => model.account.UserID,"", new { style = "color:White" })
                         </div>
 
                         <div class="md-form mb-4">
                             <i class="glyphicon glyphicon-eye-open"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                            @Html.PasswordFor(model => model.account.Password, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Enter Password provided by Admin!" })
-
+                            @Html.PasswordFor(model => model.account.Password, new { @id = "UserPass", @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Enter Password provided by Admin!" })
+                            @Html.ValidationMessageFor(model => model.account.Password, "",new { style="color:White"})
                         </div>
-
+                        
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <input type="submit" value="Login" class="btn btn-success my-btn-login-signup" />
@@ -1240,6 +1243,7 @@
                             <i class="fa fa-envelope prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Email</label>
                             @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please enter your E-mail ID!" })
+                            @Html.ValidationMessageFor(model => model.account.UserID, "", new { style = "color:White" })
                         </div>
 
                     </div>
@@ -1267,9 +1271,9 @@
                         <div class="md-form mb-4">
                             <i class="glyphicon glyphicon-user" style="color:#ce870d"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
-                            @*<input type="text" id="txtUserName" class="form-control validate" data-toggle="tooltip" title="Enter Display Name!">*@
+                            @*<input type="text" id="txtUserName" class="form-control validate" data-toggle="tooltip" title="Enter Display Name!"><input type="text" id="txtUserName" class="form-control validate" data-toggle="tooltip" title="Enter Display Name!">*@
                             @Html.TextBoxFor(model => model.account.Username, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please Enter your Name!" })
-
+                            @Html.ValidationMessageFor(model => model.account.Username, "", new { style = "color:White" })
 
                         </div>
 
@@ -1287,13 +1291,14 @@
                               new SelectListItem{Text="AUD",Value="AUD"}
 
                             },"---select Currency---",new { @class="form-control"})
+                            @Html.ValidationMessageFor(model => model.account.currency, "", new { style = "color:White" })
                         </div>
                         <div class="md-form mb-4">
                             <i class="glyphicon glyphicon-envelope"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-email">Your Email</label>
-                            @Html.PasswordFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please enter your E-mail ID!" })
+                            @Html.TextBoxFor(model => model.account.emailid, new { @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Please enter your E-mail ID!" })
                             @*<input type="email" id="defaultForm-pass" class="form-control validate" data-toggle="tooltip" title="Enter Email for all required communications!">*@
-
+                            @Html.ValidationMessageFor(model => model.account.emailid, "", new { style = "color:White" })
                         </div>
 
                     </div>
@@ -1353,11 +1358,7 @@
         window.onload = function () {
             $("#myDiv1").hide();
         };
-
-
+       
     </script>
-
-
-
 </body>
 </html>

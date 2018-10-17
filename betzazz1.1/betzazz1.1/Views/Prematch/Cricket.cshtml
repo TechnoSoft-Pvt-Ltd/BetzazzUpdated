@@ -16,113 +16,115 @@
                     <!--Event Name-->
                     <div class="col col--xs-8 col--sm-10 col--md-10 col--lg-11">
                         <span class="flex-row--title text-center "><h4 style="font-size:28px;font-weight:bold;margin:10px;">@ViewBag.EventName</h4></span>
-                        <span class=" flex-row--title text-right pull-right"><h4 style="font-size:28px;font-weight:bold;margin:10px;">@ViewBag.MarketTime</h4></span>
+                        <span class=" flex-row--title text-right pull-right visible-lg"><h4 style="font-size:28px;font-weight:bold;margin:10px;">@ViewBag.MarketTime</h4></span>
                     </div> 
-                    
-                    <!--Match Odds Market-->
-                  <div id="matchoddsMArket">
-                    <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
-                        <span style="margin:5px">@ViewBag.MrktNameMatchOdds</span>
+                    <div class="col col--xs-8 col--sm-10 col--md-10 col--lg-11 visible-xs visible-sm">
+                        <h4 style="font-size:28px;font-weight:bold;margin:10px;">@ViewBag.MarketTime</h4>
                     </div>
-                    @*<span class="caret"></span> <span></span>*@
-                    <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
-                        <div class="pull-left Live-btn-div" style="width:34%">
-                            <span class="Live-Odds-Page-span">@ViewBag.T1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.Odds1</button>
+                        <!--Match Odds Market-->
+                        <div id="matchoddsMArket">
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">@ViewBag.MrktNameMatchOdds</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">@ViewBag.T1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.Odds1</button>
+                                </div>
+
+                                @*<div class="pull-right Live-btn-div" style="width:33%">
+                    <span class="Live-Odds-Page-span">@ViewBag.T3Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsT31</button>
+                </div>*@
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">@ViewBag.T2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsT21</button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="pull-right Live-btn-div" style="width:33%">
-                            <span class="Live-Odds-Page-span">@ViewBag.T3Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsT31</button>
+                        <!--Team A Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">@ViewBag.TowinMarketName</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">@ViewBag.M1T1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsTowT1</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">@ViewBag.M1T2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsTowT2</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pull-right Live-btn-div" style="width:33%">
-                            <span class="Live-Odds-Page-span">@ViewBag.T2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsT21</button>
+
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">@ViewBag.drawNBetMarketName</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">@ViewBag.DRNT1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDRNT1</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">@ViewBag.DRNT2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDRNT1</button>
+                                </div>
+                            </div>
                         </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">@ViewBag.DBlChnceMarketName </span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">@ViewBag.DBlT1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDBLT1</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span"> @ViewBag.DBlT3Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDBLT3</button>
+                                </div>
+                                @*<div class="pull-right Live-btn-div" style="width:33%">
+                    <span class="Live-Odds-Page-span"> @ViewBag.DBlT2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDBLT2</button>
+                </div>*@
+                            </div>
+                        </div>
+
+                        <!--Team B Total Runs Market-->
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px">Team B Total Runs</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                <div class="pull-left Live-btn-div">
+                                    <span class="Live-Odds-Page-span">INDIA</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">1.85</button>
+                                </div>
+
+                                <div class="pull-right Live-btn-div">
+                                    <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">1.85</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
-                  </div>
-
-                    <!--Team A Total Runs Market-->
-                    <div>
-                        <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
-                            <span style="margin:5px">@ViewBag.TowinMarketName</span>
-                        </div>
-                        @*<span class="caret"></span> <span></span>*@
-                        <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
-                            <div class="pull-left Live-btn-div">
-                                <span class="Live-Odds-Page-span">@ViewBag.M1T1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsTowT1</button>
-                            </div>
-
-                            <div class="pull-right Live-btn-div">
-                                <span class="Live-Odds-Page-span">@ViewBag.M1T2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsTowT2</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--Team B Total Runs Market-->
-                    <div>
-                        <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
-                            <span style="margin:5px">@ViewBag.drawNBetMarketName</span>
-                        </div>
-                        @*<span class="caret"></span> <span></span>*@
-                        <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
-                            <div class="pull-left Live-btn-div">
-                                <span class="Live-Odds-Page-span">@ViewBag.DRNT1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDRNT1</button>
-                            </div>
-
-                            <div class="pull-right Live-btn-div">
-                                <span class="Live-Odds-Page-span">@ViewBag.DRNT2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDRNT1</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Team B Total Runs Market-->
-                    <div>
-                        <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
-                            <span style="margin:5px">@ViewBag.DBlChnceMarketName </span>
-                        </div>
-                        @*<span class="caret"></span> <span></span>*@
-                        <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
-                            <div class="pull-left Live-btn-div" style="width:34%">
-                                <span class="Live-Odds-Page-span">@ViewBag.DBlT1Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDBLT1</button>
-                            </div>
-
-                            <div class="pull-right Live-btn-div" style="width:33%">
-                                <span class="Live-Odds-Page-span"> @ViewBag.DBlT3Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDBLT3</button>
-                            </div>
-                            <div class="pull-right Live-btn-div" style="width:33%">
-                                <span class="Live-Odds-Page-span"> @ViewBag.DBlT2Name</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@ViewBag.OddsDBLT2</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Team B Total Runs Market-->
-                    <div>
-                        <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
-                            <span style="margin:5px">Team B Total Runs</span>
-                        </div>
-                        @*<span class="caret"></span> <span></span>*@
-                        <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
-                            <div class="pull-left Live-btn-div">
-                                <span class="Live-Odds-Page-span">INDIA</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">1.85</button>
-                            </div>
-
-                            <div class="pull-right Live-btn-div">
-                                <span class="Live-Odds-Page-span">ENGLAND</span><button type="button" onclick="show('myDiv1')" class="pull-right Live-odds-btn">1.85</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    
-
-                    
-
-                   
-
-                    
-
-
-
-                </div>
             </div>
         </div>
     </div>

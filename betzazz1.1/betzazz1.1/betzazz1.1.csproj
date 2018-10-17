@@ -885,7 +885,6 @@
     <Content Include="website\fontawesome-free-5.3.1-web\fontawesome-free-5.3.1-web\webfonts\fa-solid-900.ttf" />
     <Content Include="website\fontawesome-free-5.3.1-web\fontawesome-free-5.3.1-web\webfonts\fa-solid-900.woff" />
     <Content Include="website\fontawesome-free-5.3.1-web\fontawesome-free-5.3.1-web\webfonts\fa-solid-900.woff2" />
-    <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Events\InPlay.cshtml" />
     <Content Include="Views\Events\PreMatch.cshtml" />
     <Content Include="Views\_LayoutAdminPanel.cshtml" />
@@ -905,6 +904,7 @@
     <Folder Include="AdminPanel\img\flags\" />
     <Folder Include="AdminPanel\vendor\font-awesome\less\" />
     <Folder Include="AdminPanel\vendor\font-awesome\scss\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\LayoutData\" />
   </ItemGroup>
   <ItemGroup>

@@ -312,6 +312,8 @@ namespace betzazz1._1.Controllers
             {
                 string userid = avm1.account.UserID;
                 string userpass = avm1.account.Password;
+                if(userid!=null || userpass!=null)
+                { 
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand("select ModlData.UserId, ModlData.UserName,ModlData.UserNameRandomGen,ModlData.CreatePass,ModlData.AccountCuerrcy,UserBlnc.Balance from  ModalData as ModlData " +
                 "left join UserBalance as UserBlnc on ModlData.UserId = UserBlnc.UserId  where UserNameRandomGen =@username and CreatePass=@password", con))
@@ -354,12 +356,16 @@ namespace betzazz1._1.Controllers
                         Response.Write("<script>alert('Usename Or Password Incorrect !');</script>");
                     }
                 }
-                
+                }
+                //else
+                //{
+                //    ViewBag.ErrorMassage = "Please enter Userid and Password";
+                //}
             }
             catch (Exception ex)
             {
                 con.Close();
-                throw ex;
+               // throw ex;
             }
             return RedirectToAction("InPlay");
 
