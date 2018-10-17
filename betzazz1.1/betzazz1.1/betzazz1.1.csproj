@@ -356,7 +356,17 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\assets\27512b78a17394baf7e63a274267df70.png" />
+    <Content Include="Content\assets\373533.jpg" />
     <Content Include="Content\assets\abc.jpg" />
+    <Content Include="Content\assets\abd.jpg" />
+    <Content Include="Content\assets\badminton.jpg" />
+    <Content Include="Content\assets\Cricket-Png-Background.png" />
+    <Content Include="Content\assets\hd0146-H264 75.mov" />
+    <Content Include="Content\assets\kisspng-fifa-world-cup-football-player-football-vector-5a916d73590096.1830379015194801793646.png" />
+    <Content Include="Content\assets\ronaldo.jpg" />
+    <Content Include="Content\assets\tennis.jpg" />
+    <Content Include="Content\bznew copy.png" />
     <Content Include="Content\ErrorPage\style.css" />
     <Content Include="Content\assets\giphy.gif" />
     <Content Include="Content\assets\js\my_js.js" />
@@ -379,6 +389,7 @@
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\js\min.js" />
     <Content Include="Content\css\preloader.js" />
+    <Content Include="Content\hd0036.mov" />
     <Content Include="Content\icons\badminton-equipment.svg" />
     <Content Include="Content\icons\baseball %281%29.svg" />
     <Content Include="Content\icons\basketball %281%29.svg" />
@@ -395,10 +406,12 @@
     <Content Include="Content\icons\soccer %281%29.svg" />
     <Content Include="Content\icons\soccer-ball.svg" />
     <Content Include="Content\icons\tennis-ball %281%29.svg" />
+    <Content Include="Content\css\index.js" />
     <Content Include="Content\Nav\css\inc\general.css" />
     <Content Include="Content\Nav\css\screen.css" />
     <Content Include="Content\Nav\css\screen.min.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\socer.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

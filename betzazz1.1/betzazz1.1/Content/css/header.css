@@ -162,7 +162,7 @@ i, span {
         }
 
     #sidebar ul.components {
-        padding: 20px 0;
+        padding: 10px 0;
         
     }
 
@@ -593,7 +593,7 @@ body {
     padding-top: 10px;
     text-align: left
 }
-<<<<<<< HEAD
+
 .dropdown-center-settings {
     font-size: 14px;
     font-weight: bold;
@@ -601,7 +601,7 @@ body {
     margin-bottom: 0;
     margin-left: 15px;
 }
-=======
+
 .my-btn-login-signup {
     background-color: black;
     border-color: #d0a44d;
@@ -613,4 +613,4 @@ body {
         color:black;
         border-color:black;
     }
->>>>>>> 0278a23d67c092795f0aa7738075f0c2597a2340
+
