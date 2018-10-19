@@ -16,6 +16,7 @@ namespace betzazz1._1.Controllers
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString);
         // GET: Member
+        //-----------Manage Profile------Start---//
         public ActionResult UserProfile()
         {
             try
@@ -70,8 +71,6 @@ namespace betzazz1._1.Controllers
             UserProfile();
             return View("UserProfile");
         }
-
-
         public ActionResult Change_Password(AccountViewModel avm3)
         {
             try
@@ -114,6 +113,10 @@ namespace betzazz1._1.Controllers
 
 
         }
+        //-----------Manage Profile------End---//
+
+
+        //-------------Manage Accounts -----Start---//
         public ActionResult Bank()
         {        
             try
@@ -138,9 +141,10 @@ namespace betzazz1._1.Controllers
             }
             return View();
         }
+        //-------------Manage Accounts -----End---//
 
-           
-    
+
+        //---------Manage Bets-----Start----//
         public ActionResult Bets()
         {
             try
@@ -200,5 +204,6 @@ namespace betzazz1._1.Controllers
             return View();
         }
        
+        //-------------Manage Bets-----End----//
     }
 }
