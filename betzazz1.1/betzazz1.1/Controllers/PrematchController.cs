@@ -36,7 +36,8 @@ namespace betzazz1._1.Controllers
         }
         public void btn_Onclick()
         {
-            Eventid = Request.QueryString["Eventid"];
+            //string gg = Data;
+            Eventid = Request.QueryString["Eventid"];          
             Response.Redirect("Cricket?eventid=" + Eventid);
             //return View("InPlay");
         }
@@ -63,6 +64,7 @@ namespace betzazz1._1.Controllers
         }
 
         // Main funtion
+        MatchOdds md = new MatchOdds();
         public ActionResult Market_display()
         {
             try
@@ -74,6 +76,10 @@ namespace betzazz1._1.Controllers
                     Obj_PreMatch = serlizer.Deserialize<NewLive>(json);
                     string EventName = Obj_PreMatch.results[0].Event.name;
                     ViewBag.EventName = EventName;
+                    MatchOdds.EventNAme = EventName;
+                    TowWintheToss.EventNAme = EventName;
+                    DrawNoBet.EventNAme = EventName;
+                    DBLChance.EventNAme = EventName;
                     //string MarketTime = Obj_PreMatch.results[0].market.marketTime;
 
                     foreach (var Obj in Obj_PreMatch.results[0].markets)
@@ -92,16 +98,19 @@ namespace betzazz1._1.Controllers
                            }
 
                         if (Obj.market.marketName.Equals("Match Odds"))//HAMW Match Odds Being End Here   
-                            {
+                        {
                                 //MatchOdds.Visible = true;
                                 //PeriodRow.Visible = false;
                                 string MrktidMatchOdds = Obj.market.marketId;
                                 string MrktNameMatchOdds = Obj.market.marketName;
                                 ViewBag.MrktNameMatchOdds = MrktNameMatchOdds;
+                                MatchOdds.MarketName= MrktNameMatchOdds;
+                                ViewData["md"] = md;
                                 string eventid = Obj.market.eventId;
                                 string MarketSatus = Obj.marketStatus;
                                 string MarketTime = Obj.market.marketTime;
                                 ViewBag.MarketTime = MarketTime;
+                                MatchOdds.MarketTime = MarketTime;
                                 string team1Name = Obj.market.runners[0].runnerName;
                                 string team2Name = Obj.market.runners[1].runnerName;
                                 string epp = Obj_PreMatch.results[0].markets_updated_at;
@@ -116,8 +125,8 @@ namespace betzazz1._1.Controllers
                                 if (Obj.marketStatus.Equals("SUSPENDED") )
                                 {
                                 //lblMatchOdds.Text = MrktNameMatchOdds;
-                                     ViewBag.T1Name = "SUSPENDED";
-                                     ViewBag.T2Name = "SUSPENDED";
+                                MatchOdds.Team1 = "SUSPENDED";
+                                MatchOdds.Team2 = "SUSPENDED";
                                     if (x == 3)
                                     {
                                         //lblMOT3.Text = "SUSPENDED";
@@ -159,22 +168,26 @@ namespace betzazz1._1.Controllers
                                                             }
                                                             else
                                                             {
-                                                               T1Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings;
+                                                               MatchOdds.MatchOddsDAta1  = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings + "@" + EventName;
                                                                string T1Name = team1Name;
+                                                               MatchOdds.Team1 = T1Name;
                                                                ViewBag.T1Name = T1Name;
                                                                string Odds1 = Convert.ToString(Odds0);
-                                                               ViewBag.Odds1 = Odds1;
-                                                            }
+                                                               MatchOdds.Odds1 = Odds1;
+                                                                ViewBag.Odds1 = Odds1;
                                                         }
+                                                            }
                                                         else
                                                         {
                                                     
                                                               string Odds00 = "10.0";
-                                                              T1Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds00 + "@" + team1Name + "@" + Innings;
+                                                              MatchOdds.MatchOddsDAta1 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds00 + "@" + team1Name + "@" + Innings + "@" + EventName;
                                                               string T1Name = team1Name;
+                                                              MatchOdds.Team1 = T1Name;
                                                               ViewBag.T1Name = T1Name;
                                                               string Odds1 = Convert.ToString(Odds00);
                                                               ViewBag.Odds1 = Odds1;
+                                                              MatchOdds.Odds1 = Odds1;
 
                                                         }
                                                     }
@@ -209,11 +222,13 @@ namespace betzazz1._1.Controllers
                                                         }
                                                         else
                                                         {
-                                                        T2Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + OddsT21 + "@" + team2Name + "@" + Innings;
+                                                        MatchOdds.MatchOddsDAta2 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + OddsT21 + "@" + team2Name + "@" + Innings + "@" + EventName;
                                                         string T2Name = team2Name;
+                                                        MatchOdds.Team2 = T2Name;
                                                         ViewBag.T2Name = T2Name;
                                                         OddsT21 = Convert.ToInt64(OddsT21);
-                                                        ViewBag.OddsT21 = OddsT21;
+                                                        MatchOdds.Odds2 =Convert.ToString( OddsT21);
+                                                        ViewBag.OddsT21 = Convert.ToString(OddsT21);
                                                         }
                                                     }
                                                     else
@@ -226,11 +241,13 @@ namespace betzazz1._1.Controllers
                                                     //    //btnMatchOdds2.Text = Odds10;
                                                     //}
                                                     string T2Odds10 = "10.0";
-                                                    T2Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + T2Odds10 + "@" + team2Name + "@" + Innings;
+                                                    MatchOdds.MatchOddsDAta2 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + T2Odds10 + "@" + team2Name + "@" + Innings + "@" + EventName;
                                                     string T2Name = team2Name;
+                                                    MatchOdds.Team2 = T2Name;
                                                     ViewBag.T2Name = T2Name;
                                                     OddsT21 = Convert.ToInt64(T2Odds10);
-                                                    ViewBag.OddsT21 = OddsT21;
+                                                    MatchOdds.Odds2 =Convert.ToString( OddsT21);
+                                                    ViewBag.OddsT21 = Convert.ToString(OddsT21);
                                                 }
                                                 }
                                             }
@@ -275,7 +292,7 @@ namespace betzazz1._1.Controllers
                                                             //hfMatchOdds3.Value = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds2 + "@" + team3Name + "@" + Innings;
                                                             //lblMOT3.Text = team3Name;
                                                             //btnMatchOdds3.Text = Convert.ToString(Odds2);
-                                                            T3Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds2 + "@" + team3Name + "@" + Innings;
+                                                            MatchOdds.MatchOddsDAta3 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds2 + "@" + team3Name + "@" + Innings+"@"+ EventName;
                                                             string T3Name = team3Name;
                                                             ViewBag.T3Name = T3Name;
                                                             Odds2 = Convert.ToInt64(Odds2);
@@ -292,7 +309,7 @@ namespace betzazz1._1.Controllers
                                                         //    btnMatchOdds3.Text = Odds20;
                                                         //}
                                                         string Odds20 = "10.0";
-                                                        T3Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds20 + "@" + team3Name + "@" + Innings;
+                                                        MatchOdds.MatchOddsDAta3 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds20 + "@" + team3Name + "@" + Innings + "@" + EventName;
                                                         string T3Name = team3Name;
                                                         ViewBag.T3Name = T3Name;
                                                         ViewBag.OddsT31 = Odds20;
@@ -313,6 +330,7 @@ namespace betzazz1._1.Controllers
                             string MrktidMatchOdds = Obj.market.marketId;
                             string TowinMarketName = Obj.market.marketName;
                             ViewBag.TowinMarketName = TowinMarketName;
+                            TowWintheToss.MarketName = TowinMarketName;
                             string eventid = Obj.market.eventId;
                             string MarketSatus = Obj.marketStatus;
                             string MarketTime = Obj.market.marketTime;
@@ -365,8 +383,8 @@ namespace betzazz1._1.Controllers
                                                 {
                                                     if (Odds0 <= 1.06)
                                                     {
-                                                        ViewBag.M1T1Name = "SUSPENDED";
-                                                        ViewBag.M1T2Name = "SUSPENDED";
+                                                        TowWintheToss.Team1 = "SUSPENDED";
+                                                        TowWintheToss.Team2 = "SUSPENDED";
                                                         //lblMOT3.Text = "SUSPENDED";
                                                         //btnMatchOdds1.Visible = false;
                                                         //btnMatchOdds2.Visible = false;
@@ -380,7 +398,10 @@ namespace betzazz1._1.Controllers
                                                         TowT1Data = eventid + "@" + TowinMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings;
                                                         string M1T1Name = team1Name;
                                                         ViewBag.M1T1Name = M1T1Name;
+                                                        TowWintheToss.Team1 = M1T1Name;
                                                         ViewBag.OddsTowT1 = Odds0;
+                                                        TowWintheToss.Odds1 =Convert.ToString( Odds0);
+
 
                                                     }
                                                 }
@@ -397,8 +418,10 @@ namespace betzazz1._1.Controllers
                                                     TowT1Data = eventid + "@" + TowinMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds00 + "@" + team1Name + "@" + Innings;
                                                     string M1T1Name = team1Name;
                                                     ViewBag.M1T1Name = M1T1Name;
+                                                    TowWintheToss.Team1 = M1T1Name;
                                                     // string Odds0 = Convert.ToString(Odds0);
                                                     ViewBag.OddsTowT1 = Odds00;
+                                                    TowWintheToss.Odds1 = Convert.ToString(Odds00);
                                                 }
                                             }
                                             //}
@@ -423,8 +446,8 @@ namespace betzazz1._1.Controllers
                                                 {
                                                     if (Odds1 <= 1.06)
                                                     {
-                                                        ViewBag.M1T1Name = "SUSPENDED";
-                                                        ViewBag.M1T2Name = "SUSPENDED";
+                                                        TowWintheToss.Team1 = "SUSPENDED";
+                                                        TowWintheToss.Team2 = "SUSPENDED";
                                                         //btnMatchOdds1.Visible = false;
                                                         //btnMatchOdds2.Visible = false;
                                                         //btnMatchOdds3.Visible = false;
@@ -437,7 +460,9 @@ namespace betzazz1._1.Controllers
                                                         TowT2Data = eventid + "@" + TowinMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds1 + "@" + team2Name + "@" + Innings;
                                                         string M1T2Name = team2Name;
                                                         ViewBag.M1T2Name = M1T2Name;
+                                                        TowWintheToss.Team2 = M1T2Name;
                                                         ViewBag.OddsTowT2 = Odds1;
+                                                        TowWintheToss.Odds2 =Convert.ToString( Odds1);
                                                     }
                                                 }
                                                 else
@@ -453,7 +478,9 @@ namespace betzazz1._1.Controllers
                                                     TowT2Data = eventid + "@" + TowinMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds1 + "@" + team2Name + "@" + Innings;
                                                     string M1T2Name = team2Name;
                                                     ViewBag.M1T2Name = M1T2Name;
+                                                    TowWintheToss.Team2 = M1T2Name;
                                                     ViewBag.OddsTowT2 = Odds10;
+                                                    TowWintheToss.Odds2 = Convert.ToString(Odds10);
 
                                                 }
                                             }
@@ -472,10 +499,12 @@ namespace betzazz1._1.Controllers
                             string MrktidMatchOdds = Obj.market.marketId;
                             string DraNBetMarketName = Obj.market.marketName;
                             ViewBag.drawNBetMarketName = DraNBetMarketName;
+                            DrawNoBet.MarketName = DraNBetMarketName;
                             string eventid = Obj.market.eventId;
                             string MarketSatus = Obj.marketStatus;
                             string MarketTime = Obj.market.marketTime;
                             ViewBag.MarketTime = MarketTime;
+                            DrawNoBet.MarketTime = MarketTime;
                             string team1Name = Obj.market.runners[0].runnerName;
                             string team2Name = Obj.market.runners[1].runnerName;          
                             string epp = Obj_PreMatch.results[0].markets_updated_at;
@@ -489,9 +518,8 @@ namespace betzazz1._1.Controllers
                             x = Obj.runnerDetails.Count;
                             if (Obj.marketStatus.Equals("SUSPENDED") )
                             {
-                                //lblMatchOdds.Text = MrktNameMatchOdds;
-                                //lblMOT1.Text = "SUSPENDED";
-                                //lblMOT2.Text = "SUSPENDED";
+                                DrawNoBet.Team1 = "SUSPENDED";
+                                DrawNoBet.Team2 = "SUSPENDED";
                                 if (x == 3)
                                 {
                                     //lblMOT3.Text = "SUSPENDED";
@@ -524,9 +552,8 @@ namespace betzazz1._1.Controllers
                                                 {
                                                     if (Odds0 <= 1.06)
                                                     {
-                                                        //lblMOT1.Text = "SUSPENDED";
-                                                        //lblMOT2.Text = "SUSPENDED";
-                                                        //lblMOT3.Text = "SUSPENDED";
+                                                        DrawNoBet.Team1 = "SUSPENDED";
+                                                        DrawNoBet.Team2 = "SUSPENDED";
                                                         //btnMatchOdds1.Visible = false;
                                                         //btnMatchOdds2.Visible = false;
                                                         //btnMatchOdds3.Visible = false;
@@ -539,7 +566,9 @@ namespace betzazz1._1.Controllers
                                                         DRNT1Data = eventid + "@" + DraNBetMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings;
                                                         string DRNT1Name = team1Name;
                                                         ViewBag.DRNT1Name = DRNT1Name;
+                                                        DrawNoBet.Team1 = DRNT1Name;
                                                         ViewBag.OddsDRNT1 = Odds0;
+                                                        DrawNoBet.Odds1 =Convert.ToString(Odds0);
                                                     }
                                                 }
                                                 else
@@ -555,7 +584,9 @@ namespace betzazz1._1.Controllers
                                                     DRNT1Data = eventid + "@" + DraNBetMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds00 + "@" + team1Name + "@" + Innings;
                                                     string DRNT1Name = team1Name;
                                                     ViewBag.DRNT1Name = DRNT1Name;
+                                                    DrawNoBet.Team1 = DRNT1Name;
                                                     ViewBag.OddsDRNT1 = Odds00;
+                                                    DrawNoBet.Odds1 = Convert.ToString(Odds00);
                                                 }
                                             }
                                             //}
@@ -580,8 +611,8 @@ namespace betzazz1._1.Controllers
                                                 {
                                                     if (Odds1 <= 1.06)
                                                     {
-                                                        //lblMOT1.Text = "SUSPENDED";
-                                                        //lblMOT2.Text = "SUSPENDED";
+                                                        DrawNoBet.Team1 = "SUSPENDED";
+                                                        DrawNoBet.Team2 = "SUSPENDED";
                                                         //lblMOT3.Text = "SUSPENDED";
                                                         //btnMatchOdds1.Visible = false;
                                                         //btnMatchOdds2.Visible = false;
@@ -595,7 +626,9 @@ namespace betzazz1._1.Controllers
                                                         DRNT2Data = eventid + "@" + DraNBetMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds1 + "@" + team2Name + "@" + Innings;
                                                         string DRNT2Name = team2Name;
                                                         ViewBag.DRNT2Name = DRNT2Name;
+                                                        DrawNoBet.Team2 = DRNT2Name;
                                                         ViewBag.OddsDRNT2 = Odds1;
+                                                        DrawNoBet.Odds2 =Convert.ToString( Odds1);
                                                     }
                                                 }
                                                 else
@@ -611,7 +644,9 @@ namespace betzazz1._1.Controllers
                                                     DRNT2Data = eventid + "@" + DraNBetMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds1 + "@" + team2Name + "@" + Innings;
                                                     string DRNT2Name = team2Name;
                                                     ViewBag.DRNT2Name = DRNT2Name;
+                                                    DrawNoBet.Team2 = DRNT2Name;
                                                     ViewBag.OddsDRNT2 = Odds10;
+                                                    DrawNoBet.Odds2 = Convert.ToString(Odds10);
                                                 }
                                             }
                                         }
@@ -628,10 +663,12 @@ namespace betzazz1._1.Controllers
                             string MrktidMatchOdds = Obj.market.marketId;
                             string DBlChnceMarketName = Obj.market.marketName;
                             ViewBag.DBlChnceMarketName = DBlChnceMarketName;
+                            DBLChance.MarketName = DBlChnceMarketName;
                             string eventid = Obj.market.eventId;
                             string MarketSatus = Obj.marketStatus;
                             string MarketTime = Obj.market.marketTime;
                             ViewBag.MarketTime = MarketTime;
+                            DBLChance.MarketTime = MarketTime;
                             string team1Name = Obj.market.runners[0].runnerName;
                             string team2Name = Obj.market.runners[1].runnerName;
                             string team3Name = Obj.market.runners[2].runnerName;
@@ -647,16 +684,9 @@ namespace betzazz1._1.Controllers
                             if (Obj.marketStatus.Equals("SUSPENDED"))
                             {
                                 //lblMatchOdds.Text = MrktNameMatchOdds;
-                                //lblMOT1.Text = "SUSPENDED";
-                                //lblMOT2.Text = "SUSPENDED";
-                                if (x == 3)
-                                {
-                                    //lblMOT3.Text = "SUSPENDED";
-                                    //btnMatchOdds3.Visible = false;
-                                    //PeriodRow.Visible = true;
-                                }
-                                //btnMatchOdds1.Visible = false;
-                                //btnMatchOdds2.Visible = false;
+                                DBLChance.Team1 = "SUSPENDED";
+                                DBLChance.Team2 = "SUSPENDED";
+                               
                             }
                             else
                             {
@@ -681,8 +711,8 @@ namespace betzazz1._1.Controllers
                                                 {
                                                     if (Odds0 <= 1.06)
                                                     {
-                                                        ViewBag.DBlT1Name = "SUSPENDED";
-                                                        ViewBag.DBlT2Name = "SUSPENDED";
+                                                        DBLChance.Team1 = "SUSPENDED";
+                                                        DBLChance.Team2 = "SUSPENDED";
                                                         //btnMatchOdds1.Visible = false;
                                                         //btnMatchOdds2.Visible = false;
                                                         //btnMatchOdds3.Visible = false;
@@ -695,7 +725,9 @@ namespace betzazz1._1.Controllers
                                                         DBLT1Data = eventid + "@" + DBlChnceMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings;
                                                         string DBlT1Name = team1Name;
                                                         ViewBag.DBlT1Name = DBlT1Name;
+                                                        DBLChance.Team1 = DBlT1Name;
                                                         ViewBag.OddsDBLT1 = Odds0;
+                                                        DBLChance.Odds1 = Convert.ToString(Odds0);
                                                     }
                                                 }
                                                 else
@@ -711,7 +743,9 @@ namespace betzazz1._1.Controllers
                                                     DBLT1Data = eventid + "@" + DBlChnceMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings;
                                                     string DBlT1Name = team1Name;
                                                     ViewBag.DBlT1Name = DBlT1Name;
+                                                    DBLChance.Team1 = DBlT1Name;
                                                     ViewBag.OddsDBLT1 = Odds00;
+                                                    DBLChance.Odds1 = Convert.ToString(Odds00);
 
                                                 }
                                             }
@@ -737,9 +771,8 @@ namespace betzazz1._1.Controllers
                                                 {
                                                     if (Odds1 <= 1.06)
                                                     {
-                                                        //lblMOT1.Text = "SUSPENDED";
-                                                        //lblMOT2.Text = "SUSPENDED";
-                                                        //lblMOT3.Text = "SUSPENDED";
+                                                         DBLChance.Team1 = "SUSPENDED";
+                                                         DBLChance.Team2 = "SUSPENDED";
                                                         //btnMatchOdds1.Visible = false;
                                                         //btnMatchOdds2.Visible = false;
                                                         //btnMatchOdds3.Visible = false;
@@ -752,7 +785,9 @@ namespace betzazz1._1.Controllers
                                                         DBLT2data = eventid + "@" + DBlChnceMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds1 + "@" + team2Name + "@" + Innings;
                                                         string DBlT2Name = team2Name;
                                                         ViewBag.DBlT2Name = DBlT2Name;
+                                                        DBLChance.Team2 = DBlT2Name; 
                                                         ViewBag.OddsDBLT2 = Odds1;
+                                                        DBLChance.Odds2 = Convert.ToString(Odds1);
                                                     }
                                                 }
                                                 else
@@ -768,7 +803,9 @@ namespace betzazz1._1.Controllers
                                                     DBLT2data = eventid + "@" + DBlChnceMarketName + "@" + MarketSatus + "@" + MarketTime + "@" + Odds10 + "@" + team2Name + "@" + Innings;
                                                     string DBlT2Name = team2Name;
                                                     ViewBag.DBlT2Name = DBlT2Name;
+                                                    DBLChance.Team2 = DBlT2Name;
                                                     ViewBag.OddsDBLT2 = Odds10;
+                                                    DBLChance.Odds2 = Convert.ToString(Odds10);
                                                 }
                                             }
                                         }
@@ -844,6 +881,132 @@ namespace betzazz1._1.Controllers
                 throw ex;
             }
             return View("Cricket");
+        }
+
+        Betslip bt = new Betslip();
+        [HttpPost]
+
+
+
+        // Function for Bet Place Button OnClick
+        public ActionResult btn_PlaceBet()
+        {
+            string GetLiveBetData = Betslip.LiveData;
+            string[] LiveBetData = GetLiveBetData.Split('@');
+            LiveData.eventId = LiveBetData[0];
+            LiveData.MarketName = LiveBetData[1];
+            LiveData.matchStatus = LiveBetData[2];
+            LiveData.betOdd = LiveBetData[4];
+            LiveData.BetName = LiveBetData[5];
+            LiveData.matchStartDateTime = LiveBetData[3];
+            LiveData.matchName = LiveBetData[7];
+
+            return RedirectToAction("Cricket");
+        }
+
+
+        public ActionResult btn1MatchOdds_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+             Betslip.EventName = MatchOdds.EventNAme;
+             Betslip.MarketNnme = MatchOdds.MarketName;
+             Betslip.Selection = MatchOdds.Team1;
+             Betslip.Rate = MatchOdds.Odds1;
+             Betslip.LiveData = MatchOdds.MatchOddsDAta1;
+             return RedirectToAction("Cricket");
+
+
+        }
+        public ActionResult btn2MatchOdds_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+            Betslip.EventName = MatchOdds.EventNAme;
+            Betslip.MarketNnme = MatchOdds.MarketName;
+            Betslip.Selection = MatchOdds.Team2;
+            Betslip.Rate = MatchOdds.Odds2;
+            Betslip.LiveData = MatchOdds.MatchOddsDAta2;
+            return RedirectToAction("Cricket");
+
+
+        }
+        public ActionResult btn1ToWnToss_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+            Betslip.EventName = TowWintheToss.EventNAme;
+            Betslip.MarketNnme = TowWintheToss.MarketName;
+            Betslip.Selection = TowWintheToss.Team1;
+            Betslip.Rate = TowWintheToss.Odds1;
+            return RedirectToAction("Cricket");
+
+
+        }
+        public ActionResult btn2ToWnToss_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+            Betslip.EventName = TowWintheToss.EventNAme;
+            Betslip.MarketNnme = TowWintheToss.MarketName;
+            Betslip.Selection = TowWintheToss.Team2;
+            Betslip.Rate = TowWintheToss.Odds2;
+            return RedirectToAction("Cricket");
+
+
+        }
+
+        // Draw No Bet
+
+        public ActionResult btn1DRNT_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+            Betslip.EventName = DrawNoBet.EventNAme;
+            Betslip.MarketNnme = DrawNoBet.MarketName;
+            Betslip.Selection = DrawNoBet.Team1;
+            Betslip.Rate = DrawNoBet.Odds1;
+            return RedirectToAction("Cricket");
+
+
+        }
+        public ActionResult btn2DRNT_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+            Betslip.EventName = DrawNoBet.EventNAme;
+            Betslip.MarketNnme = DrawNoBet.MarketName;
+            Betslip.Selection = DrawNoBet.Team2;
+            Betslip.Rate = DrawNoBet.Odds2;
+            return RedirectToAction("Cricket");
+
+
+        }
+        // Draw No Bet
+
+        public ActionResult btn1DBL_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+            Betslip.EventName = DBLChance.EventNAme;
+            Betslip.MarketNnme = DBLChance.MarketName;
+            Betslip.Selection = DBLChance.Team1;
+            Betslip.Rate = DBLChance.Odds1;
+            return RedirectToAction("Cricket");
+
+
+        }
+        public ActionResult btn2DBL_Onclick()
+        {
+            //MatchOdds mo = new MatchOdds();
+
+            Betslip.EventName = DBLChance.EventNAme;
+            Betslip.MarketNnme = DBLChance.MarketName;
+            Betslip.Selection = DBLChance.Team2;
+            Betslip.Rate = DBLChance.Odds2;
+            return RedirectToAction("Cricket");
+
+
         }
     }
 }

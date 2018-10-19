@@ -422,6 +422,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\css\Preloader.css" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="slider2.html" />
     <Content Include="slider\css\slider2.css" />
     <Content Include="slider\img\1920\c-navigator-horizontal.png" />

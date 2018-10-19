@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 @using System.Collections;
 @model betzazz1._1.ViewModels.AccountViewModel
+    @using betzazz1._1.Models
 <html lang="en">
 <head>
     <title>@ViewBag.Title</title>
@@ -975,9 +976,9 @@
                         <span class="topright" onclick="hide('myDiv1')">&times</span>
                         <div class="card-body text-warning card-body-style">
 
-                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;">@Betslip.EventName</h5>
 
-                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">Match Odds</h5>
+                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">@Betslip.MarketNnme</h5>
                             <table style="margin-left: 5%;">
                                 @*<tr><th>Match Odds</th></tr>*@
                                 <tr>
@@ -985,19 +986,19 @@
                                         Selection
                                     </th>
                                     <th class="my-td">
-                                        Team Name
+                                        @Betslip.Selection
                                     </th>
                                 </tr>
                                 <tr>
                                     <td class="my-td" style="width:45%;">Rate</td>
-                                    <td><input type="text" name="Rate" id="Rate" value="7.50" class="my-button-betslip" readonly>
+                                    <td><input type="text" name="Rate" id="Rate" value="@Betslip.Rate" class="my-button-betslip" readonly>
                                     <td>
                                 </tr>
                                 <tr>
                                     <td class="my-td">Stake</td>
 
                                     <td>
-                                        <input type="text" name="Stake" id="Stake" onfocus="this.value=''" value="Stake" class="my-button-betslip">
+                                        <input type="text" name="Stake" id="Stake"  value="Stake" class="my-button-betslip">
                                         <a href="javascript: void(0)" onClick="calc()"></a>
                                     </td>
                                 </tr>
@@ -1005,13 +1006,16 @@
                                 <tr>
                                     <td class="my-td">Return</td>
                                     <td>
-                                        <input type="text" name="Return" id="Return" onfocus="this.value=''" value="Total Return" class="my-button-betslip">
+                                        <input type="text" name="Return" id="Return"  value="Total Return" class="my-button-betslip">
                                         <a href="javascript: void(0)" onClick="cal()"></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <button class="btn btn-dark betslip-button">Place Bet</button>
+                                        @using (Html.BeginForm("btn_PlaceBet", "PreMatch"))
+                                        {
+                                            <button class="btn btn-dark betslip-button" value="btn_PlaceBet">Place Bet</button>
+                                        }
                                     </td>
                                 </tr>
                             </table>
@@ -1050,8 +1054,8 @@
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
-            });
-        });
+                                                    });
+                                                });
     </script>
 
 
@@ -1193,7 +1197,7 @@
         </div>
     </footer>
     <!--Login Popup Modal-->
-    @using (Html.BeginForm("Login", "Events",new {@id="LoginFormId" }))
+    @using (Html.BeginForm("Login", "Events", new { @id = "LoginFormId" }))
     {
         <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -1209,14 +1213,14 @@
                             <i class="glyphicon glyphicon-user"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-email">User id</label>
                             @Html.TextBoxFor(model => model.account.UserID, new { @id = "UserId", @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Enter User id provided by Admin!" })
-                            @Html.ValidationMessageFor(model => model.account.UserID,"", new { style = "color:White" })
+                            @Html.ValidationMessageFor(model => model.account.UserID, "", new { style = "color:White" })
                         </div>
 
                         <div class="md-form mb-4">
                             <i class="glyphicon glyphicon-eye-open"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
                             @Html.PasswordFor(model => model.account.Password, new { @id = "UserPass", @class = "form-control validate", style = "width:100%;border-color:black;height:35px", placeholder = "Enter Password provided by Admin!" })
-                            @Html.ValidationMessageFor(model => model.account.Password, "",new { style="color:White"})
+                            @Html.ValidationMessageFor(model => model.account.Password, "", new { style = "color:White" })
                         </div>
                         
                     </div>
@@ -1358,9 +1362,9 @@
 
         });
          // ---------------------------To Hide Betslip on Page Load--------------------
-        window.onload = function () {
-            $("#myDiv1").hide();
-        };
+        //window.onload = function () {
+        //    $("#myDiv1").hide();
+        //};
        
     </script>
 </body>
