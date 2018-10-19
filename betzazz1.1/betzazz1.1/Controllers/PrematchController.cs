@@ -168,7 +168,7 @@ namespace betzazz1._1.Controllers
                                                             }
                                                             else
                                                             {
-                                                               T1Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings;
+                                                               MatchOdds.MatchOddsDAta1  = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds0 + "@" + team1Name + "@" + Innings + "@" + EventName;
                                                                string T1Name = team1Name;
                                                                MatchOdds.Team1 = T1Name;
                                                                ViewBag.T1Name = T1Name;
@@ -181,11 +181,11 @@ namespace betzazz1._1.Controllers
                                                         {
                                                     
                                                               string Odds00 = "10.0";
-                                                              T1Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds00 + "@" + team1Name + "@" + Innings;
+                                                              MatchOdds.MatchOddsDAta1 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds00 + "@" + team1Name + "@" + Innings + "@" + EventName;
                                                               string T1Name = team1Name;
                                                               MatchOdds.Team1 = T1Name;
                                                               ViewBag.T1Name = T1Name;
-                                                               string Odds1 = Convert.ToString(Odds00);
+                                                              string Odds1 = Convert.ToString(Odds00);
                                                               ViewBag.Odds1 = Odds1;
                                                               MatchOdds.Odds1 = Odds1;
 
@@ -222,7 +222,7 @@ namespace betzazz1._1.Controllers
                                                         }
                                                         else
                                                         {
-                                                        T2Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + OddsT21 + "@" + team2Name + "@" + Innings;
+                                                        MatchOdds.MatchOddsDAta2 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + OddsT21 + "@" + team2Name + "@" + Innings + "@" + EventName;
                                                         string T2Name = team2Name;
                                                         MatchOdds.Team2 = T2Name;
                                                         ViewBag.T2Name = T2Name;
@@ -241,7 +241,7 @@ namespace betzazz1._1.Controllers
                                                     //    //btnMatchOdds2.Text = Odds10;
                                                     //}
                                                     string T2Odds10 = "10.0";
-                                                    T2Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + T2Odds10 + "@" + team2Name + "@" + Innings;
+                                                    MatchOdds.MatchOddsDAta2 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + T2Odds10 + "@" + team2Name + "@" + Innings + "@" + EventName;
                                                     string T2Name = team2Name;
                                                     MatchOdds.Team2 = T2Name;
                                                     ViewBag.T2Name = T2Name;
@@ -292,7 +292,7 @@ namespace betzazz1._1.Controllers
                                                             //hfMatchOdds3.Value = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds2 + "@" + team3Name + "@" + Innings;
                                                             //lblMOT3.Text = team3Name;
                                                             //btnMatchOdds3.Text = Convert.ToString(Odds2);
-                                                            T3Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds2 + "@" + team3Name + "@" + Innings;
+                                                            MatchOdds.MatchOddsDAta3 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds2 + "@" + team3Name + "@" + Innings+"@"+ EventName;
                                                             string T3Name = team3Name;
                                                             ViewBag.T3Name = T3Name;
                                                             Odds2 = Convert.ToInt64(Odds2);
@@ -309,7 +309,7 @@ namespace betzazz1._1.Controllers
                                                         //    btnMatchOdds3.Text = Odds20;
                                                         //}
                                                         string Odds20 = "10.0";
-                                                        T3Data = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds20 + "@" + team3Name + "@" + Innings;
+                                                        MatchOdds.MatchOddsDAta3 = eventid + "@" + MrktNameMatchOdds + "@" + MarketSatus + "@" + MarketTime + "@" + Odds20 + "@" + team3Name + "@" + Innings + "@" + EventName;
                                                         string T3Name = team3Name;
                                                         ViewBag.T3Name = T3Name;
                                                         ViewBag.OddsT31 = Odds20;
@@ -885,6 +885,26 @@ namespace betzazz1._1.Controllers
 
         Betslip bt = new Betslip();
         [HttpPost]
+
+
+
+        // Function for Bet Place Button OnClick
+        public ActionResult btn_PlaceBet()
+        {
+            string GetLiveBetData = Betslip.LiveData;
+            string[] LiveBetData = GetLiveBetData.Split('@');
+            LiveData.eventId = LiveBetData[0];
+            LiveData.MarketName = LiveBetData[1];
+            LiveData.matchStatus = LiveBetData[2];
+            LiveData.betOdd = LiveBetData[4];
+            LiveData.BetName = LiveBetData[5];
+            LiveData.matchStartDateTime = LiveBetData[3];
+            LiveData.matchName = LiveBetData[7];
+
+            return RedirectToAction("Cricket");
+        }
+
+
         public ActionResult btn1MatchOdds_Onclick()
         {
             //MatchOdds mo = new MatchOdds();
@@ -893,6 +913,7 @@ namespace betzazz1._1.Controllers
              Betslip.MarketNnme = MatchOdds.MarketName;
              Betslip.Selection = MatchOdds.Team1;
              Betslip.Rate = MatchOdds.Odds1;
+             Betslip.LiveData = MatchOdds.MatchOddsDAta1;
              return RedirectToAction("Cricket");
 
 
@@ -905,6 +926,7 @@ namespace betzazz1._1.Controllers
             Betslip.MarketNnme = MatchOdds.MarketName;
             Betslip.Selection = MatchOdds.Team2;
             Betslip.Rate = MatchOdds.Odds2;
+            Betslip.LiveData = MatchOdds.MatchOddsDAta2;
             return RedirectToAction("Cricket");
 
 
