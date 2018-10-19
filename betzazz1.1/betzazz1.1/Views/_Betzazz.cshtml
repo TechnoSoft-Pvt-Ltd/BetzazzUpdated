@@ -1014,7 +1014,7 @@
                                     <td colspan="2">
                                         @using (Html.BeginForm("btn_PlaceBet", "PreMatch"))
                                         {
-                                            <button class="btn btn-dark betslip-button" value="btn_PlaceBet">Place Bet</button>
+                                            <button class="btn btn-dark betslip-button"  value="btn_PlaceBet">Place Bet</button>
                                         }
                                     </td>
                                 </tr>
@@ -1199,7 +1199,7 @@
     <!--Login Popup Modal-->
     @using (Html.BeginForm("Login", "Events", new { @id = "LoginFormId" }))
     {
-        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color:#ce870d">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-center">
@@ -1236,7 +1236,7 @@
     <!--Forgot Password-->>
     @using (Html.BeginForm("Submit", "Default"))
     {
-        <div class="modal fade" id="modalForgetPasswordForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalForgetPasswordForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color:#ce870d">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-center">
@@ -1265,7 +1265,7 @@
     <!--Register Popup Modal-->
     @using (Html.BeginForm("SignUp", "Events"))
     {
-        <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color:#ce870d">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-center">
@@ -1361,6 +1361,7 @@
             $('#Stake').val($('#Return').val() / $('#Rate').val());
 
         });
+        
          // ---------------------------To Hide Betslip on Page Load--------------------
         //window.onload = function () {
         //    $("#myDiv1").hide();

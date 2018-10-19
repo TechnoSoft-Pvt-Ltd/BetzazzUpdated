@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI;
 using System.Web.Mvc;
 using System.Data;
 using System.Data.SqlClient;
@@ -900,8 +901,19 @@ namespace betzazz1._1.Controllers
             LiveData.BetName = LiveBetData[5];
             LiveData.matchStartDateTime = LiveBetData[3];
             LiveData.matchName = LiveBetData[7];
+            // check User Login
+            if (Session["UserNameRandomGen"] != null && Session["Password"] != null)
+            {
 
-            return RedirectToAction("Cricket");
+            }
+            else
+            {
+                Response.Write("<script>alert('Please Login to Place Bet !');</script>");
+                //Response.Redirect("Cricket");
+            }
+            //  Response.Redirect("Cricket");
+            //return RedirectToAction("Cricket");
+            return View("Cricket");
         }
 
 
@@ -914,7 +926,11 @@ namespace betzazz1._1.Controllers
              Betslip.Selection = MatchOdds.Team1;
              Betslip.Rate = MatchOdds.Odds1;
              Betslip.LiveData = MatchOdds.MatchOddsDAta1;
-             return RedirectToAction("Cricket");
+            //Response.Redirect(Request.RawUrl);
+            // return RedirectToAction("Cricket");
+            //Response.Redirect("Cricket");
+            //Response.Redirect(Request.RawUrl);
+            return RedirectToAction("Cricket");
 
 
         }
@@ -927,7 +943,7 @@ namespace betzazz1._1.Controllers
             Betslip.Selection = MatchOdds.Team2;
             Betslip.Rate = MatchOdds.Odds2;
             Betslip.LiveData = MatchOdds.MatchOddsDAta2;
-            return RedirectToAction("Cricket");
+            return RedirectToAction("Cricket", Request.RawUrl);
 
 
         }

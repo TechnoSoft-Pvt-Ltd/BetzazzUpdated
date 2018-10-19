@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\17 Oct brtPublish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Lenovo\Desktop\Betzazz1.1Publish\19 Oct brtPublish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminPanel/AddBalanceaspx.aspx">
@@ -388,10 +388,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:06</publishTime>
     </File>
     <File Include="bin/betzazz1.1.dll">
-      <publishTime>10/17/2018 17:11:06</publishTime>
+      <publishTime>10/19/2018 19:17:41</publishTime>
     </File>
     <File Include="bin/betzazz1.1.pdb">
-      <publishTime>10/17/2018 17:11:06</publishTime>
+      <publishTime>10/19/2018 19:17:41</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/06/2018 18:23:12</publishTime>
@@ -881,6 +881,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.js">
       <publishTime>10/06/2018 18:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>10/18/2018 19:18:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>10/18/2018 19:18:23</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1519,7 +1525,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/Default/Index.cshtml">
-      <publishTime>10/17/2018 17:03:25</publishTime>
+      <publishTime>10/19/2018 15:16:30</publishTime>
     </File>
     <File Include="Views/Events/InPlay.cshtml">
       <publishTime>10/15/2018 14:21:46</publishTime>
@@ -1555,7 +1561,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2018 15:49:52</publishTime>
     </File>
     <File Include="Views/Prematch/Cricket.cshtml">
-      <publishTime>10/16/2018 19:53:54</publishTime>
+      <publishTime>10/18/2018 20:27:26</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1576,7 +1582,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Views/_Betzazz.cshtml">
-      <publishTime>10/17/2018 17:03:25</publishTime>
+      <publishTime>10/19/2018 18:27:03</publishTime>
     </File>
     <File Include="Views/_LayoutAdminPanel.cshtml">
       <publishTime>10/06/2018 18:23:07</publishTime>
@@ -1585,7 +1591,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/06/2018 18:23:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/17/2018 17:11:06</publishTime>
+      <publishTime>10/19/2018 19:17:41</publishTime>
     </File>
     <File Include="website/assets/css/theme-dark.min.css">
       <publishTime>10/06/2018 18:23:08</publishTime>
