@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 @using System.Collections;
 @model betzazz1._1.ViewModels.AccountViewModel
+    @using betzazz1._1.Models
 <html lang="en">
 <head>
     <title>@ViewBag.Title</title>
@@ -975,9 +976,9 @@
                         <span class="topright" onclick="hide('myDiv1')">&times</span>
                         <div class="card-body text-warning card-body-style">
 
-                            <h5 class="card-title card-title-style" style="margin-left: 10%;">Pakistan vs India</h5>
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;">@Betslip.EventName</h5>
 
-                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">Match Odds</h5>
+                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">@Betslip.MarketNnme</h5>
                             <table style="margin-left: 5%;">
                                 @*<tr><th>Match Odds</th></tr>*@
                                 <tr>
@@ -985,12 +986,12 @@
                                         Selection
                                     </th>
                                     <th class="my-td">
-                                        Team Name
+                                        @Betslip.Selection
                                     </th>
                                 </tr>
                                 <tr>
                                     <td class="my-td" style="width:45%;">Rate</td>
-                                    <td><input type="text" name="Rate" id="Rate" value="7.50" class="my-button-betslip" readonly>
+                                    <td><input type="text" name="Rate" id="Rate" value="@Betslip.Rate" class="my-button-betslip" readonly>
                                     <td>
                                 </tr>
                                 <tr>
@@ -1358,9 +1359,9 @@
 
         });
          // ---------------------------To Hide Betslip on Page Load--------------------
-        window.onload = function () {
-            $("#myDiv1").hide();
-        };
+        //window.onload = function () {
+        //    $("#myDiv1").hide();
+        //};
        
     </script>
 </body>
