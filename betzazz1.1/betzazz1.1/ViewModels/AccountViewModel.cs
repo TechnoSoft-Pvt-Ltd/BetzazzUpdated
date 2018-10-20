@@ -13,5 +13,6 @@ namespace betzazz1._1.ViewModels
             get;
             set;
         }
+        public Betslip GetBetslipData { get; set;}
     }
 }

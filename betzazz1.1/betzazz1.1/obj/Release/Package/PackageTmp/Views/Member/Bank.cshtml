@@ -1,0 +1,136 @@
+﻿@using System.Data;
+@using System.Data.SqlClient;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Bank";
+    Layout = "~/Views/_Betzazz.cshtml";
+}
+<div class="container-fluid middle-container">
+    <h2 class="my-h2">Banks</h2>
+    <div class="tab-setting">
+        <div class="tab">
+            <button class="tablinksProfile" id="defaultOpenPersonal" onclick="openProfile(event, 'Deposit')">Deposit</button>
+            <button class="tablinksProfile" onclick="openProfile(event,'Withdraw')">Withdraw</button>
+            <button class="tablinksProfile" onclick="openProfile(event,'Summary')">Account Summary</button>
+        </div>
+    </div>
+
+    <div class="tabcontentProfile" id="Deposit">
+        <h3>Deposit Information</h3>
+        <table class="table table-bordered table-setting">
+
+            <tr>
+                <th>Name</th>
+                <td>Harry</td>
+
+            </tr>
+
+            <tr>
+                <th>Currency</th>
+                <td>INR</td>
+
+            </tr>
+            <tr>
+                <th>Email-ID</th>
+                <td>harryporter@gmail.com</td>
+
+            </tr>
+
+        </table>
+        <button class="btn btn-danger">Edit Details</button>
+
+    </div>
+    <div class="tabcontentProfile" id="Withdraw">
+        <h3>Withdraw Information</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tabcontentProfile table-responsive" id="Summary">
+        <h3>Account Summary</h3>
+        <table class="table table-bordered" id="myTable">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Date Time</th>
+                    <th>Description</th>
+                    <th>Details</th>
+                    <th>Debit Amount</th>
+                    <th>Credit Amount</th>
+                    <th>Total Amount</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataTable dt in ViewBag.ds.Tables)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        <tr>
+                            <td>@dr["UserID"]</td>
+                            <td>@dr["DateTime"]</td>
+                            <td>@dr["DescriptionResion"]</td>
+                            <td>@dr["Details"]</td>
+                            <td style="color:red">@dr["DrAmount"]</td>
+                            <td style="color:green">@dr["CrAmount"]</td>
+                            <td>@dr["TotalAmount"]</td>
+
+                        </tr>
+                    }
+                 }
+            </tbody>
+        </table>
+        
+
+    </div>
+
+</div>
+
+
+
+<!--Script for the Bank tabs -->
+<script>
+    function openProfile(evt, eventName) {
+        var i, tabcontentProfile, tablinksProfile;
+        tabcontentProfile = document.getElementsByClassName("tabcontentProfile");
+        for (i = 0; i < tabcontentProfile.length; i++) {
+            tabcontentProfile[i].style.display = "none";
+        }
+        tablinksProfile = document.getElementsByClassName("tablinksProfile");
+        for (i = 0; i < tablinksProfile.length; i++) {
+            tablinksProfile[i].className = tablinksProfile[i].className.replace(" active", "");
+        }
+        document.getElementById(eventName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpenPersonal").click();
+</script>
+<script>
+    $(document).ready(function () {
+        $('#myTable').dataTable();
+    });
+</script>

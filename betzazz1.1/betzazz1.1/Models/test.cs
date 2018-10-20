@@ -33,6 +33,8 @@ namespace betzazz1._1.Models
         public static string Selection { get; set; }
         public static string Rate { get; set; }
         public static string LiveData { get; set; }
+        public  string Stake { get; set; }
+        public  string Totalreturn { get; set; }
 
     }
 
@@ -48,6 +50,8 @@ namespace betzazz1._1.Models
 
         public static string Team2 { get; set; }
         public static string Odds2 { get; set; }
+        public static string Team3 { get; set; }
+        public static string Odds3 { get; set; }
         public static string MatchOddsDAta1 { get; set; }
         public static string MatchOddsDAta2 { get; set; }
         public static string MatchOddsDAta3 { get; set; }
@@ -67,6 +71,72 @@ namespace betzazz1._1.Models
 
         public static string Team2 { get; set; }
         public static string Odds2 { get; set; }
+        public static string TWTOddsDAta1 { get; set; }
+        public static string TWTOddsDAta2 { get; set; }
+    }
+
+    // Class For To Runs in 1st Over
+    public class Runsin1stOver
+    {
+        public static string EventNAme { get; set; }
+        public static string MarketName { get; set; }
+        public static string MarketTime { get; set; }
+        public static string Team1 { get; set; }
+
+        public static string Odds1 { get; set; }
+
+        public static string Team2 { get; set; }
+        public static string Odds2 { get; set; }
+        public static string Runsin1stOverData1 { get; set; }
+        public static string Runsin1stOverData2 { get; set; }
+    }
+
+    // Class For To Heigst Score in 15th Over
+    public class HSIN15Overs
+    {
+        public static string EventNAme { get; set; }
+        public static string MarketName { get; set; }
+        public static string MarketTime { get; set; }
+        public static string Team1 { get; set; }
+
+        public static string Odds1 { get; set; }
+
+        public static string Team2 { get; set; }
+        public static string Odds2 { get; set; }
+        public static string HSIN15OversData1 { get; set; }
+        public static string HSIN15OversData2 { get; set; }
+    }
+
+    // Class For To 50 Scored in First Innins
+    public class HalfCenturyScIn1stInnings
+    {
+        public static string EventNAme { get; set; }
+        public static string MarketName { get; set; }
+        public static string MarketTime { get; set; }
+        public static string Team1 { get; set; }
+
+        public static string Odds1 { get; set; }
+
+        public static string Team2 { get; set; }
+        public static string Odds2 { get; set; }
+        public static string HlfCentryIn1InnsData1 { get; set; }
+        public static string HlfCentryIn1InnsData2 { get; set; }
+    }
+
+    // Class For To 100  Scored in First Innins
+    public class CenturyScIn1stInnings
+    {
+        public static string EventNAme { get; set; }
+        public static string MarketName { get; set; }
+        public static string MarketTime { get; set; }
+        public static string Team1 { get; set; }
+
+        public static string Odds1 { get; set; }
+
+        public static string Team2 { get; set; }
+        public static string Odds2 { get; set; }
+        public static string Centuryin1stInnsDat1 { get; set; }
+        public static string Centuryin1stInnsData2 { get; set; }
     }
 
     // Class For Draw No Bet Market
@@ -81,6 +151,9 @@ namespace betzazz1._1.Models
 
         public static string Team2 { get; set; }
         public static string Odds2 { get; set; }
+        public static string DNBOddsDAta1 { get; set; }
+        public static string DNBOddsDAta2 { get; set; }
+
     }
 
     // Class For Double Chance
@@ -95,6 +168,8 @@ namespace betzazz1._1.Models
 
         public static string Team2 { get; set; }
         public static string Odds2 { get; set; }
+        public static string DBCOddsDAta1 { get; set; }
+        public static string DBCOddsDAta2 { get; set; }
     }
 
     // Class for Get Live Data For Insert Bet

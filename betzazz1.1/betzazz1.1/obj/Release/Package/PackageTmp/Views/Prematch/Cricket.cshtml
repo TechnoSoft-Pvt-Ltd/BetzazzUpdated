@@ -1,0 +1,287 @@
+﻿
+@{
+    ViewBag.Title = "Cricket Upcoming Events";
+    Layout = "~/Views/_Betzazz.cshtml";
+}
+@using betzazz1._1.Models
+<div class="content-body">
+    <!-- Revenue, Hit Rate & Deals -->
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card inplay">
+                @*This card for Cricket Inplay Events*@
+                <h4 class="flex-row--title text-center">Up Coming Events</h4>
+                <div class="card-body my-card-body">
+                    <!--Event Name-->
+                    <div class="col col--xs-8 col--sm-10 col--md-10 col--lg-11 visible-lg" >
+                        <span class="flex-row--title text-center "><span style="font-size:28px;font-weight:bold;margin:10px;">@MatchOdds.EventNAme</span></span>
+                        <span class=" flex-row--title text-right pull-right visible-lg"><span style="font-size:28px;font-weight:bold;margin:10px;">@MatchOdds.MarketTime</span></span>
+                    </div>
+                    <div class="col col--xs-8 col--sm-10 col--md-10 col--lg-11 visible-xs visible-sm">
+                        <h4 class="flex-row--title text-center" style="font-size:20px;font-weight:bold;margin:10px;">@MatchOdds.EventNAme</h4>
+                        <h4 class="flex-row--title text-center" style="font-size:20px;font-weight:bold;margin:10px;">@MatchOdds.MarketTime</h4>
+                    </div>
+                    @if (ViewBag.MatchOddsMarket)
+                    {
+                        <!--Match Odds Market-->
+                        <div id="matchoddsMArket">
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">@MatchOdds.MarketName</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                @using (Html.BeginForm("btn1MatchOdds_Onclick", "PreMatch"))
+                                 {
+                                    <div class="pull-left Live-btn-div" style="width:34%">
+                                        <span class="Live-Odds-Page-span">@MatchOdds.Team1</span>
+                                        @if (ViewBag.MatchOddsMarketbtn1)
+                                         {
+                                            <button type="submit" value="btn1MatchOdds_Onclick" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@MatchOdds.Odds1</button>
+                                         }
+                                    </div>
+                                 }
+
+                                @using (Html.BeginForm("btn2MatchOdds_Onclick", "PreMatch"))
+                                {
+                                    <div class="pull-left Live-btn-div" style="width:33%">
+                                        <span class="Live-Odds-Page-span">@MatchOdds.Team2</span>
+                                        @*Condion For Button Visible Hide*@
+                                        @if (ViewBag.MatchOddsMarketbtn2)
+                                         {
+                                            <button type="submit" onclick="show('myDiv1')" value="btn2MatchOdds_Onclick" class="pull-right Live-odds-btn">@MatchOdds.Odds2</button>
+                                         }
+                                    </div>
+                                 }
+
+
+                                @*Condion For if 3rd Runner Available in Match Odds Visible or Hide*@
+                                @if (ViewBag.MatchOddsMarket3)
+                                {
+                                  using (Html.BeginForm("btn3MatchOdds_Onclick", "PreMatch"))
+                                  {
+                                    <div class="pull-right Live-btn-div" style="width:33%">
+                                        <span class="Live-Odds-Page-span">@MatchOdds.Team3</span>
+                                        @*Condion For Button Visible Hide*@
+                                        @if (ViewBag.MatchOddsMarketbtn3)
+                                        {
+                                            <button type="submit" value="btn3MatchOdds_Onclick" class="pull-right Live-odds-btn">@MatchOdds.Odds3</button>
+                                        }
+                                    </div>
+
+                                  }
+                                 }
+                            </div>
+                        </div>
+                    }
+
+                    <!--Team A Total Runs Market-->
+                    @if (ViewBag.TWTossMarket)
+                    {
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">@TowWintheToss.MarketName</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                @using (Html.BeginForm("btn1ToWnToss_Onclick", "PreMatch"))
+                                {
+                                    <div class="pull-left Live-btn-div">
+                                        <span class="Live-Odds-Page-span">@TowWintheToss.Team1</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn1ToWnToss_Onclick" class="pull-right Live-odds-btn">@TowWintheToss.Odds1</button>
+                                    </div>
+                                }
+                                @using (Html.BeginForm("btn2ToWnToss_Onclick", "PreMatch"))
+                                {
+                                    <div class="pull-right Live-btn-div">
+                                        <span class="Live-Odds-Page-span">@TowWintheToss.Team2</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn2ToWnToss_Onclick" class="pull-right Live-odds-btn">@TowWintheToss.Odds2</button>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+
+
+                    <!--Runs In First Over-->
+                    @if (ViewBag.Runsin1stOver)
+                     {
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">@Runsin1stOver.MarketName</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                @using (Html.BeginForm("btn1_Runsin1stOver", "PreMatch"))
+                                {
+                                    <div class="pull-left Live-btn-div">
+                                        <span class="Live-Odds-Page-span">@Runsin1stOver.Team1</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn1_Runsin1stOver" class="pull-right Live-odds-btn">@Runsin1stOver.Odds1</button>
+                                    </div>
+                                 }
+
+                                    @using (Html.BeginForm("btn2_Runsin1stOver", "PreMatch"))
+                                    {
+                                        <div class="pull-right Live-btn-div">
+                                            <span class="Live-Odds-Page-span">@Runsin1stOver.Team1</span>
+                                            <button type="submit" onclick="show('myDiv1')" value="btn2_Runsin1stOver" class="pull-right Live-odds-btn">@Runsin1stOver.Odds2</button>
+                                        </div>
+                                    }
+                                </div>
+                        </div>
+                     }
+
+
+                    <!--50 Scored? - 1st Innings-->
+                    @if (ViewBag.HSIN15Overs)
+                     {
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">@HSIN15Overs.MarketName</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                  @using (Html.BeginForm("btn1_HSIN15Overs", "PreMatch"))
+                                   {
+                                      <div class="pull-left Live-btn-div">
+                                        <span class="Live-Odds-Page-span">@HSIN15Overs.Team1</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn1_HSIN15Overs" class="pull-right Live-odds-btn">@HSIN15Overs.Odds1</button>
+                                      </div>
+                                   }
+                                   @using (Html.BeginForm("btn2_HSIN15Overs", "PreMatch"))
+                                    {
+                                        <div class="pull-right Live-btn-div">
+                                            <span class="Live-Odds-Page-span">@HSIN15Overs.Team2</span>
+                                            <button type="submit" onclick="show('myDiv1')" value="btn2_HSIN15Overs" class="pull-right Live-odds-btn">@HSIN15Overs.Odds2</button>
+                                        </div>
+                                    }
+                                </div>
+                        </div>
+                     }
+
+                    <!--50 Scored? - 1st Innings-->
+                    @if (ViewBag.HalfCenturyScIn1stInnings)
+                     {
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">50 Scored? - 1st Innings</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                @using (Html.BeginForm("btn1_HalfCenturyScIn1stInnings", "PreMatch"))
+                                {
+                                    <div class="pull-left Live-btn-div">
+                                        <span class="Live-Odds-Page-span">INDIA</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn1_HalfCenturyScIn1stInnings" class="pull-right Live-odds-btn">1.85</button>
+                                    </div>
+                                }
+                                @using (Html.BeginForm("btn2_HalfCenturyScIn1stInnings", "PreMatch"))
+                                {
+                                    <div class="pull-right Live-btn-div">
+                                        <span class="Live-Odds-Page-span">ENGLAND</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn2_HalfCenturyScIn1stInnings" class="pull-right Live-odds-btn">1.85</button>
+                                    </div>
+                                }
+                                </div>
+                        </div>
+                     }
+
+                    <!--Century Scored? - 1st Innings-->
+                    @if (ViewBag.CenturyScIn1stInnings)
+                     {
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">50 Scored? - 1st Innings</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                @using (Html.BeginForm("btn1_CenturyScIn1stInnings", "PreMatch"))
+                                {
+                                    <div class="pull-left Live-btn-div">
+                                        <span class="Live-Odds-Page-span">INDIA</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn1_CenturyScIn1stInnings" class="pull-right Live-odds-btn">1.85</button>
+                                    </div>
+                                }
+                                @using (Html.BeginForm("btn2_CenturyScIn1stInnings", "PreMatch"))
+                                {
+
+                                    <div class="pull-right Live-btn-div">
+                                        <span class="Live-Odds-Page-span">ENGLAND</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn2_CenturyScIn1stInnings" class="pull-right Live-odds-btn">1.85</button>
+                                    </div>
+                                }
+                                </div>
+                        </div>
+                     }
+
+                    <!--Draw No Bet-->
+                    @if (ViewBag.DNBetMarket)
+                     {
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">@DrawNoBet.MarketName</span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                @using (Html.BeginForm("btn1DRNT_Onclick", "PreMatch"))
+                                {
+                                    <div class="pull-left Live-btn-div">
+                                        <span class="Live-Odds-Page-span">@DrawNoBet.Team1</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn1DRNT_Onclick" class="pull-right Live-odds-btn">@DrawNoBet.Odds1</button>
+                                    </div>
+                                }
+                                @using (Html.BeginForm("btn2DRNT_Onclick", "PreMatch"))
+                                {
+                                    <div class="pull-right Live-btn-div">
+                                        <span class="Live-Odds-Page-span">@DrawNoBet.Team2</span>
+                                        <button type="submit" onclick="show('myDiv1')" value="btn2DRNT_Onclick" class="pull-right Live-odds-btn">@DrawNoBet.Odds2</button>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                     }
+
+                    <!--Team B Total Runs Market-->
+                    @if (ViewBag.DBLChangeMarket)
+                     {
+                        <div>
+                            <div class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv Live-page-div-main" data-toggle="collapse" aria-expanded="false" data-target="#">
+                                <span style="margin:5px;font-size:18px;font-weight:bold">@DBLChance.MarketName </span>
+                            </div>
+                            @*<span class="caret"></span> <span></span>*@
+                            <div id="#" class="col col--xs-8 col--sm-10 col--md-4 col--lg-4 text-left eventbDiv" style="height:33px">
+                                @using (Html.BeginForm("btn1DBL_Onclick", "PreMatch"))
+                                {
+                                    <div class="pull-left Live-btn-div">
+                                        <span class="Live-Odds-Page-span">@DBLChance.Team1</span>
+                                        <button type="submit" value="btn1DBL_Onclick" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@DBLChance.Odds1</button>
+                                    </div>
+                                }
+                                @using (Html.BeginForm("btn2DBL_Onclick", "PreMatch"))
+                                {
+                                    <div class="pull-right Live-btn-div">
+                                        <span class="Live-Odds-Page-span"> @DBLChance.Team2</span>
+                                        <button type="submit" value="btn2DBL_Onclick" onclick="show('myDiv1')" class="pull-right Live-odds-btn">@DBLChance.Odds2</button>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                     }
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

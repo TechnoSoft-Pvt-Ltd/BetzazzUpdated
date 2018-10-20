@@ -410,6 +410,8 @@
     <Content Include="Content\icons\soccer-ball.svg" />
     <Content Include="Content\icons\tennis-ball %281%29.svg" />
     <Content Include="Content\css\index.js" />
+    <Content Include="Content\image\avatar-1.jpg" />
+    <Content Include="Content\image\avatar-5.jpg" />
     <Content Include="Content\Nav\css\inc\general.css" />
     <Content Include="Content\Nav\css\screen.css" />
     <Content Include="Content\Nav\css\screen.min.css" />
@@ -495,6 +497,9 @@
     <Content Include="Views\Member\UserProfile.cshtml" />
     <Content Include="Views\Prematch\Cricket.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Cricket\CricketEvents.cshtml" />
+    <Content Include="Views\Football\FootballEvents.cshtml" />
+    <Content Include="Views\Tennis\TennisEvents.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPanel\img\flags\" />

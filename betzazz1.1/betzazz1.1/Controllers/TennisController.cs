@@ -31,5 +31,9 @@ namespace betzazz1._1.Controllers
             };
             return View(model);
         }
+        public ActionResult TennisEvents()
+        {
+            return View();
+        }
     }
 }
