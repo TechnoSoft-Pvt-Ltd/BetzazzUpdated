@@ -427,7 +427,6 @@
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Error404\index.html" />
-<<<<<<< HEAD
     <Content Include="website\assets\img\avatars\profiles\avatar-1.jpg" />
     <Content Include="website\assets\img\avatars\profiles\avatar-2.jpg" />
     <Content Include="website\assets\img\avatars\profiles\avatar-3.jpg" />
@@ -456,8 +455,6 @@
     <Content Include="website\assets\img\logo.svg" />
     <Content Include="website\assets\img\logohorizontal.png" />
     <Content Include="website\assets\img\logoxs.png" />
-=======
->>>>>>> d2d094d3ce14d1238874e0b6abfe67355ab0fe42
     <Content Include="Content\Nav\scss\inc\general.scss" />
     <Content Include="Content\Nav\scss\inc\_navigation.scss" />
     <Content Include="Content\Nav\scss\inc\_variables.scss" />

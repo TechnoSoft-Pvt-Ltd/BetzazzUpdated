@@ -1207,35 +1207,34 @@
             <!-- Grid row -->
         </div>
     </footer>
-	<div class="text-center visible-xs" style=" position: fixed;left: 0;bottom: 0;width: 100%;background-color: red;color: white;
+	<div class="text-center visible-xs" style=" position: fixed;left: 0;bottom: 0;width: 100%;background-color: black;color: white;
     text-align: center;"><div class="card border-warning mb-3 card-width" id="myDivMobile">
-                        <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
+                        <div class="card-header card-header-style" ><strong>Bet Slip</strong></div>
                         <span class="topright" onclick="hide('myDivMobile')">&times</span>
                         <div class="card-body text-warning card-body-style">
 
-                            <h5 class="card-title card-title-style" style="margin-left: 10%;">EventName</h5>
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;margin-top: 0;margin-bottom: 0;">EventName</h5>
 
-                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">MarketNnme</h5>
+                            <h5 class="card-title" style="margin-left:10%;  color: #e49b1e;margin-top: 0;margin-bottom: 0 ">MarketNnme</h5>
                             <table style="margin-left: 5%;">
-                                <tr><th>Match Odds</th></tr>
                                 <tr>
-                                    <th class="my-td">
+                                    <th class="my-td" style="padding-left: 10%">
                                         Selection1
                                     </th>
-                                    <th class="my-td">
+                                    <th class="my-td" style="padding-left: 15%">
                                         Selection2
                                     </th>
                                 </tr>
                                 <tr>
                                     <td class="my-td" style="width:45%;">Rate</td>
-                                    <td><input type="text" name="Rate" id="Rate" value="@Betslip.Rate" class="my-button-betslip" readonly>
+                                    <td><input type="text" name="Rate" id="Rate1" value="@Betslip.Rate" class="my-button-betslip" readonly>
                                     <td>
                                 </tr>
                                 <tr>
                                     <td class="my-td">Stake</td>
 
                                     <td>
-                                        <input type="text" name="Stake" id="Stake"  value="Stake" class="my-button-betslip">
+                                        <input type="text" name="Stake" id="Stake1" value="Stake" class="my-button-betslip">
                                         <a href="javascript: void(0)" onClick="calc()"></a>
                                     </td>
                                 </tr>
@@ -1243,18 +1242,19 @@
                                 <tr>
                                     <td class="my-td">Return</td>
                                     <td>
-                                        <input type="text" name="Return" id="Return"  value="Total Return" class="my-button-betslip">
+                                        <input type="text" name="Return" id="Return1" value="Total Return" class="my-button-betslip">
                                         <a href="javascript: void(0)" onClick="cal()"></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        
-                                            <button class="btn btn-dark betslip-button" value="btn_PlaceBet">Place Bet</button>
-                                       
+
+                                        <button class="btn btn-dark betslip-button" value="btn_PlaceBet">Place Bet</button>
+
                                     </td>
                                 </tr>
                             </table>
+                            <span style="color:orangered;font-size:14px;font-weight:bold">Please login to place a Bet</span>
                         </div></div>
     </div>
     <!--Login Popup Modal-->
@@ -1381,40 +1381,7 @@
     }
     <!--End Register Popup Modal-->
 
-    <!---------------Modal For Betslip Starts from here---------------------->
-        <div class="modal fade" id="mobile_betslip" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h4 class="modal-title w-100 font-weight-bold">New User Sign Up here !</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body mx-3">
-                        <div class="md-form mb-4">
-                            <i class="glyphicon glyphicon-user" style="color:#ce870d"></i>
-                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
-                           
-                        </div>
-
-                        <div>
-                            <i class="glyphicon glyphicon-usd"></i>
-                            <label data-error="wrong" data-success="right" for="defaultForm-email">Currency</label>
-                           </div>
-                        <div class="md-form mb-4">
-                            <i class="glyphicon glyphicon-envelope"></i>
-                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your Email</label>
-                            </div>
-
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <input type="submit" value="SignUp" class="btn btn-success my-btn-login-signup" />
-                      <button class="btn btn-success" style="background-color:black;border-color:#d0a44d">Sign Up</button><button class="btn btn-success" style="background-color:black;border-color:#d0a44d"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -1458,11 +1425,23 @@
             $('#Stake').val($('#Return').val() / $('#Rate').val());
 
         });
+
+        //---------------Betslip calculation for Mobile-------------------------
+        $("#Rate1,#Stake1").keyup(function () {
+
+            $('#Return1').val($('#Rate1').val() * $('#Stake1').val());
+
+        });
+        $("#Rate1,#Return1").keyup(function () {
+
+            $('#Stake1').val($('#Return1').val() / $('#Rate1').val());
+
+        });
         
          // ---------------------------To Hide Betslip on Page Load--------------------
-        $(document).ready(function (){
-            $("#myDivMobile").hide();
-        });
+        //$(document).ready(function (){
+        //    $("#myDivMobile").hide();
+        //});
     </script>
 </body>
 </html>
