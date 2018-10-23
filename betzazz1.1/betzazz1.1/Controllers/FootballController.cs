@@ -17,5 +17,9 @@ namespace betzazz1._1.Controllers
         {
             return View();
         }
+        public ActionResult FootballEvents()
+        {
+            return View();
+        }
     }
 }

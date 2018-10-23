@@ -53,5 +53,8 @@ namespace betzazz1._1.Models
             get;
             set;
         }
+
+        public  string Stake { get; set; }
+        public  string Totalreturn { get; set; }
     }
 }
