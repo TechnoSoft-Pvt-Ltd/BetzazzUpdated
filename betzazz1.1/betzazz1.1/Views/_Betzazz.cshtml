@@ -16,8 +16,7 @@
 </head>
 
 <body style="background-color:black;color:#ce870d">
-    <!-- MODALS
-    ================================================== -->
+    <!-- ============================= MODALS ============================== -->
     <nav class="navbar navbar-inverse navbar-fixed-top " role="navigation">
         <div class="container-fluid">
             <div class="row">
@@ -298,7 +297,7 @@
                                 Footbaal
                             </a>
                             <ul class="collapse list-unstyled" id="football">
-                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#myDivMobile">Page 1</a></li>
                                 <li><a href="#">Page 2</a></li>
                                 <li><a href="#">Page 3</a></li>
                             </ul>
@@ -938,7 +937,7 @@
                 </div><!-- modal-dialog -->
             </div><!-- modal -->
         </div>
-
+        <button class="btn btn-danger" data-toggle="modal" data-target="mobile_betslip"></button>
         <!----------------------------------- left Model Ending here ------------------------------->
         <div class="col-md-8 mypadding padding-center-pane">
             <div class="my-container-fluid middle-container">
@@ -1048,7 +1047,6 @@
         </div>
     </div>
 
-    </div>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap Js CDN -->
@@ -1064,7 +1062,7 @@
 
 
 
-
+    <div class="text-center" style="color:red; Background-color:darkblue;" > Hi i am fixed footer for the Mobile Only </div>
     <!-- Footer -->
     <footer class="page-footer font-small unique-color-dark" style="background-color: black">
 
@@ -1199,6 +1197,56 @@
             <!-- Grid row -->
         </div>
     </footer>
+	<div class="text-center visible-xs" style=" position: fixed;left: 0;bottom: 0;width: 100%;background-color: red;color: white;
+    text-align: center;"><div class="card border-warning mb-3 card-width" id="myDivMobile">
+                        <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
+                        <span class="topright" onclick="hide('myDivMobile')">&times</span>
+                        <div class="card-body text-warning card-body-style">
+
+                            <h5 class="card-title card-title-style" style="margin-left: 10%;">EventName</h5>
+
+                            <h5 class="card-title" style="margin-left:5%;  color: #e49b1e;">MarketNnme</h5>
+                            <table style="margin-left: 5%;">
+                                <tr><th>Match Odds</th></tr>
+                                <tr>
+                                    <th class="my-td">
+                                        Selection1
+                                    </th>
+                                    <th class="my-td">
+                                        Selection2
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="my-td" style="width:45%;">Rate</td>
+                                    <td><input type="text" name="Rate" id="Rate" value="@Betslip.Rate" class="my-button-betslip" readonly>
+                                    <td>
+                                </tr>
+                                <tr>
+                                    <td class="my-td">Stake</td>
+
+                                    <td>
+                                        <input type="text" name="Stake" id="Stake"  value="Stake" class="my-button-betslip">
+                                        <a href="javascript: void(0)" onClick="calc()"></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="my-td">Return</td>
+                                    <td>
+                                        <input type="text" name="Return" id="Return"  value="Total Return" class="my-button-betslip">
+                                        <a href="javascript: void(0)" onClick="cal()"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        
+                                            <button class="btn btn-dark betslip-button" value="btn_PlaceBet">Place Bet</button>
+                                       
+                                    </td>
+                                </tr>
+                            </table>
+                        </div></div>
+    </div>
     <!--Login Popup Modal-->
     @using (Html.BeginForm("Login", "Events", new { @id = "LoginFormId" }))
     {
@@ -1236,7 +1284,7 @@
         </div>
     }
     <!--End Login Popup Modal-->
-    <!--Forgot Password-->>
+    <!--Forgot Password-->
     @using (Html.BeginForm("Submit", "Default"))
     {
         <div class="modal fade" id="modalForgetPasswordForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1319,8 +1367,44 @@
                 </div>
             </div>
         </div>
+        
     }
     <!--End Register Popup Modal-->
+
+    <!---------------Modal For Betslip Starts from here---------------------->
+        <div class="modal fade" id="mobile_betslip" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">New User Sign Up here !</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-4">
+                            <i class="glyphicon glyphicon-user" style="color:#ce870d"></i>
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
+                           
+                        </div>
+
+                        <div>
+                            <i class="glyphicon glyphicon-usd"></i>
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Currency</label>
+                           </div>
+                        <div class="md-form mb-4">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your Email</label>
+                            </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <input type="submit" value="SignUp" class="btn btn-success my-btn-login-signup" />
+                      <button class="btn btn-success" style="background-color:black;border-color:#d0a44d">Sign Up</button><button class="btn btn-success" style="background-color:black;border-color:#d0a44d"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -1365,10 +1449,9 @@
 
         });
          // ---------------------------To Hide Betslip on Page Load--------------------
-        //window.onload = function () {
-        //    $("#myDiv1").hide();
-        //};
-       
+        $(document).ready(function (){
+            $("#myDivMobile").hide();
+        });
     </script>
 </body>
 </html>
