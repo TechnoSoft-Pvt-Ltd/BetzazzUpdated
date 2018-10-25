@@ -152,7 +152,7 @@
             </ul>
         </div>
 
-        <hr style="background-color:#ce870d;margin-top: 0px; margin-bottom:0;width:100%;">
+        <hr style="background-color:#ce870d;border-top: 2px solid #ce870d;margin-top: 0px; margin-bottom:0;width:100%;">
         <div class="scrollmenu" style="align-items:center">
             <ul class="nav navbar-nav my-nav">
                 <li class="#" style="color:#ce870d"><a href="#">Sports</a></li>
@@ -326,7 +326,7 @@
                     <img src="~/Content/assets/abd.jpg" alt="Avatar" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>Cricker News</h1>
+                    <h1>Cricker</h1>
                     <p>Architect & Engineer</p>
                     <p>We love that guy</p>
                     <button class="small-button-index"><strong>Click Here</strong></button>
@@ -339,7 +339,7 @@
                     <img src="~/Content/image/avatar-1.jpg" alt="Avatar" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>Tennis News</h1>
+                    <h1>Tennis</h1>
                     <p>Architect & Engineer</p>
                     <p>We love that guy</p>
                     <button class="small-button-index"><strong>Click Here</strong></button>
@@ -353,7 +353,7 @@
                     <img src="~/Content/assets/ronaldo.jpg" alt="Avatar" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>Football News</h1>
+                    <h1>Football</h1>
                     <p>Architect & Engineer</p>
                     <p>We love that guy</p>
                     <button class="small-button-index"><strong>Click Here</strong></button>
@@ -366,7 +366,7 @@
                     <img src="~/Content/assets/badminton.jpg" alt="Avatar" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>Badminton News</h1>
+                    <h1>Badminton</h1>
                     <p>Architect & Engineer</p>
                     <p>We love that guy</p>
                     <button class="small-button-index"><strong>Click Here</strong></button>
@@ -379,7 +379,7 @@
                     <img src="~/Content/image/avatar-5.jpg" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>Badminton News</h1>
+                    <h1>Badminton</h1>
                     <p>Architect & Engineer</p>
                     <p>We love that guy</p>
                     <button class="small-button-index"><strong>Click Here</strong></button>
@@ -396,6 +396,7 @@
             <small>www.Betzazz.com</small>
         </header>
         <div class="se-container">
+            @*===========================Section 1 starts here=================================*@
             <section class="slope">
                 <div class="slope-content">
                     <hr style=" margin-top: 0px;">
@@ -405,46 +406,76 @@
                     </p>
                 </div>
             </section>
-
+            @*===========================Section 2 starts here=================================*@
             <section class="slope">
-                <div class="slope-content">
+                @*------------------------for desktop-------------------------*@
+                <div class="slope-content hidden-xs">
                     <img src="~/Content/assets/kisspng-fifa-world-cup-football-player-football-vector-5a916d73590096.1830379015194801793646.png"
-                         class="img-responsive image-one-settings"/>
+                         class="img-responsive image-one-settings hidden-xs" />
                     <h3 style="margin-top: -10px;margin-bottom: 40px;/* margin-right: 100px; */margin-left: 850px;">Bet Your Way in FIFA 2018!</h3>
                     <p style=" margin-right:100px;   color: #333333;">
                         Get the latest FIFA 2018 betting information, enjoy the best football odds and find betting tips from our experienced pundits. New customers get a $20 Free Bet.
 
                     </p>
                 </div>
-            </section>
-            <section class="slope">
-                <div class="slope-content">
-                    <img src="~/Content/assets/Cricket-Png-Background.png" class="img-responsive image-two-settings"/>
-                    <h3 style="margin-top: -10px;margin-bottom: 40px;/* margin-right: 100px; */margin-left: 180px; color: #e49b1e;">FIBA Champions League 2018!</h3>
-                    <p style=" margin-left:100px;   color: #e49b1e;">
-                        Get the latest FIFA 2018 betting information, enjoy the best football odds and find betting tips from our experienced pundits. New customers get a $20 Free Bet.
+                @*-----------------------For Mobile--------------------------*@
+                <div class="slope-content visible-xs">
 
+                    <img src="~/Content/assets/kisspng-fifa-world-cup-football-player-football-vector-5a916d73590096.1830379015194801793646.png"
+                         class="img-responsive " style="width: 300px;height: 350px;margin-bottom: -70px;margin-top: -50px;transform: rotateY(180deg);" />
+
+
+                    <h3 style="margin-top: 100px;margin-bottom: 45px;font-size: 22px;"><b>Bet Your Way in FIFA 2018!</b></h3>
+                    <p style=" margin-right:100px;   color: #333333;    margin-bottom: -150px;">
+                        Get the latest FIFA 2018 betting information, enjoy the best football odds and find betting tips from our experienced pundits. New customers get a $20 Free Bet.
                     </p>
                 </div>
             </section>
+            @*===========================Section 3 starts here=================================*@
+            <section class="slope">
+                @*------------------------for desktop-------------------------*@
+                <div class="slope-content hidden-xs">
+                    <img src="~/Content/assets/Cricket-Png-Background.png" class="img-responsive image-two-settings" />
+                    <h3 style="margin-top: -10px;margin-bottom: 40px;/* margin-right: 100px; */margin-left: 180px; color: #e49b1e;">FIBA Champions League 2018!</h3>
+                    <p style=" margin-left:100px;   color: #e49b1e;">
+                        Get the latest FIFA 2018 betting information, enjoy the best football odds and find betting tips from our experienced pundits. New customers get a $20 Free Bet.
+                    </p>
+                </div>
+                @*-----------------------For Mobile--------------------------*@
+                <div class="slope-content visible-xs">
+                    <img src="~/Content/assets/Cricket-Png-Background.png"
+                         class="img-responsive " style="width: 330px;height: 350px;margin-bottom: -80px;margin-top: -100px;" />
+                    <h3 style="margin-top: 100px;margin-bottom: 45px;font-size: 22px;color: #e49b1e;"><b>FIBA Champions League 2018!</b></h3>
+                    <p style=" margin-right:100px;   color: #e49b1e; margin-bottom:40px;">
+                        Get the latest FIFA 2018 betting information, enjoy the best football odds and find betting tips from our experienced pundits. New customers get a $20 Free Bet.
+                    </p>
+                </div>
+            </section>
+            @*===========================Section 4 starts here=================================*@
             <section class="slope" style="margin-top: -300px;">
-                <div class="slope-content">
-                    <img src="~/Content/assets/27512b78a17394baf7e63a274267df70.png" class="img-responsive image-three-settings"/>
+                @*------------------------for desktop-------------------------*@
+                <div class="slope-content hidden-xs">
+                    <img src="~/Content/assets/27512b78a17394baf7e63a274267df70.png" class="img-responsive image-three-settings" />
                     <h3 style="margin-top: -10px;margin-bottom: 40px;/* margin-right: 100px; */margin-left: 850px;">
                         Rugby World Cup
                         2018!
                     </h3>
-                    <p style=" margin-right:100px;   color: #333333;">
+                    <p style=" margin-right:100px;   color: #333333; ">
                         Mixins allow you to define styles that can be re-used throughout the stylesheet without needing to resort to non-semantic classes like .float-left. Mixins can also contain full CSS rules, and anything else allowed elsewhere in a Sass document.
                     </p>
-
                     <hr style="color:#333;border-top: 1px solid #080808;  margin-top: 100px; margin-bottom: -100px; ">
                 </div>
-
+                @*-----------------------For Mobile--------------------------*@
+                <div class="slope-content visible-xs">
+                    <img src="~/Content/assets/27512b78a17394baf7e63a274267df70.png"
+                         class="img-responsive " style="width: 300px;height: 350px;margin-bottom: -70px;margin-top: -50px;" />
+                    <h3 style="margin-top: 100px;margin-bottom: 45px;font-size: 22px;"><b>Rugby World Cup 2018!</b></h3>
+                    <p style=" margin-right:100px;   color: #333333;   margin-bottom: -150px;">
+                        Mixins allow you to define styles that can be re-used throughout the stylesheet without needing to resort to non-semantic classes like .float-left. Mixins can also contain full CSS rules, and anything else allowed elsewhere in a Sass document.
+                    </p>
+                </div>
+                <hr style="color:#333;border-top: 1px solid #080808;  margin-top: 100px; margin-bottom: -100px; ">
             </section>
-
-
-
         </div>
     </div>
 
@@ -526,8 +557,7 @@
                     <h3 class="text-uppercase font-weight-bold">CapitalStreetFx</h3>
                     <hr style="width: 60px">
                     <p>
-                        Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.
+                        Capital Street FX
                     </p>
 
                 </div>

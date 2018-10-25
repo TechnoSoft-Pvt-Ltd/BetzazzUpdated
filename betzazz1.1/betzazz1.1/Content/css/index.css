@@ -1,5 +1,5 @@
 ﻿body {
-    margin: 0;
+    margin: -3px;
     background: #000;
 }
 /*-----------------------------Diffrent Background content Scroll------------------------------*/
@@ -657,8 +657,8 @@ header {
 .se-container {
     /*padding-top: 10px;*/
     overflow: hidden;
-    margin-left: -15px;
-    width: 103%;
+    /*margin-left: -15px;*/
+    width: 104%;
 }
 
     .se-container .slope {
@@ -714,7 +714,7 @@ header {
         }
 
             .se-container .slope:nth-child(even) .slope-content {
-                padding: 130px 100px 250px 100px;
+                padding: 100px 100px 250px 100px;
                 -webkit-transform: rotate(-5deg);
                 -moz-transform: rotate(-5deg);
                 -ms-transform: rotate(-5deg);

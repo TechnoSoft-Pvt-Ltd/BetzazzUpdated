@@ -7,6 +7,10 @@
     .navbar-nav > li {
         float: none;
         display: inline-block;
+        font-variant: small-caps;
+        font-size: larger;
+        font-weight: 600;
+        font-stretch: semi-condensed;
     }
 
 

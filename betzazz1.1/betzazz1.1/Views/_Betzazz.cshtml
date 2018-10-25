@@ -973,7 +973,7 @@
 
                         </div>
                     </div>
-                    <div class="card border-warning mb-3 card-width" id="myDiv1">
+                    <div class="card border-warning mb-3 card-width" id="myDiv1" style="display:none;">
                         <div class="card-header card-header-style"><strong>Bet Slip</strong></div>
                         <span class="topright" onclick="hide('myDiv1')">&times</span>
                         @using (Html.BeginForm("btn_PlaceBet", "PreMatch"))
@@ -1072,7 +1072,6 @@
 
 
 
-    <div class="text-center" style="color:red; Background-color:darkblue;" > Hi i am fixed footer for the Mobile Only </div>
     <!-- Footer -->
     <footer class="page-footer font-small unique-color-dark" style="background-color: black">
 
@@ -1207,10 +1206,11 @@
             <!-- Grid row -->
         </div>
     </footer>
+    
 	<div class="text-center visible-xs" style=" position: fixed;left: 0;bottom: 0;width: 100%;background-color: black;color: white;
-    text-align: center;"><div class="card border-warning mb-3 card-width" id="myDivMobile">
+    text-align: center; display:none !important;" id="myDivMobile" ><div class="card border-warning mb-3 card-width">
                         <div class="card-header card-header-style" ><strong>Bet Slip</strong></div>
-                        <span class="topright" onclick="hide('myDivMobile')">&times</span>
+                        <span class="topright" onclick="CloseBet()">&times</span>
                         <div class="card-body text-warning card-body-style">
 
                             <h5 class="card-title card-title-style" style="margin-left: 10%;margin-top: 0;margin-bottom: 0;">EventName</h5>
@@ -1407,12 +1407,12 @@
 
         // ----------------To show the Bet slip----------------------
         function show(target) {
-            document.getElementById(target).style.display = 'block';
+            document.getElementById(target).style.display = 'block !important';
         }
 
         // ---------------------------for close button-----------------------------
         function hide(target) {
-            document.getElementById(target).style.display = 'none';
+            document.getElementById(target).style.display = 'none ';
         }
         // ---------------------------To calculate Bet Function--------------------
         $("#Rate,#Stake").keyup(function () {
@@ -1439,9 +1439,14 @@
         });
         
          // ---------------------------To Hide Betslip on Page Load--------------------
-        //$(document).ready(function (){
-        //    $("#myDivMobile").hide();
-        //});
+        function DisplayBet() {
+            document.getElementById("myDivMobile").style.display = "block";
+        }
+        function CloseBet() {
+            document.getElementById("myDivMobile").style.display = "none !important";
+        }
+
+
     </script>
 </body>
 </html>
